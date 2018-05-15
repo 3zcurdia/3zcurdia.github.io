@@ -1,5 +1,9 @@
 ## Welcome to GitHub Pages
 
+{% highlight ruby linenos %}
+0.1 + 0.2 != 0.3
+{% endhighlight %}
+
 You can use the [editor on GitHub](https://github.com/3zcurdia/blog3/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
