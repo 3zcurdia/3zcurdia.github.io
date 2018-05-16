@@ -25,7 +25,6 @@ background: /assets/images/about-bg.jpg
 Hi! My name is Luis, and I am a happy human from planet earth who does software for a living. Like any other software developer, I do love computers and technology, and I am always eager to learn something new about it. But I also like other topics like photography, nature, art, science, politics, foods and cultures of the world. After all, I guess you will be glad to meet me for business or just for a couple of beers (especially IPA's).
 
 
-<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="{{"/assets/badge.min.js" | relative_url }}">
 <script type="text/javascript">
   $(document).ready(function(){ console.log("badges"); $('#badges').badger({username: "3zcurdia"}); });
