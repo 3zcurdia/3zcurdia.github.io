@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Swift Vs Objective-C the ultimate answer"
+title: "Swift Vs Objective-C"
 description: "languages perks and differences"
 date: "2017-11-11T20:55:32-06:00"
 background: /assets/images/post-bg.jpg
@@ -11,6 +11,7 @@ tags:
 ---
 
 Since 2014 Swift programming language has gotten the fascination of developers and strangers, but what about the old and reliable Objective-C, that for years has been the default language in iOS and OSX applications.  Is Objective-C dead? Do the new generations should only know Swift? Is Swift the tool for everything? In this article, I will try to answer those questions, by comparing them in different categories.
+
 > In this article I am not considering backend development with Swift
 
 ## Learning curve

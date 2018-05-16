@@ -19,6 +19,7 @@ Sometimes in the development process you might find yourself with the need to kn
 
 Ruby bit itself has a benchmark lib which allows you to get the elapsed times evaluated within a code block
 
+{% highlight ruby linenos %}
     require "benchmark"
     n = 10_000_000
     Benchmark.bmbm do |x|
@@ -35,6 +36,7 @@ Ruby bit itself has a benchmark lib which allows you to get the elapsed times ev
         end
       end
     end
+{% endhighlight %}
 
 Getting as result but sometimes you need to get a better comparison.
 
@@ -49,6 +51,7 @@ Getting as result but sometimes you need to get a better comparison.
 
 To get a more clear result you can use `benchmark-ips` which it will benchmark by iterations per second.
 
+{% highlight ruby linenos %}
     require 'benchmark/ips'    
 
     n = 10_000_000
@@ -68,6 +71,8 @@ To get a more clear result you can use `benchmark-ips` which it will benchmark b
       end
       x.compare! # Print the comparison
     end
+{% endhighlight %}
+
 
 Getting a better presentation results in terms of comparsion
 
