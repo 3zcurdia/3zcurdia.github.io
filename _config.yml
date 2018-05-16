@@ -6,3 +6,9 @@ twitter_username: 3zcurdia
 github_username:  3zcurdia
 
 remote_theme: BlackrockDigital/startbootstrap-clean-blog-jekyll
+markdown: kramdown
+paginate: 5
+paginate_path: "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
