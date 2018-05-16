@@ -9,7 +9,7 @@ background: /assets/images/about-bg.jpg
 
 <div class="row">
   <div class="col-md-2">
-    <img class='rounded-circle' src='https://github.com/3zcurdia.png' height='128px'/>
+    <img class='rounded-circle' src='https://www.gravatar.com/avatar/274c4526d6904dcc320ea585619c2af2.png?s=120' height='120px'/>
   </div>
   <div class="col-md-4">
     <h3>Luis Ezcurdia</h3>
