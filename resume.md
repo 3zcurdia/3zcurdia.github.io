@@ -226,11 +226,3 @@ $(function() {
   }
 });
 </script>
-<style type="text/css">
-@media print{
-  .no-print,.no-print *, header, footer { display: none !important; }
-  .page-break {
-    page-break-before: always;
-  }
-}
-</style>

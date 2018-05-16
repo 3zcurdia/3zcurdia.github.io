@@ -1,2 +1,9 @@
 @import "syntax-highlighting";
 @import "../assets/vendor/startbootstrap-clean-blog/scss/clean-blog.scss";
+
+@media print{
+  .no-print,.no-print *, header, footer { display: none !important; }
+  .page-break {
+    page-break-before: always;
+  }
+}
