@@ -15,12 +15,12 @@ One of my hobbies is taking pictures, although I am still learning, with my comp
 ## JPEG is NOT Film
 JPEG as any other digital format, it will always be digital: a sample of a real world signal(consider pictures as 2D signals). Digital computers are designed to work with samples from an analog signal; which means it skips some of the real world data. The today sampling is good, but it will never be an analog system. On computers to achieve higher quality, you will need more data.
 
-<img class="img-fluid" src="/assets/media/quantization.gif" alt="quantization">
+<img class="img-fluid" src="/media/quantization.gif" alt="quantization">
 
 ## Compression algorithms
 Handling a large amount of data it requires a lot of computing power. Therefore we need to use less to perform better. A very common technique in signal compression is to skip the information that is not human visible, on audio, this is better known as the human perceivable frequency range that goes from 10 Hz to 22kHz, and it could be a shorter depending how damaged your ears are. Since images are 2D signals, the same principle applies by skipping what is not relevant. There are two types of compression algorithms, lossy and lossless, although the lossless algorithms tend to be larger files, they provide better quality. Even when JPEG uses a lossy compression algorithm, it became famous thanks to the internet cause is easy to manipulate and small. In 2000 the Joint Photographic Experts Group developed a new JPEG format with the intention of superseding their original standard (created in 1992) with a newly designed, wavelet-based method. Unfortunately, the new JPEG2000 did not achieve the reach of its predecessor.
 
-<img class="img-fluid" src="/assets/media/jpeg2000.png" alt="jpeg2000">
+<img class="img-fluid" src="/media/jpeg2000.png" alt="jpeg2000">
 
 ## Discrete cosine transform
 The base algorithm for JPEG and MPEG formats it discard high-frequencies, by taking the real component (see [complex numbers](https://en.wikipedia.org/wiki/Complex_number)) from the Discrete Fourier Transform. The DFT it transforms a signal into to their frequencies, and it makes a spectral manipulation simpler Also, there is a faster version for the DFT algorithm called Fast Fourier Transform (FFT) which is extremely popular and relatively easy to implement in any programming language. The popularity and performance of this transformation it sacrifices image/audio quality, but when the JPEG format it was released the computer resources were limited, and performance matter most.
@@ -31,7 +31,7 @@ Since JPEG lose some signals, the following transformations applied in a post-pr
 ## Reveal a picture is a signal equalization
 Reveal an image in CameraRaw, Lightroom or any other software, it is merely a process of equalization. As in audio, we configure our preferences with the bass, middle, and treble frequencies as we please. This is the same with images, we equalize according to our style if we like more or less contrast, blacks, shadows, whites, highlights, etc. If we use a JPEG, there will be a gap in our frequencies, to equalize. Yes! You will have a decent result, but not with the fully potential of our RAW image.
 
-<img class="img-fluid" src="/assets/media/equalizer.jpg" alt="equalizer">
+<img class="img-fluid" src="/media/equalizer.jpg" alt="equalizer">
 
 
 ## Moore's Law made storage cheaper

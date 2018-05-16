@@ -16,7 +16,7 @@ This is not a vanilla javascript solution, but that never stopped you right?
 
 [CoffeeScript](http://coffeescript.org/) is a little language that compiles into JavaScript, allowing you to write less code and safer. If you are a Ruby on Rails developer, you might be familiar with it. However, I found that outside the rails community is not that common. Maybe some javascript puritans will refute the idea of drinking coffee in their codebase, but for mere mortals, it is a very tasteful solution.
 
-<img class="img-fluid" src="/assets/media/code-maintenance.png" alt="code-maintenance">
+<img class="img-fluid" src="/media/code-maintenance.png" alt="code-maintenance">
 
 The idea of writing less code is not enough; you need some structure, and here is where CoffeeScript turns very handy. You can do object-oriented programming, by building classes more clearly and intuitive.
 
