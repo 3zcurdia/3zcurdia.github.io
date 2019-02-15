@@ -1,0 +1,13 @@
+@import "vendor/pure-layout-blog/blog";
+@import "syntax-highlighting";
+
+.content {
+  color: #333;
+}
+
+@media print{
+  .no-print,.no-print *, header, footer, .sidebar { display: none !important; }
+  .page-break {
+    page-break-before: always;
+  }
+}

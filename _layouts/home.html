@@ -1,11 +1,12 @@
 ---
-layout: page
-title: Blog
+layout: default
 background: /assets/images/post-bg.jpg
 ---
-{% for post in paginator.posts %}
+{{ content }}
+{% for post in site.posts limit : 5 %}
 <section class="post">
   <header class="post-header">
+    <!-- <img width="48" height="48" alt="Luis Ezcurdia&#x27;s avatar" class="post-avatar" src="https://github.com/3zcurdia.png"> -->
     <h2 class="post-title"><a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a></h2>
     <p class="post-meta">
       By
@@ -28,20 +29,3 @@ background: /assets/images/post-bg.jpg
   </div>
 </section>
 {% endfor %}
-
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-
-  <div class="clearfix">
-
-    {% if paginator.previous_page %}
-      <a class="float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer<span class="d-none d-md-inline"> Posts</span></a>
-    {% endif %}
-
-    {% if paginator.next_page %}
-      <a class="float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
-    {% endif %}
-
-  </div>
-
-{% endif %}

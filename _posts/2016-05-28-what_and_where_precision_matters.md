@@ -19,7 +19,7 @@ It is well known in all programming languages the floating point math loses some
 
 This is explained in detail in [here](http://0.30000000000000004.com/), but basically, is because some fractional numbers aren't well represented on binary, and the carryover loses accuracy, but it keeps precise.
 
-<img class="img-fluid" src="/media/accuracy-vs-precision.jpg" alt="accuracy vs precision">
+<img class="img-fluid" src="/assets/media/accuracy-vs-precision.jpg" alt="accuracy vs precision">
 
 There are several ways to mitigate this effect, the most known use double numbers or big decimal representations, the problem with those is the operations tend to use more computing resources, especially with BigNumbers, that usually are objects with large strings and complicated math behind.
 
@@ -33,7 +33,7 @@ In statistics or graphics, having a 100% accuracy and precision do not make any 
 
 # Sensors and Space (very high accuracy, very high precision)
 
-<img class="img-fluid" src="/media/dart.jpg" alt="dart">
+<img class="img-fluid" src="/assets/media/dart.jpg" alt="dart">
 
 As in an article recent published [here](http://www.jpl.nasa.gov/edu/news/2016/3/16/how-many-decimals-of-pi-do-we-really-need/), we can see how the NASA it only uses 14 decimals of Pi to send a man to the moon. That is very impressive, although some developers think that, having more than 14 decimals are not enough for the calculations, especially if our application gather information from sensors. But we still need high accuracy and precision, the question is, how much?
 
