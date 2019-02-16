@@ -8,17 +8,7 @@ background: /assets/images/post-bg.jpg
   <header class="post-header">
     <!-- <img width="48" height="48" alt="Luis Ezcurdia&#x27;s avatar" class="post-avatar" src="https://github.com/3zcurdia.png"> -->
     <h2 class="post-title"><a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a></h2>
-    <p class="post-meta">
-      By
-      <a class="post-author" href="#">
-        {% if post.author %}
-        {{ post.author }}
-        {% else %}
-        {{ site.author }}
-        {% endif %}
-      </a>
-      on {{ post.date | date: '%B %d, %Y' }}
-    </p>
+    <p class="post-meta">{{ post.date | date: '%B %d, %Y' }}</p>
   </header>
   <div class="post-description">
     {% if post.subtitle %}

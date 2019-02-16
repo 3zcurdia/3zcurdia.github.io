@@ -2,8 +2,6 @@ author: Luis Ezcurdia
 title: 3zcurdia
 email: ing.ezcurdia@gmail.com
 description: Work smart rather than hard.
-twitter_username: 3zcurdia
-github_username:  3zcurdia
 url: http://3zcurdia.com/
 
 sass:
@@ -16,3 +14,8 @@ paginate_path: "/posts/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate
+
+social:
+  github:  3zcurdia
+  twitter: 3zcurdia
+  instagram: 3zcurdia

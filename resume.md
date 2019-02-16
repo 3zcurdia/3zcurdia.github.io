@@ -6,18 +6,15 @@ permalink: /about/resume
 background: /assets/images/about-bg.jpg
 ---
 
-<div class="row">
-  <div class="col-md-2 no-print">
-    <img class='rounded-circle' src='http://www.gravatar.com/avatar/274c4526d6904dcc320ea585619c2af2?s=120' height='92px'/>
+<div class="pure-g">
+  <div class="pure-u-1-8 no-print">
+    <img class='rounded-circle' src='http://www.github.com/{{site.social.github}}.png' height='120px'/>
   </div>
-  <div class="col-md-5">
+  <div class="pure-u-1-4">
     <h3>Luis Ezcurdia</h3>
     <h4>Full Stack Developer</h4>
   </div>
-  <div class="col-md-5">
-    <div class='float-right no-print'>
-      <a class="btn btn-default btn-sm" href="#" onclick="window.print();return false;"><i class="fa fa-print"></i> Print</a>
-    </div>
+  <div class="pure-u-1-4">
     <h4>Contact</h4>
     <small>
       <a href="mailto:ing.ezcurdia@gmail.com">ing.ezcurdia@gmail.com</a><br/>
@@ -26,29 +23,31 @@ background: /assets/images/about-bg.jpg
       <a href="http://www.linkedin.com/in/3zcurdia"><i class="fa fa-linkedin-square"></i> Linkedin </a>
     </small>
   </div>
+  <div class="pure-u-3-8">
+    <div class='float-right no-print'>
+      <a class="btn btn-default btn-sm" href="#" onclick="window.print();return false;"><i class="fa fa-print"></i> Print</a>
+    </div>
+  </div>
 </div>
 
----
-
-## <i class="fa fa-briefcase"></i> Experience
-#### <i class='fa fa-clock-o'></i> <time class="from_now_no_suffix">2009-10-01</time>
+## <i class="fa fa-briefcase"></i> <time class="from_now_no_suffix">2009-10-01</time> of experience
 
 ---
 
 ### <i class="fa fa-cogs"></i> Skill Set
 
   * Programming languages:
-    - <small>Proficient: **Ruby**, CoffeeScript</small>
-    - <small>Fluent: **Elixir**, **Swift**, Javascript</small>
-    - <small>Familiar with: Go, Python, Java, Objective-C, C, C++</small>
-  * Backend frameworks:
+    - <small>Proficient: **Ruby**, **Swift**</small>
+    - <small>Fluent: **Elixir**</small>
+    - <small>Familiar with: Javascript, Go, Python, Java, Objective-C, C, C++</small>
+  * Backend:
     - <small>Proficient: **Ruby and Rails**</small>
-    - <small>Fluent: Sinatra</small>
+    - <small>Fluent: **Phoenix**, Sinatra, Roda</small>
     - <small>Familiar with: Grape, Negroni, Martini</small>
-  * Frontend frameworks:
+  * Frontend:
     - <small>Proficient: **Cocoatouch**, **JQuery**</small>
     - <small>Fluent: **JSNative**</small>
-    - <small>Familiar with: Emberjs, AngularJS</small>
+    - <small>Familiar with: Vuejs, Emberjs, AngularJS</small>
   * SQL Databases:
     - <small>Proficient: **Postgresql**</small>
     - <small>Familiar with: SQLite, MySQL</small>

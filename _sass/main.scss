@@ -2,8 +2,14 @@
 @import "syntax-highlighting";
 
 .content {
-  color: #333;
+  color: #424242;
 }
+img.rounded-circle {
+  border-radius: 50%;
+}
+
+.float-right { float: right; }
+.float-left { float: left; }
 
 @media print{
   .no-print,.no-print *, header, footer, .sidebar { display: none !important; }
