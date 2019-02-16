@@ -9,6 +9,7 @@ background: /assets/images/about-bg.jpg
 
 <div class="pure-g">
   <div class="pure-u-1-4">
+    <img class='rounded-circle' src='http://www.github.com/{{site.social.github}}.png' height='120px'/>
     <h3><a href="/about/resume" title="See my resume"><i class="fa fa-road"></i> Full Stack Developer</a></h3>
   </div>
   <div class="pure-u-3-4 text-center">

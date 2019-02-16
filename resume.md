@@ -17,10 +17,10 @@ background: /assets/images/about-bg.jpg
   <div class="pure-u-1-4">
     <h4>Contact</h4>
     <small>
-      <a href="mailto:ing.ezcurdia@gmail.com">ing.ezcurdia@gmail.com</a><br/>
-      +1 (415) 513-0394<br/>
-      <a href="https://github.com/3zcurdia"><i class="fa fa-github"></i> Github</a><br/>
-      <a href="http://www.linkedin.com/in/3zcurdia"><i class="fa fa-linkedin-square"></i> Linkedin </a>
+      <a href="mailto:ing.ezcurdia@gmail.com"><i class="fa fa-envelope"></i> ing.ezcurdia@gmail.com</a><br/>
+      <a href="tel:+14155130394"><i class="fa fa-phone"></i> +1 (415) 513-0394</a><br/>
+      <a href="https://github.com/3zcurdia"><i class="fab fa-github"></i> Github</a><br/>
+      <a href="http://www.linkedin.com/in/3zcurdia"><i class="fab fa-linkedin"></i> Linkedin </a>
     </small>
   </div>
   <div class="pure-u-3-8">
@@ -193,7 +193,6 @@ background: /assets/images/about-bg.jpg
 * UNAM-DGTIC *(September 2010)*<br/>**OpenSceneGraph Workshop**
 * Facultad de Ingeniería UNAM *(2005–2009)*<br/>**Bachelor degree Computer Engineer**
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js" crossorigin="anonymous"></script>
 <script>
 $(function() {
   var moment_date, text, time_tag, _i, _len, _ref;
