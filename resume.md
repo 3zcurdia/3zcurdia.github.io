@@ -18,7 +18,7 @@ background: /assets/images/about-bg.jpg
     <h4>Contact</h4>
     <small>
       <a href="mailto:ing.ezcurdia@gmail.com"><i class="fa fa-envelope"></i> ing.ezcurdia@gmail.com</a><br/>
-      <a href="tel:+14155130394"><i class="fa fa-phone"></i> +1 (415) 513-0394</a><br/>
+      <!-- <a href="tel:+14155130394"><i class="fa fa-phone"></i> +1 (415) 513-0394</a><br/> -->
       <a href="https://github.com/3zcurdia"><i class="fab fa-github"></i> Github</a><br/>
       <a href="http://www.linkedin.com/in/3zcurdia"><i class="fab fa-linkedin"></i> Linkedin </a>
     </small>
@@ -59,6 +59,7 @@ background: /assets/images/about-bg.jpg
     - <small>Familiar with: Chef, Habitat, Jenkins</small>
 
 ---
+<div class="page-break"></div>
 
 ### Apptegy
 *(February 2018 - present)*<br/>
@@ -68,8 +69,6 @@ background: /assets/images/about-bg.jpg
   * Implement tests for CI under rails engines architecture
   * Design and implement micro services
   * Improve process by implementing best practices
-
-<div class="page-break"></div>
 
 ### Unosquare
 *(July 2015 - February 2018)*<br/>
@@ -108,8 +107,6 @@ background: /assets/images/about-bg.jpg
   * Designed web services for oil platforms management systems
   * Implemented web services using emberjs
 
-<div class="page-break"></div>
-
 ### Power Systems MX
 *(January 2012 - March 2013)*<br/>
 **Technical Founder**
@@ -136,8 +133,6 @@ background: /assets/images/about-bg.jpg
   * Conducted research to facilitate the proper design of a system that could serve a load of over a million deliveries per day.
   * Deployed a series of e-commerce applications to cloud-based servers after completion of development by the senior engineering team.
   * Monitored the processes that ensure test-driven development to maintain a high level of quality in the application engineering process with minimal flaws
-
-<div class="page-break"></div>
 
 ### UNAM-DGTIC
 #### Dirección General de Tecnologías de la Información y Comunicación
@@ -166,7 +161,7 @@ background: /assets/images/about-bg.jpg
 
 ### <i class="fa  fa-lightbulb-o"></i> Side projects
 * **[Amaca](https://github.com/3zcurdia/Amaca)**: Network layer oriented to services and codable protocol
-* **[Badger](http://getbadger.herokuapp.com/)**: Beautiful badge system for coders
+* ~~**Badger**: Beautiful badge system for coders based on github profile statistics~~
 * **[reportcopter](https://github.com/3zcurdia/reportcopter)**: Tool to generate changelog files using the git log
 * **[gbelt](https://github.com/3zcurdia/gbelt)**: Github tool belt to search, profile, and generate metrics on users and repositories
 * **[waqi](https://github.com/3zcurdia/waqi)**: Air Quality Open Data Platform api wrapper
