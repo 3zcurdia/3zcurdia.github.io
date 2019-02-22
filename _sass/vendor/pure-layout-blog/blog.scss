@@ -172,3 +172,7 @@ h3 {
         text-align: center;
     }
 }
+
+@media (max-width: 47em) {
+  .sidebar { display: none; }
+}
