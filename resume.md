@@ -47,7 +47,7 @@ background: /assets/images/about-bg.jpg
   * Frontend:
     - <small>Proficient: **Cocoatouch**, **JQuery**</small>
     - <small>Fluent: **JSNative**</small>
-    - <small>Familiar with: Vuejs, Emberjs, AngularJS</small>
+    - <small>Familiar with: SwiftUI Vuejs, Emberjs, AngularJS</small>
   * SQL Databases:
     - <small>Proficient: **Postgresql**</small>
     - <small>Familiar with: SQLite, MySQL</small>
@@ -61,9 +61,19 @@ background: /assets/images/about-bg.jpg
 ---
 <div class="page-break"></div>
 
+### michelada.io
+*(February 2019 - Present)*<br/>
+**Senior Backend Engineer**
+
+  * Provide maintenance and improve to legacy aapplications
+  * Implement APIs for mobile carriers providers in latin america
+  * Implement core funcionality for patyments and fraud detection
+  * Implement real time package tracking system architecture
+  * Participate in training and sessions
+
 ### Apptegy
-*(February 2018 - present)*<br/>
-**Software Developer**
+*(February 2018 - January 2019)*<br/>
+**Software Engineer**
 
   * Maintain and improve existent code base
   * Implement tests for CI under rails engines architecture
@@ -98,7 +108,7 @@ background: /assets/images/about-bg.jpg
 
 ### Software Allies
 *(December 2012 - February 2014)*<br/>
-**Ruby Developer**
+**Software Engineer**
 
   * Designed a training program to onboard and support new engineering team members.
   * Conducted database maintenance to ensure robust database performance and a high level of data integrity.
@@ -118,7 +128,7 @@ background: /assets/images/about-bg.jpg
 
 ### Winmart Group
 *(February 2012 - October 2012)*<br/>
-**Fullstack Junior developer (Independent Contractor)**
+**Fullstack Junior developer**
 
   * Monitored and implemented cloud deployment processes to launch applications developed by the senior engineering teams.
   * Provided load balancing for servers used by the senior engineers.
@@ -137,7 +147,7 @@ background: /assets/images/about-bg.jpg
 ### UNAM-DGTIC
 #### Dirección General de Tecnologías de la Información y Comunicación
 *(April 2011 - September 2011) **Process Chief** at Scientific Visualization Department*<br/>
-*(July 2010 - March 2011) **System administrator** at Observatory Ixtli*<br/>
+*(July 2010 - March 2011) **Systems administrator** at Observatory Ixtli*<br/>
 
   * Monitored the performance and maintenance of the supercomputing equipment used for the virtual reality observatory under the guidance of the primary scientific investigators using the observatory.
   * Maintained the software packages used in the supercomputing clusters that powered the observatory.
@@ -177,7 +187,9 @@ background: /assets/images/about-bg.jpg
 * ***"D Programming language: The Evolution of C++"***  Speaker at PUMASOL 2009 UNAM (April 2009)
 
 ### <i class="fa fa-university"></i> Workshops
-* Instructor at ***iOS Mobile development diploma course*** (UNAM iOSLab January 2018)
+* Instructor at ***iOS Development Diploma course - 3rd Generation*** (UNAM iOSLab January 2019)
+* Instructor at ***iOS Development Diploma course - 2nd Generation*** (UNAM iOSLab August 2018)
+* Instructor at ***iOS Development Diploma course - 1st Generation*** (UNAM iOSLab January 2018)
 * Instructor at ***Ruby Basic*** (Hackergarage June 2013)
 * Instructor at ***Python Basics*** course (April 2009)
 
