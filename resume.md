@@ -65,7 +65,7 @@ background: /assets/images/about-bg.jpg
 *(February 2019 - Present)*<br/>
 **Senior Backend Engineer**
 
-  * Provide maintenance and improve to legacy aapplications
+  * Provide maintenance and improve to legacy applications
   * Implement APIs for mobile carriers providers in latin america
   * Implement core funcionality for patyments and fraud detection
   * Implement real time package tracking system architecture
