@@ -1,21 +1,27 @@
 ---
 layout: default
-background: /assets/images/post-bg.jpg
 ---
-{{ content }}
-{% for post in site.posts limit : 5 %}
-<section class="post">
-  <header class="post-header">
-    <!-- <img width="48" height="48" alt="Luis Ezcurdia&#x27;s avatar" class="post-avatar" src="https://github.com/3zcurdia.png"> -->
-    <h2 class="post-title"><a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a></h2>
-    <p class="post-meta">{{ post.date | date: '%B %d, %Y' }}</p>
-  </header>
-  <div class="post-description">
-    {% if post.subtitle %}
-    {{ post.subtitle }}
-    {% else %}
-    {{ post.excerpt | strip_html | truncatewords: 25 }}
-    {% endif %}
+<section class="section">
+  <div class="container">
+    <div class="columns is-mobile">
+      <div class="column is-three-quarters">
+        {{ content }}
+        <article class="content">
+          {% for post in site.posts limit : 5 %}
+          <h1 class="title">
+            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
+          </h1>
+          <p class="subtitle is-5">{{ post.date | date: '%B %d, %Y' }}</p>
+          <p>
+            {% if post.subtitle %}
+            {{ post.subtitle }}
+            {% else %}
+            {{ post.excerpt | strip_html | truncatewords: 25 }}
+            {% endif %}
+          </p>
+          {% endfor %}
+        </article>
+      </div>
+    </div>
   </div>
 </section>
-{% endfor %}

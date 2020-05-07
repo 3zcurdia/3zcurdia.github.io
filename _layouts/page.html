@@ -2,5 +2,56 @@
 layout: default
 ---
 
-<h1 class="page-title">{{ page.title }}</h1>
-{{ content }}
+<section class="section">
+  <div class="container content">
+    <h1 class="title">{{ page.title }}</h1>
+    <h2 class="subtitle is-4 has-text-weight-light">
+      {% if page.description %}
+      {{ page.description }}
+      {% endif %}
+    </h2>
+    <hr>
+    <div class="columns is-mobile">
+      <div class="column is-three-quarters">
+        <div class="content">
+
+        </div>
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script>
+$(function() {
+  var moment_date, text, time_tag, _i, _len, _ref;
+  _ref = $('time');
+  for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+    time_tag = _ref[_i];
+    text = $.trim($(time_tag).text());
+    moment_date = moment(text);
+    if (text.length > 0 && moment_date.isValid()) {
+      (function(time_tag) {
+        switch ($(time_tag).attr('class')) {
+          case 'ago':
+            return $(time_tag).text(moment_date.fromNow());
+          case 'from_now':
+            return $(time_tag).text(moment_date.endOf('day').fromNow());
+          case 'from_now_no_suffix':
+            return $(time_tag).text(moment_date.endOf('day').fromNow(true));
+          case 'long':
+            return $(time_tag).text(moment_date.format("dddd, MMMM D, YYYY [by] h:mma z"));
+          case 'short':
+            return $(time_tag).text(moment_date.format("MM/DD/YYYY"));
+          case 'timestamp':
+            return $(time_tag).text(moment_date.format("MM/DD/YYYY - h:mma z"));
+          case 'short_text':
+            return $(time_tag).text(moment_date.format("MMM D, YYYY"));
+        }
+      })(time_tag);
+    }
+  }
+});
+</script>

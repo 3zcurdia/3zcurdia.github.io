@@ -1,37 +1,26 @@
 ---
-layout: page
-title: Blog
-background: /assets/images/post-bg.jpg
+layout: default
 ---
-{% for post in paginator.posts %}
-<section class="post">
-  <header class="post-header">
-    <h2 class="post-title"><a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a></h2>
-    <p class="post-meta">{{ post.date | date: '%B %d, %Y' }}</p>
-  </header>
-  <div class="post-description">
-    {% if post.subtitle %}
-    {{ post.subtitle }}
-    {% else %}
-    {{ post.excerpt | strip_html | truncatewords: 25 }}
-    {% endif %}
+<section class="section">
+  <div class="container">
+    <div class="columns is-mobile">
+      <div class="column is-three-quarters">
+        <article class="content">
+          {% for post in site.posts limit : 20 %}
+          <h1 class="title">
+            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
+          </h1>
+          <p class="subtitle is-5">{{ post.date | date: '%B %d, %Y' }}</p>
+          <p>
+            {% if post.subtitle %}
+            {{ post.subtitle }}
+            {% else %}
+            {{ post.excerpt | strip_html | truncatewords: 25 }}
+            {% endif %}
+          </p>
+          {% endfor %}
+        </article>
+      </div>
+    </div>
   </div>
 </section>
-{% endfor %}
-
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-
-  <div class="clearfix">
-
-    {% if paginator.previous_page %}
-      <a class="float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer<span class="d-none d-md-inline"> Posts</span></a>
-    {% endif %}
-
-    {% if paginator.next_page %}
-      <a class="float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
-    {% endif %}
-
-  </div>
-
-{% endif %}
