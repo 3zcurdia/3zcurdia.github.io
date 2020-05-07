@@ -39,7 +39,6 @@ permalink: /about/resume
     - <small>Familiar with: Chef, Jenkins</small>
 
 ---
-<div class="page-break"></div>
 
 ### michelada.io
 *(February 2019 - Present)*<br/>
