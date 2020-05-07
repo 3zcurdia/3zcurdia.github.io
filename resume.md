@@ -1,62 +1,42 @@
 ---
 layout: page
-title: Resume
-description: "Useful info for recruiters"
+title: Luis Ezcurdia
 permalink: /about/resume
-background: /assets/images/about-bg.jpg
 ---
 
-<div class="pure-g">
-  <div class="pure-u-1-8 no-print">
-    <img class='rounded-circle' src='http://www.github.com/{{site.social.github}}.png' height='120px'/>
-  </div>
-  <div class="pure-u-1-4">
-    <h3>Luis Ezcurdia</h3>
-    <h4>Full Stack Developer</h4>
-  </div>
-  <div class="pure-u-1-4">
-    <h4>Contact</h4>
-    <small>
-      <a href="mailto:ing.ezcurdia@gmail.com"><i class="fa fa-envelope"></i> ing.ezcurdia@gmail.com</a><br/>
-      <!-- <a href="tel:+14155130394"><i class="fa fa-phone"></i> +1 (415) 513-0394</a><br/> -->
-      <a href="https://github.com/3zcurdia"><i class="fab fa-github"></i> Github</a><br/>
-      <a href="http://www.linkedin.com/in/3zcurdia"><i class="fab fa-linkedin"></i> Linkedin </a>
-    </small>
-  </div>
-  <div class="pure-u-3-8">
-    <div class='float-right no-print'>
-      <a class="btn btn-default btn-sm" href="#" onclick="window.print();return false;"><i class="fa fa-print"></i> Print</a>
-    </div>
-  </div>
-</div>
+<a class="is-pulled-right no-print" href="#" onclick="window.print();return false;">
+  <i class="fa fa-print"></i> Print
+</a>
+{% include business_card.html %}
 
-## <i class="fa fa-briefcase"></i> <time class="from_now_no_suffix">2009-10-01</time> of experience
+## <i class="fa fa-briefcase"></i> Experience
+#### <time class="from_now_no_suffix">2009-10-01</time> of experience
 
 ---
 
 ### <i class="fa fa-cogs"></i> Skill Set
 
   * Programming languages:
-    - <small>Proficient: **Ruby**, **Swift**</small>
-    - <small>Fluent: **Elixir**</small>
-    - <small>Familiar with: Javascript, Go, Python, Java, Objective-C, C, C++</small>
+    - <small>Proficient: **Ruby**</small>
+    - <small>Fluent: **Elixir**, **Swift**</small>
+    - <small>Familiar with: Javascript, Go, Python, Objective-C, C, C++</small>
   * Backend:
     - <small>Proficient: **Ruby and Rails**</small>
     - <small>Fluent: **Phoenix**, Sinatra, Roda</small>
     - <small>Familiar with: Grape, Negroni, Martini</small>
   * Frontend:
-    - <small>Proficient: **Cocoatouch**, **JQuery**</small>
+    - <small>Proficient: **UIKit**</small>
     - <small>Fluent: **JSNative**</small>
-    - <small>Familiar with: SwiftUI Vuejs, Emberjs, AngularJS</small>
+    - <small>Familiar with: Vuejs</small>
   * SQL Databases:
     - <small>Proficient: **Postgresql**</small>
     - <small>Familiar with: SQLite, MySQL</small>
   * NoSQL Databases:
-    - <small>Proficient: **PostgresJSON**, **Redis**</small>
-    - <small>Familiar with: MongoDB</small>
+    - <small>Proficient: **PostgresJSON**, **Redis**, **ETS**</small>
+    - <small>Familiar with: Mnesia, MongoDB</small>
   * DevOps tools:
     - <small>Fluent: Docker</small>
-    - <small>Familiar with: Chef, Habitat, Jenkins</small>
+    - <small>Familiar with: Chef, Jenkins</small>
 
 ---
 <div class="page-break"></div>
@@ -169,16 +149,14 @@ background: /assets/images/about-bg.jpg
 ---
 <div class="page-break"></div>
 
-### <i class="fa  fa-lightbulb-o"></i> Side projects
-* **[Amaca](https://github.com/3zcurdia/Amaca)**: Network layer oriented to services and codable protocol
+### <i class="far fa-lightbulb"></i> Side projects
+* **[GemAudit](https://gemaudit.herokuapp.com)**: Audit your gemfile and know the state of your dependencies.
+* ~~**[Amaca](https://github.com/3zcurdia/Amaca)**: Network layer oriented to services and codable protocol~~
 * ~~**Badger**: Beautiful badge system for coders based on github profile statistics~~
 * **[reportcopter](https://github.com/3zcurdia/reportcopter)**: Tool to generate changelog files using the git log
-* **[gbelt](https://github.com/3zcurdia/gbelt)**: Github tool belt to search, profile, and generate metrics on users and repositories
+* ~~**[gbelt](https://github.com/3zcurdia/gbelt)**: Github tool belt to search, profile, and generate metrics on users and repositories~~
 * **[waqi](https://github.com/3zcurdia/waqi)**: Air Quality Open Data Platform api wrapper
-* **[capybara page mapper](https://github.com/3zcurdia/capybara-page_mapper)**: Simple object mapper for page objects with capybara
-* ~~**color-schemes**: iOS App to help one man band developers to select their color palette~~
-* ~~**hacker meet**: iOS App to find and profile hackers based on their github profile~~
-* ~~**LaboraApp**: Job board app for the Faculty of Engineering at UNAM~~
+* ~~**[capybara page mapper](https://github.com/3zcurdia/capybara-page_mapper)**: Simple object mapper for page objects with capybara~~
 
 ### <i class="fa fa-bullhorn"></i> Speeches
 * ***"The Happy Developer Guide"*** Speaker at Happy Hacking Festival UNAM 2016 (November 2016)
@@ -199,35 +177,3 @@ background: /assets/images/about-bg.jpg
 * UNAM-DGTIC *(February - November 2016)*<br/>**Mobile Applications Development Diploma Course**
 * UNAM-DGTIC *(September 2010)*<br/>**OpenSceneGraph Workshop**
 * Facultad de Ingeniería UNAM *(2005–2009)*<br/>**Bachelor degree Computer Engineer**
-
-<script>
-$(function() {
-  var moment_date, text, time_tag, _i, _len, _ref;
-  _ref = $('time');
-  for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-    time_tag = _ref[_i];
-    text = $.trim($(time_tag).text());
-    moment_date = moment(text);
-    if (text.length > 0 && moment_date.isValid()) {
-      (function(time_tag) {
-        switch ($(time_tag).attr('class')) {
-          case 'ago':
-            return $(time_tag).text(moment_date.fromNow());
-          case 'from_now':
-            return $(time_tag).text(moment_date.endOf('day').fromNow());
-          case 'from_now_no_suffix':
-            return $(time_tag).text(moment_date.endOf('day').fromNow(true));
-          case 'long':
-            return $(time_tag).text(moment_date.format("dddd, MMMM D, YYYY [by] h:mma z"));
-          case 'short':
-            return $(time_tag).text(moment_date.format("MM/DD/YYYY"));
-          case 'timestamp':
-            return $(time_tag).text(moment_date.format("MM/DD/YYYY - h:mma z"));
-          case 'short_text':
-            return $(time_tag).text(moment_date.format("MMM D, YYYY"));
-        }
-      })(time_tag);
-    }
-  }
-});
-</script>

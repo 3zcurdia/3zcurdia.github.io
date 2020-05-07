@@ -1,17 +1,13 @@
-@import url("https://unpkg.com/purecss@1.0.0/build/pure-min.css");
-@import url("https://use.fontawesome.com/releases/v5.7.2/css/all.css");
-@import "vendor/pure-layout-blog/blog";
+@import "bulma";
 @import "syntax-highlighting";
 
-.content {
-  color: #424242;
+.sidebar {
+  background-color: white;
+  background-image: url(/assets/images/sidebar.jpg);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-img.rounded-circle {
-  border-radius: 50%;
-}
-
-.float-right { float: right; }
-.float-left { float: left; }
 
 @media print{
   .no-print,.no-print *, header, footer, .sidebar { display: none !important; }
