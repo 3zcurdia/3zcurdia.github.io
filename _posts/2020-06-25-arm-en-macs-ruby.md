@@ -1,7 +1,11 @@
 ---
-layout: posts
+layout: post
 title: ARM en la MAC, desdela perspectiva del developer
 description: ¿ARM-Based afectara los desarrollo de software?
+date: "2020-06-25T20:55:32-06:00"
+tags:
+  - apple
+  - arm
 ---
 
 Hace unos días Apple reveló sus planes de integrar procesadores con arquitectura ARM en sus equipos de escritorio, dejando a un lado los procesadores de Intel con  x86. Pero ¿qué significa esto para nosotros los developers?.
