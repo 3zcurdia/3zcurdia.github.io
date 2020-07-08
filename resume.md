@@ -19,7 +19,7 @@ permalink: /about/resume
   * Programming languages:
     - <small>Proficient: **Ruby**</small>
     - <small>Fluent: **Elixir**, **Swift**</small>
-    - <small>Familiar with: Javascript, Go, Python, Objective-C, C, C++</small>
+    - <small>Familiar with: Javascript, Go, Rust, Python, Objective-C, C, C++</small>
   * Backend:
     - <small>Proficient: **Ruby and Rails**</small>
     - <small>Fluent: **Phoenix**, Sinatra, Roda</small>
@@ -27,13 +27,10 @@ permalink: /about/resume
   * Frontend:
     - <small>Proficient: **UIKit**</small>
     - <small>Fluent: **JSNative**</small>
-    - <small>Familiar with: Vuejs</small>
-  * SQL Databases:
-    - <small>Proficient: **Postgresql**</small>
-    - <small>Familiar with: SQLite, MySQL</small>
-  * NoSQL Databases:
-    - <small>Proficient: **PostgresJSON**, **Redis**, **ETS**</small>
-    - <small>Familiar with: Mnesia, MongoDB</small>
+    - <small>Familiar with: SwiftUI</small>
+  * Databases:
+    - <small>Proficient: **Postgresql**, **Redis**</small>
+    - <small>Familiar with: SQLite, MySQL, ETS, Mnesia, MongoDB</small>
   * DevOps tools:
     - <small>Fluent: Docker</small>
     - <small>Familiar with: Chef, Jenkins</small>
@@ -164,9 +161,7 @@ permalink: /about/resume
 * ***"D Programming language: The Evolution of C++"***  Speaker at PUMASOL 2009 UNAM (April 2009)
 
 ### <i class="fa fa-university"></i> Workshops
-* Instructor at ***iOS Development Diploma course - 3rd Generation*** (UNAM iOSLab January 2019)
-* Instructor at ***iOS Development Diploma course - 2nd Generation*** (UNAM iOSLab August 2018)
-* Instructor at ***iOS Development Diploma course - 1st Generation*** (UNAM iOSLab January 2018)
+* Instructor at ***iOS Development Diploma course - 1st to 5th Generation*** (UNAM iOSLab January 2018 - present)
 * Instructor at ***Ruby Basic*** (Hackergarage June 2013)
 * Instructor at ***Python Basics*** course (April 2009)
 
