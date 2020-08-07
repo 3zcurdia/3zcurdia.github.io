@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ¿Necesitamos Background Jobs en Elixir?
-description: Tal vez no si conociéramos bien OTP
+description: Tal vez no, si conociéramos bien la OTP
 date: "2020-08-07T18:00:00-06:00"
 tags:
   - elixir
