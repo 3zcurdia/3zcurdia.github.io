@@ -92,7 +92,7 @@ iex> Example.Registry.find("something")
 {:ok, 21wqeds24354trgfdq2365ytgfde23465}
 ```
 
-Ahora, del lado del server tenemos una inicialización del estado init y manejadores. La función handle_cast nos permite hacer llamadas asíncronas que esperan una tupla `{:noreply, state}` como valor de retorno, mientras que handle_call espera una respuesta sincronía con la tupla {:reply, value, state}.
+Ahora, del lado del server tenemos una inicialización del estado init y manejadores. La función handle_cast nos permite hacer llamadas asíncronas que esperan una tupla `{:noreply, state}` como valor de retorno, mientras que handle_call espera una respuesta sincronía con la tupla `{:reply, value, state}`.
 El equivalente en Ruby sería tener un worker en el background job, un estado almacenado en un medio externo y un cliente que nos de acceso a él. Mientras que aquí, con el uso de un simple GenServer, tenemos una aplicación cliente-servidor asíncrona en unas cuantas líneas de código.
 
 ## ¿Entonces cuándo utilizo Background Jobs?
