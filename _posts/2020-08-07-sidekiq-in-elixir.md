@@ -86,6 +86,12 @@ end
 
 En este ejemplo podremos notar que hay mucho más código del que normalmente usaríamos en un worker de Ruby. Si lo analizamos a detalle notaremos que nuestro server cuenta con una pequeña arquitectura cliente-servidor. Por lo que utilizaríamos nuestro GenServer de la siguiente forma.
 
+```
+iex> Example.Registry.add("something")
+iex> Example.Registry.find("something")
+{:ok, 21wqeds24354trgfdq2365ytgfde23465}
+```
+
 Ahora, del lado del server tenemos una inicialización del estado init y manejadores. La función handle_cast nos permite hacer llamadas asíncronas que esperan una tupla `{:noreply, state}` como valor de retorno, mientras que handle_call espera una respuesta sincronía con la tupla {:reply, value, state}.
 El equivalente en Ruby sería tener un worker en el background job, un estado almacenado en un medio externo y un cliente que nos de acceso a él. Mientras que aquí, con el uso de un simple GenServer, tenemos una aplicación cliente-servidor asíncrona en unas cuantas líneas de código.
 
@@ -101,11 +107,10 @@ Existen otras opciones, sin embargo, son proyectos que no son tan populares y es
 
 Gracias a la OTP en Elixir contamos con una amplia gama de herramientas que nos facilitan el procesamiento concurrente y que podrian evitarnos incluir dependencias de terceros. En este post solo mencione algunas de ellas, pero valdría la pena que las revisaras por tu cuenta.
 
-- Task: https://hexdocs.pm/elixir/Task.html
-- GenServer: http://elixir-lang.org/getting-started/mix-otp/genserver.html
-- GenStage: https://hexdocs.pm/gen_stage/GenStage.html
-- Supervisor: http://elixir-lang.org/getting-started/mix-otp/supervisor-and-application.html
-- OTP: http://erlang.org/doc/
+- [Task](https://hexdocs.pm/elixir/Task.html)
+- [GenServer](http://elixir-lang.org/getting-started/mix-otp/genserver.html)
+- [GenStage](https://hexdocs.pm/gen_stage/GenStage.html)
+- [Supervisor](http://elixir-lang.org/getting-started/mix-otp/supervisor-and-application.html)
+- [OTP](http://erlang.org/doc/)
 
----
-[original](https://sipsandbits.com/2020/08/07/do-we-need-background-jobs-in-elixir/)
+[Fuente](https://sipsandbits.com/2020/08/07/do-we-need-background-jobs-in-elixir/)

@@ -36,4 +36,4 @@ Actualmente en el backend nuestros proyectos funcionan en la nube ya sea de Amaz
 En conclusión ARM es una tecnología con mas de 30 años en el mercado, que en la ultima década se ha incrustado en diversas industrias. Y gracias a su eficiencia térmica y consumo de energía, es muy atractiva para un futuro donde la eficiencia está por encima del performance en bruto. Y no debe  tomarnos por sorpresa este cambio tecnológico, porque nos guste o no Apple, lidera las tendencias en el mercado.
 
 ---
-[original](https://sipsandbits.com/2020/06/26/arm-based-macs-from-the-developers-perspective/)
+[Fuente](https://sipsandbits.com/2020/06/26/arm-based-macs-from-the-developers-perspective/)
