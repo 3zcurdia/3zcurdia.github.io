@@ -15,6 +15,9 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
+feed:
+  path: atom.xml
+
 social:
   github:  3zcurdia
   twitter: 3zcurdia
