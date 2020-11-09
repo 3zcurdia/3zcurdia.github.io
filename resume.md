@@ -26,14 +26,14 @@ permalink: /about/resume
     - <small>Familiar with: Grape, Negroni, Martini</small>
   * Frontend:
     - <small>Proficient: **UIKit**</small>
-    - <small>Fluent: **JSNative**</small>
+    - <small>Fluent: **JSNative**, **StimulusJS**</small>
     - <small>Familiar with: SwiftUI</small>
   * Databases:
     - <small>Proficient: **Postgresql**, **Redis**</small>
     - <small>Familiar with: SQLite, MySQL, ETS, Mnesia, MongoDB</small>
   * DevOps tools:
     - <small>Fluent: Docker</small>
-    - <small>Familiar with: Chef, Jenkins</small>
+    - <small>Familiar with: Ansible, Chef, Jenkins</small>
 
 ---
 
@@ -41,20 +41,24 @@ permalink: /about/resume
 *(February 2019 - Present)*<br/>
 **Senior Backend Engineer**
 
-  * Provide maintenance and improve to legacy applications
-  * Implement APIs for mobile carriers providers in latin america
-  * Implement core funcionality for patyments and fraud detection
-  * Implement real time package tracking system architecture
-  * Participate in training and sessions
+  * Lead and coordinate development teams in diverse products
+  * Provide maintenance and improvements to legacy applications
+  * Implement APIs for mobile carrier providers in LATAM
+  * Implement core functionality for payments and fraud detection
+  * Design and Implement real time package tracking system architecture
+  * Design and implement release processes
+  * Participate in training, and mentorship programs
 
 ### Apptegy
 *(February 2018 - January 2019)*<br/>
-**Software Engineer**
+**Senior Backend Engineer**
 
-  * Maintain and improve existent code base
-  * Implement tests for CI under rails engines architecture
+  * Build and design backend architecture for CMS system
+  * Perform maintenance over legacy platforms
+  * Increase test coverage in main project
+  * Perform improvements over architectural flaws
+  * Design and implement release process
   * Design and implement micro services
-  * Improve process by implementing best practices
 
 ### Unosquare
 *(July 2015 - February 2018)*<br/>
