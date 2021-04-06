@@ -80,7 +80,7 @@ En conclusion con la masificación del conocimiento (principalmente técnico), s
 
 ## Fuentes
 
-- [](El origen de la universidad)
+- [https://books.google.com.mx/books?hl=en&lr=&id=_k3pZxmPSVUC&oi=fnd&pg=PA7&dq=the+origin+of+universities&ots=OztiVVVemQ&sig=i_PJ-kfofucUYzkJg4FnW4sLJ7w&redir_esc=y#v=onepage&q=the%20origin%20of%20universities&f=false](What are universities for?)
 - [](La revolución industrial y la educación)
 - [](El nacimiento del computo moderno)
 - [](La democratización de la información)
