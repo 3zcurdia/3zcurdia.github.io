@@ -1,14 +1,14 @@
 ---
 layout: post
-title: The inmortal symbols
-description: Not everything in ruby pass through the GC
+title: Los simbolos inmortales
+description: Lo que el recolector de basura de ruby jamas limpiara
 date: "2021-05-20T18:00:00-06:00"
 tags:
   - elixir
   - ruby
 ---
 
-TL; DR; Valida siempre los nombres de los métodos admitidos cuando realices metaprogramación
+#### TL;DR; Valida siempre los nombres de los métodos admitidos cuando realices metaprogramación
 
 En ruby es muy común usar símbolos para todo, casi todo, ya que son más eficientes a la hora de realizar búsquedas o comparaciones que simples cadenas. Y gracias al recolector de basura no nos preocupamos por las asignaciones de memoria que usan nuestros símbolos. Sin embargo, hay un escenario en el que el recolector de basura los ignora y habilita "símbolos inmortales". El cual nunca será eliminado por el recolector de basura y vivirá para siempre en la memoria. Hagamos una pequeña prueba, usaremos ObjectSpace para fines prácticos y en este caso, solo nos enfocaremos en símbolos y cadenas.
 
