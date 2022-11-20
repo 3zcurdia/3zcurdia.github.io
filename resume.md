@@ -39,15 +39,18 @@ permalink: /about/resume
 
 ### michelada.io
 *(February 2019 - Present)*<br/>
-**Senior Backend Engineer**
+**Tech Lead Engineer**
 
-  * Lead and coordinate development teams in diverse products
-  * Provide maintenance and improvements to legacy applications
-  * Implement APIs for mobile carrier providers in LATAM
-  * Implement core functionality for payments and fraud detection
-  * Design and Implement real time package tracking system architecture
-  * Design and implement release processes
-  * Participate in training, and mentorship programs
+  * Implement and lead bootcamp to induce experienced developers into ruby
+  * Implement continuous training sessions for junior developers
+  * Implement ruby knowledge base for latin community
+  * Mentored developers to improve soft and hard skills
+  * Validate technical skills for candidates and onboarded team members
+  * Collaborate in carrier path planing program
+  * Tech lead in for remote collaborators application
+  * Tech lead for an incubator projects
+  * Design and Implement applications architecture
+  * Design and Implement DSLs
 
 ### Apptegy
 *(February 2018 - January 2019)*<br/>
