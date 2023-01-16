@@ -1,17 +1,17 @@
 ---
 layout: default
 ---
-<section class="section">
-  <div class="container">
-    <div class="columns is-mobile">
-      <div class="column is-three-quarters">
+<section class="">
+  <div class="">
+    <div class="">
+      <div class="">
         {{ content }}
-        <article class="content">
+        <article class="">
           {% for post in site.posts limit : 5 %}
-          <h1 class="title">
+          <h1 class="">
             <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
           </h1>
-          <p class="subtitle is-5">{{ post.date | date: '%B %d, %Y' }}</p>
+          <p class="">{{ post.date | date: '%B %d, %Y' }}</p>
           <p>
             {% if post.subtitle %}
             {{ post.subtitle }}
