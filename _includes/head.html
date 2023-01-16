@@ -9,16 +9,9 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ /atom.xml | relative_url }}">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/assets/css/styles.css">
   <script>
     tailwind.config = {
       theme: {
-        screens: {
-          sm: '480px',
-          md: '768px',
-          lg: '976px',
-          xl: '1440px',
-        },
         extend: {
           colors: {
             jet: "#353535",
@@ -29,4 +22,5 @@
       }
     }
   </script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>

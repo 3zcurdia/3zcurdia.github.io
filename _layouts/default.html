@@ -2,15 +2,11 @@
 <html lang="en-us">
   {% include head.html %}
   <body>
-    <main class="min-h-screen w-full bg-gray-100 text-gray-700">
-      <div class="">
-        <div class="">
-          {% include sidebar.html %}
-        </div>
-        <div class="">
-          {{ content }}
-          {% include footer.html %}
-        </div>
+    <main class="flex min-h-screen w-full bg-slate-100 text-slate-700">
+      {% include sidebar.html %}
+      <div class="container w-4/5">
+        {{ content }}
+        {% include footer.html %}
       </div>
     </main>
   </body>
