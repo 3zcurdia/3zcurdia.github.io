@@ -1,9 +1,0 @@
-@import "syntax-highlighting";
-
-@media print{
-  .no-print,.no-print *, header, footer, .sidebar { display: none !important; }
-  .page-break {
-    page-break-before: always;
-  }
-  .column.is-three-quarters { width: 100% !important; }
-}

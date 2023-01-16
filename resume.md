@@ -1,16 +1,17 @@
 ---
 layout: page
 title: Luis Ezcurdia
+description: Software Engineer
 permalink: /about/resume
 ---
 
-<a class="is-pulled-right no-print" href="#" onclick="window.print();return false;">
+<a class="float-right no-print" href="#" onclick="window.print();return false;">
   <i class="fa fa-print"></i> Print
 </a>
-{% include business_card.html %}
 
-## <i class="fa fa-briefcase"></i> Experience
-#### <time class="from_now_no_suffix">2009-10-01</time> of experience
+## <i class="fa fa-briefcase"></i> Introduction
+
+My name is Luis Ezcurdia, and I am a highly experienced software engineer with over a decade of expertise in the field, particularly in the Ruby programming language. I am proficient in this language and have utilized it extensively in the development and improvement of a diverse range of projects. As a professional, I am deeply committed to delivering high-quality work that meets the needs of my clients. My diverse interests, including food, photography, travel, and hobby collection, provide me with a unique perspective that allows me to approach problem-solving in new and innovative ways, understand and appreciate different cultures, have a keen eye for detail and stay current in my field.
 
 ---
 

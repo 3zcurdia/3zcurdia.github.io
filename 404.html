@@ -1,17 +1,15 @@
 ---
-layout: default
+layout: base
 ---
-
-<section class="">
-  <div class="">
-    <div class="">
-      <div class="">
-        <div class="">
-          <h1 class="">🤯 Oups!</h1>
-          <p><strong>404 - Page not found</strong></p>
-          <p>The requested page could not be found, maybe you got a typo in the link</p>
-        </div>
-      </div>
-    </div>
+<main class="h-screen w-full flex flex-col justify-center items-center bg-oxford-blue">
+  <h1 class="text-9xl font-extrabold text-white tracking-widest">404</h1>
+  <div class="bg-columbia-blue px-2 text-md rounded rotate-12 absolute">
+    Page Not Found
   </div>
-</section>
+  <button class="mt-5">
+    <a href="/" class="relative inline-block text-sm font-medium text-columbia-blue group active:text-indigo-dye focus:outline-none focus:ring">
+      <span class="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-columbia-blue group-hover:translate-y-0 group-hover:translate-x-0"></span>
+      <span class="relative block px-8 py-3 bg-oxford-blue border border-current">Go Home</span>
+    </a>
+  </button>
+</main>

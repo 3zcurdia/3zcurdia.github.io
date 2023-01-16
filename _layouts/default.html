@@ -1,29 +1,28 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  {% include head.html %}
-  <body>
-    <main class="flex flex-col md:flex-row w-full min-h-screen bg-slate-100 text-slate-700">
-      <div class="basis-1/4 bg-gradient-to-r from-indigo-dye to-oxford-blue text-slate-100">
-        <header class="mt-7 mx-5 text-right">
-          <div class="flex items-center columns-2">
-            <div class="w-full mx-3">
-              <p class="text-3xl font-bold uppercase">{{ site.title }}</p>
-              <p class="text-xl font-normal leading-tight">{{ site.description }}</p>
-            </div>
-            <a href="/" class="w-full">
-              <img class="max-w-full h-auto rounded-full" src="https://s.gravatar.com/avatar/acb85d71b90905e69b95fd02fbe6f828?s=128">
-            </a>
-          </div>
-          <div class="mt-2 mb-5 columns-1 text-center">
-            <a class="m-2 w-full text-xl" title="blog posts" href="{{"/posts" | relative_url }}"><i class="fa fa-bullhorn"></i> Blog</a>
-            <a class="m-2 w-full text-xl" title="about me" href="{{"/about" | relative_url }}"><i class="fa fa-address-card"></i> About</a>
-          </div>
-        </header>
+---
+layout: base
+---
+<div class="flex flex-col md:flex-row w-full min-h-screen">
+  <aside class="basis-1/4 bg-gradient-to-r from-indigo-dye to-oxford-blue text-slate-100">
+    <header class="mt-7 mx-5 text-right">
+      <div class="flex items-center columns-2">
+        <div class="w-full mx-3">
+          <p class="text-3xl font-bold uppercase">{{ site.title }}</p>
+          <p class="text-xl font-normal leading-tight">{{ site.description }}</p>
+        </div>
+        <a href="/" class="w-full">
+          <img class="max-w-full h-auto rounded-full" src="https://s.gravatar.com/avatar/acb85d71b90905e69b95fd02fbe6f828?s=128">
+        </a>
       </div>
-      <div class="basis-3/4">
-        {{ content }}
-        {% include footer.html %}
+      <div class="mt-2 mb-5 columns-1 text-center">
+        <a class="m-2 w-full text-xl" title="blog posts" href="{{"/posts" | relative_url }}"><i class="fa fa-bullhorn"></i> Blog</a>
+        <a class="m-2 w-full text-xl" title="about me" href="{{"/about" | relative_url }}"><i class="fa fa-address-card"></i> About</a>
       </div>
-    </main>
-  </body>
-</html>
+    </header>
+  </aside>
+  <section class="basis-3/4">
+    <div class="mt-7 mx-5">
+      {{ content }}
+      {% include footer.html %}
+    </div>
+  </section>
+</div>

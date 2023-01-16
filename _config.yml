@@ -4,10 +4,6 @@ email: ing.ezcurdia@gmail.com
 description: I like to build things
 url: http://3zcurdia.com/
 
-sass:
-  sass_dir: _sass
-  style: compressed
-
 markdown: kramdown
 paginate: 5
 paginate_path: "/posts/page:num/"
