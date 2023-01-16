@@ -23,14 +23,13 @@ permalink: /about/resume
   * Backend:
     - <small>Proficient: **Ruby and Rails**</small>
     - <small>Fluent: **Phoenix**, Sinatra, Roda</small>
-    - <small>Familiar with: Grape, Negroni, Martini</small>
   * Frontend:
-    - <small>Proficient: **UIKit**</small>
-    - <small>Fluent: **JSNative**, **StimulusJS**</small>
-    - <small>Familiar with: SwiftUI</small>
+    - <small>Proficient: **StimulusJS**</small>
+    - <small>Fluent: **SwiftUI**, **UIKit**</small>
   * Databases:
     - <small>Proficient: **Postgresql**, **Redis**</small>
-    - <small>Familiar with: SQLite, MySQL, ETS, Mnesia, MongoDB</small>
+    - <small>Fluent: MySQL, SQLite</small>
+    - <small>Familiar with: ETS, Mnesia, MongoDB</small>
   * DevOps tools:
     - <small>Fluent: Docker</small>
     - <small>Familiar with: Ansible, Chef, Jenkins</small>
@@ -39,17 +38,16 @@ permalink: /about/resume
 
 ### michelada.io
 *(February 2019 - Present)*<br/>
-**Tech Lead Engineer**
+**Staff Software Engineer**
 
-  * Implement and lead bootcamp to induce experienced developers into ruby
-  * Implement continuous training sessions for junior developers
-  * Implement ruby knowledge base for latin community
-  * Mentored developers to improve soft and hard skills
-  * Validate technical skills for candidates and onboarded team members
-  * Collaborate in carrier path planing program
-  * Tech lead in for remote collaborators application
+  * Design and implement backend architecture for a diverse projects
+  * Lead a development team remotely
+  * Mentor junior and mid level developers
+  * Implement and direct ruby bootcamp and training sessions
+  * Implement ruby knowledge base for spanish speaker community
+  * Asses technical skills for candidates and onboarding process
   * Tech lead for an incubator projects
-  * Design and Implement applications architecture
+  * Design and Implement architecture
   * Design and Implement DSLs
 
 ### Apptegy
@@ -153,13 +151,12 @@ permalink: /about/resume
 <div class="page-break"></div>
 
 ### <i class="far fa-lightbulb"></i> Side projects
-* **[GemAudit](https://gemaudit.herokuapp.com)**: Audit your gemfile and know the state of your dependencies.
-* ~~**[Amaca](https://github.com/3zcurdia/Amaca)**: Network layer oriented to services and codable protocol~~
-* ~~**Badger**: Beautiful badge system for coders based on github profile statistics~~
+* **[Anealing](https://github.com/3zcurdia/annealing)**: A ruby implementation of the annealing algorithm
+* **[Amaca](https://github.com/3zcurdia/Amaca)**: Network layer oriented to services and codable protocol.
 * **[reportcopter](https://github.com/3zcurdia/reportcopter)**: Tool to generate changelog files using the git log
-* ~~**[gbelt](https://github.com/3zcurdia/gbelt)**: Github tool belt to search, profile, and generate metrics on users and repositories~~
 * **[waqi](https://github.com/3zcurdia/waqi)**: Air Quality Open Data Platform api wrapper
-* ~~**[capybara page mapper](https://github.com/3zcurdia/capybara-page_mapper)**: Simple object mapper for page objects with capybara~~
+* ~~**[gbelt](https://github.com/3zcurdia/gbelt)**: Github tool belt to search, profile, and generate metrics on users and repositories~~ (deprecated)
+* ~~**[capybara page mapper](https://github.com/3zcurdia/capybara-page_mapper)**: Simple object mapper for page objects with capybara~~ (deprecated)
 
 ### <i class="fa fa-bullhorn"></i> Speeches
 * ***"The Happy Developer Guide"*** Speaker at Happy Hacking Festival UNAM 2016 (November 2016)
@@ -168,7 +165,7 @@ permalink: /about/resume
 * ***"D Programming language: The Evolution of C++"***  Speaker at PUMASOL 2009 UNAM (April 2009)
 
 ### <i class="fa fa-university"></i> Workshops
-* Instructor at ***iOS Development Diploma course - 1st to 5th Generation*** (UNAM iOSLab January 2018 - present)
+* Instructor at ***iOS Development Diploma course - 1st to 6th Generation*** (UNAM iOSLab January 2018 - present)
 * Instructor at ***Ruby Basic*** (Hackergarage June 2013)
 * Instructor at ***Python Basics*** course (April 2009)
 
