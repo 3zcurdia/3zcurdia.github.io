@@ -1,27 +1,21 @@
 ---
-layout: default
+layout: default 
 ---
-<section class="">
-  <div class="">
-    <div class="">
-      <div class="">
-        {{ content }}
-        <article class="">
-          {% for post in site.posts limit : 5 %}
-          <h1 class="">
-            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
-          </h1>
-          <p class="">{{ post.date | date: '%B %d, %Y' }}</p>
-          <p>
-            {% if post.subtitle %}
-            {{ post.subtitle }}
-            {% else %}
-            {{ post.excerpt | strip_html | truncatewords: 25 }}
-            {% endif %}
-          </p>
-          {% endfor %}
-        </article>
-      </div>
-    </div>
-  </div>
+<section class="content m-3">
+  {{ content }}
+  {% for post in site.posts limit : 5 %}
+  <article class="my-3">
+    <h1 class="text-2xl font-bold">
+      <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
+    </h1>
+    <p class="text-lg font-thin italic">{{ post.date | date: '%B %d, %Y' }}</p>
+    <p class="text-base font-light mt-2">
+      {% if post.subtitle %}
+      {{ post.subtitle }}
+      {% else %}
+      {{ post.excerpt | strip_html | truncatewords: 25 }}
+      {% endif %}
+    </p>
+  </article>
+  {% endfor %}
 </section>
