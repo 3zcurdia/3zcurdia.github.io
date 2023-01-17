@@ -2,21 +2,20 @@
 layout: default
 ---
 
-<section class="section">
-  <div class="container content">
-    <h1 class="title">{{ page.title }}</h1>
-    <h2 class="subtitle is-4 has-text-weight-light">
+<section class="">
+  <div class="">
+    <p class="">{{ page.title }}</p>
+    <p class="">
       {% if page.description %}
       {{ page.description }}
       {% endif %}
-    </h2>
+    </p>
     <hr>
-    <div class="columns is-mobile">
-      <div class="column is-three-quarters">
-        <div class="content">
-
+    <div class="">
+      <div class="">
+        <div class="">
+          {{ content }}
         </div>
-        {{ content }}
       </div>
     </div>
   </div>

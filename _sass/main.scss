@@ -1,13 +1,4 @@
-@import "bulma";
 @import "syntax-highlighting";
-
-.sidebar {
-  background-color: white;
-  background-image: url(/assets/images/sidebar.jpg);
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
 @media print{
   .no-print,.no-print *, header, footer, .sidebar { display: none !important; }
