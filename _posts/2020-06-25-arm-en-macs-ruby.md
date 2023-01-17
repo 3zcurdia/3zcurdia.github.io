@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ARM en la MAC, desdela perspectiva del developer
+title: ARM en la MAC, desde la perspectiva del developer
 description: ¿ARM-Based afectara los desarrollo de software?
 date: "2020-06-25T20:55:32-06:00"
 tags:

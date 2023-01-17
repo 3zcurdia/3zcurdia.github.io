@@ -1,26 +1,18 @@
 ---
 layout: default
 ---
-<section class="section">
-  <div class="container">
-    <div class="columns is-mobile">
-      <div class="column is-three-quarters">
-        <article class="content">
-          {% for post in site.posts limit : 20 %}
-          <h1 class="title">
-            <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
-          </h1>
-          <p class="subtitle is-5">{{ post.date | date: '%B %d, %Y' }}</p>
-          <p>
-            {% if post.subtitle %}
-            {{ post.subtitle }}
-            {% else %}
-            {{ post.excerpt | strip_html | truncatewords: 25 }}
-            {% endif %}
-          </p>
-          {% endfor %}
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
+{% for post in site.posts %}
+<article class="my-3">
+  <h1 class="text-2xl font-bold">
+    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
+  </h1>
+  <p class="text-lg font-thin italic">{{ post.date | date: '%B %d, %Y' }}</p>
+  <p class="text-base font-light mt-2">
+    {% if post.subtitle %}
+    {{ post.subtitle }}
+    {% else %}
+    {{ post.excerpt | strip_html | truncatewords: 35 }}
+    {% endif %}
+  </p>
+</article>
+{% endfor %}
