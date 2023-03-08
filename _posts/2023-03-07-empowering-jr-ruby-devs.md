@@ -11,9 +11,6 @@ tags:
   - community
 ---
 
-# The growth problem of Ruby in 2023
-The state of the community and the problem we will face in the future
-
 When I started my career as a developer, I was lucky to be part of a vibrant community that offered a wealth of resources for beginners. Resources like RailsCasts by Ryan Bates and Rails for Zombies by Code School were incredibly helpful in learning the ropes. However, as I progressed in my career, I noticed that the community was changing. There were fewer resources available for beginners, and the updates to the framework were becoming increasingly complex.
 
 Take the asset pipeline, for example. Sprockets used to be the default tool for managing assets in Rails, which was easy to understand and use. But with the switch to Webpacker, things got more advanced but less beginner-friendly, leaving developers to turn to Stack Overflow to figure things out. Now, with the latest release of Rails 7, the default tool has changed again, allowing the developers to select between importmaps, esbuild, webpacker, or rollup. This is a great improvement in flexibility, but since there are a lot of options, it can be overwhelming for beginners.
