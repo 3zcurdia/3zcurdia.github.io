@@ -2,7 +2,7 @@
 layout: post
 title: My Rails Way!
 description: Crafting Ruby on Rails applications with simplicity, patterns, and seamless integration of third-party services for maintainable and testable code.
-date: "2023-05-20T18:00:00-06:00"
+date: "2023-05-20T15:00:00-06:00"
 tags:
   - ruby on rails
   - architecture
