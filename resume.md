@@ -11,142 +11,67 @@ permalink: /about/resume
 
 ## <i class="fa fa-briefcase"></i> Introduction
 
-My name is Luis Ezcurdia, and I am a highly experienced software engineer with over a decade of expertise in the field, particularly in the Ruby programming language. I am proficient in this language and have utilized it extensively in the development and improvement of a diverse range of projects. As a professional, I am deeply committed to delivering high-quality work that meets the needs of my clients. My diverse interests, including food, photography, travel, and hobby collection, provide me with a unique perspective that allows me to approach problem-solving in new and innovative ways, understand and appreciate different cultures, have a keen eye for detail and stay current in my field.
+Senior Software Engineer with a passion for building robust and scalable products using Ruby and Ruby on Rails. With over 13 years of expertise, I have honed my skills as a tech lead and software architect. I thrive on challenging projects and possess a proven track record of delivering exceptional results. Additionally, I actively seek out opportunities to expand my knowledge and stay up-to-date with emerging technologies, ensuring I can provide innovative solutions that drive business success
+
 
 ---
 
-### <i class="fa fa-cogs"></i> Skill Set
+### <i class="fa fa-cogs"></i> Main Tech Stack
 
-  * Programming languages:
-    - <small>Proficient: **Ruby**</small>
-    - <small>Fluent: **Elixir**, **Swift**</small>
-    - <small>Familiar with: Javascript, Go, Rust, Python, Objective-C, C, C++</small>
-  * Backend:
-    - <small>Proficient: **Ruby and Rails**</small>
-    - <small>Fluent: **Phoenix**, Sinatra, Roda</small>
-  * Frontend:
-    - <small>Proficient: **StimulusJS**</small>
-    - <small>Fluent: **SwiftUI**, **UIKit**</small>
-  * Databases:
-    - <small>Proficient: **Postgresql**, **Redis**</small>
-    - <small>Fluent: MySQL, SQLite</small>
-    - <small>Familiar with: ETS, Mnesia, MongoDB</small>
-  * DevOps tools:
-    - <small>Fluent: Docker</small>
-    - <small>Familiar with: Ansible, Chef, Jenkins</small>
+  - Ruby, Ruby and Rails, Hotwire
+  - Elixir, Phoenix, LiveView
+  - Swift, SwiftUI, Rust
 
 ---
 
-### michelada.io
-*(February 2019 - Present)*<br/>
-**Staff Software Engineer**
+## Tech Lead, Mind Group, Remote CA, US *(Oct 2021 - Present)*
+I have successfully led developer teams and played a pivotal role in delivering from the Minimum Viable Product (MVP) to Full Fledges Products. By providing guidance and direction, I ensured the teams' efforts were aligned with project goals, resulting in efficient and timely deliveries.
 
-  * Design and implement backend architecture for a diverse projects
-  * Lead a development team remotely
-  * Mentor junior and mid level developers
-  * Implement and direct ruby bootcamp and training sessions
-  * Implement ruby knowledge base for spanish speaker community
-  * Asses technical skills for candidates and onboarding process
-  * Tech lead for an incubator projects
-  * Design and Implement architecture
-  * Design and Implement DSLs
+  * Led developer teams in the timely delivery of products, driving successful outcomes.
+  * Orchestrated complex refactoring and data migrations, seamlessly integrating existing
+users and traffic to minimize disruption and optimize performance.
+  * Acted as the architect for an application within an insurance company, enabling home inspectors to generate comprehensive property reports efficiently. This involved designing and implementing a robust product that met the specific needs of the industry.
+  * Contributed as an architect to an application enabling data warehouse integration with multiple sites, employing web scraping techniques to gather information effectively.
 
-### Apptegy
-*(February 2018 - January 2019)*<br/>
-**Senior Backend Engineer**
+### Sr Software Engineer, michelada.io, Remote CA, US *(February 2019 - Oct 2021)*
+  * Provided maintenance and improvements to legacy applications, implementing optimizations and addressing technical debt to enhance overall system reliability and performance.
+  * Successfully coordinated and led development teams, fostering collaboration and achieving project milestones within the specified timelines.
+  * Designed and implemented APIs for mobile carrier providers in LATAM, facilitating seamless integration and enabling efficient communication between different systems.
+  * Actively contributed to training and mentorship programs, empowering team members with the knowledge and skills necessary to excel in their roles.
 
-  * Build and design backend architecture for CMS system
-  * Perform maintenance over legacy platforms
-  * Increase test coverage in main project
-  * Perform improvements over architectural flaws
-  * Design and implement release process
-  * Design and implement micro services
+### Sr Software Engineer, Apptegy, Remote AK, US *(Feb 2018 - Jan 2019)*
+  * Designed and built the backend architecture for a Content Management System (CMS) system, ensuring scalability, performance, and maintainability. This involved leveraging best practices and industry standards to create a solid foundation for the application.
+  * Effectively maintained and improved legacy platforms, resolving issues and optimizing performance to enhance user experience and ensure system stability.
+  * Identified and rectified architectural flaws, implementing improvements that significantly enhanced system performance, scalability, and maintainability.
+  * Designed and implemented streamlined release processes, reducing deployment time and improving the overall efficiency of software updates.
+  * Successfully architected and implemented micro services, creating modular and scalable architectures that improved system flexibility and performance.
 
-### Unosquare
-*(July 2015 - February 2018)*<br/>
-**Lead Software Developer**
+### Tech Lead, Unosquare, Remote OR, US *(Jul 2015 - Jan 2018)*
+  * Developed strong leadership skills in managing remote development teams, fostering collaboration, and achieving project objectives.
+  * Streamlined deployment workflows, resulting in faster and more reliable releases with minimal disruption to end-users.
+  * Successfully reduced technical debt during major framework updates, improving system stability and maintainability while minimizing downtime.
+  * Designed and implemented API components, enabling seamless integration and secure communication between systems, enhancing overall system functionality.
+  * Successfully facilitated the transition process for HIPAA compliance, ensuring adherence to strict data privacy and security regulations.
+  * Designed and implemented reporting tools, empowering stakeholders with valuable insights and analytics for informed decision-making.
 
-  * Lead a development team remotely
-  * Implemented continuous integration servers and services
-  * Implemented deployment workflows
-  * Decrease application technical debt throughout mayor framework updates
-  * Designed and implement API components
-  * Conducted platform maintenance over legacy projects
-  * Refactor components to improve performance and scalability
-  * Design and implemented automation test suite workflows
-  * Conducted HIPAA compliance transition process
-  * Design and implemented reporting tools
+### Sr Software Engineer, PayByGroup, CA, US *(Mar 2014 - May 2015)*
+  * Successfully migrate existing components to a new payment platform, resulting in improved system performance and enhanced user experience.
+  * Implemented a robust refund mechanism for group payments, ensuring accurate and timely processing of refunds, thus enhancing customer satisfaction.
+  * Seamlessly integrated client systems in the property rental industry, enabling efficient data exchange and streamlining operations for these companies.
+  * Implemented additional features to enhance the user experience of the group payments platform, resulting in increased user engagement and satisfaction.
+  * Successfully facilitated the transition process for PCI compliance, ensuring adherence to strict payment regulations.
 
-### PayByGroup
-*(March 2014 - May 2015)*<br/>
-**Fullstack Developer**
+### Software Engineer, Software Allies, GDL, MX *(Dec 2012 - Feb 2014)*
+As a software engineer, I built an components for a CMS, CRM, notification system products, refactored existing code, and implemented a robust system for error tracking. Through these efforts, I improved test coverage and enhanced code quality.
 
-  * Designed components in payment processing for groups
-  * Designed and implemented internal tools for data analysis
-  * Designed components for processing refunds
-  * Oversaw the continuous integration system to facilitate a maintainable code throughout testing environments over parallel processing.
-  * Conducted platform maintenance
-  * Improved performance optimizations for background process and web application, reducing end user latency.
+### Jr Software Engineer, Zaaga, CDMX, MX *(Feb 2011 - Oct 2012)*
+As a software engineer, I implemented a high-traffic contests platform for online gaming, maintained and improved the technical debt of an application for e-sports betting, collaborated on infrastructure provision and maintenance, and successfully implemented a service-oriented architecture (SOA) service for an API betting system.
 
-### Software Allies
-*(December 2012 - February 2014)*<br/>
-**Software Engineer**
+### Software Engineer, Kemist, CA, US *(Oct 2011 - Dec 2011)*
+As a software engineer, I implemented backend services for an e-commerce platform, developed frontend pages for landing and marketing platforms, and collaborated on a service- oriented architecture (SOA) system built in Rails.
 
-  * Designed a training program to onboard and support new engineering team members.
-  * Conducted database maintenance to ensure robust database performance and a high level of data integrity.
-  * Oversaw the deployment system to facilitate regular integration and syncing between the testing environment where engineers could build new functionality and the live, fully deployed environment for the production applications to exist.
-  * Implemented a content management system for multiple projects to effectively create and update content on an ongoing basis.
-  * Designed web services for oil platforms management systems
-  * Implemented web services using emberjs
-
-### Power Systems MX
-*(January 2012 - March 2013)*<br/>
-**Technical Founder**
-
-  * Designed an enterprise architecture for Software As A Service platform
-  * Realized business analysis for several clients
-  * Realized project management for PowerSystems Product
-  * Lead Developer on e-commerce products
-
-### Winmart Group
-*(February 2012 - October 2012)*<br/>
-**Fullstack Junior developer**
-
-  * Monitored and implemented cloud deployment processes to launch applications developed by the senior engineering teams.
-  * Provided load balancing for servers used by the senior engineers.
-  * Conducted database maintenance to ensure optimal application performance.
-  * Conducted exploratory testing to identify bottlenecks in performance to be addressed by the senior engineers.
-  * Provided recommendations and reports to direct application improvements in performance and robustness.
-
-### Kemists
-*(October2011 - December 2011)*<br/>
-**Software Engineer (Independent Contractor)**
-
-  * Conducted research to facilitate the proper design of a system that could serve a load of over a million deliveries per day.
-  * Deployed a series of e-commerce applications to cloud-based servers after completion of development by the senior engineering team.
-  * Monitored the processes that ensure test-driven development to maintain a high level of quality in the application engineering process with minimal flaws
-
-### UNAM-DGTIC
-#### Dirección General de Tecnologías de la Información y Comunicación
-*(April 2011 - September 2011) **Process Chief** at Scientific Visualization Department*<br/>
-*(July 2010 - March 2011) **Systems administrator** at Observatory Ixtli*<br/>
-
-  * Monitored the performance and maintenance of the supercomputing equipment used for the virtual reality observatory under the guidance of the primary scientific investigators using the observatory.
-  * Maintained the software packages used in the supercomputing clusters that powered the observatory.
-  * Conducted data analysis using internally implemented tools to provide insights to improve performance and understand the results of the primary investigators.
-  * Provided documentation for the specification of the EOS file format.
-  * Facilitated the importing and exporting of data with the 3D manipulation software used by the primary investigators.
-
-### UNAM-DGSCA
-#### Dirección General de Servicios de Computo Académico
-*(October 2009 – June 2010) Virtual Reality Department*<br/>
-**Intern at Ixtli project**
-
-  * Managed web servers and control version systems.
-  * Provided support to the infrastructure of the Virtual Reality Department.
-  * Designed and developed internal tools for the Virtual Reality Department.
-  * Designed and developed tools for 3D files, optimizing real time applications.
-  * Collaborated on the 3D collection for the Visualization Department.
+### System Administrator, UNAM DGTIC, CDMX, MX *(July 2010 - Sep 2011)*
+As a sysadmin, I maintained the existing infrastructure for a virtual reality department and implemented a projects repository catalog app
 
 ---
 <div class="page-break"></div>
@@ -173,6 +98,7 @@ My name is Luis Ezcurdia, and I am a highly experienced software engineer with o
 ---
 
 ### <i class="fa fa-graduation-cap"></i> Education
+* Bunsan Academy *(2021)*<br/> **Software Architecture**
 * UNAM-DGTIC *(February - November 2016)*<br/>**Mobile Applications Development Diploma Course**
 * UNAM-DGTIC *(September 2010)*<br/>**OpenSceneGraph Workshop**
 * Facultad de Ingeniería UNAM *(2005–2009)*<br/>**Bachelor degree Computer Engineer**
