@@ -22,13 +22,13 @@ Instead of relying on specialized frontend and backend teams, companies are now 
 
 A decade ago, we began hearing about modern JavaScript frameworks like Ember or Angular. The advent of Single-Page Applications (SPAs) prompted the division of frontend and backend teams. However, with the emergence of React, the tech world witnessed an explosive growth where everyone aspired to emulate Facebook and utilize their exceptional framework. Undeniably, React is a remarkable tool. However, this trend further widened the gap between frontend and backend development. Nowadays, we often witness specialized teams focused only on React on the frontend, while separate teams handle API development on the backend. Consequently, it appears that building a web application, regardless of a company's size, necessitates the collaboration of both teams comprising skilled and experienced engineers.
 
-# Comunication channels does not scale
+# Communication channels does not scale
 
 Another challenge stemming from specialization is communication. Software development extends beyond mere code; effective communication among team members is crucial. However, communication channels pose a combinatorial problem. For instance, in a team of four individuals, the number of communication channels amounts to six. Adding just one more person increases the channels to ten, and each additional team member grows the count exponentially. This issue becomes problematic as the team size grows, leading to an increased amount of time spent in meetings rather than actual product development. This is where cohesive teams excel. By enabling full stack development within a team, the workforce can be reduced, resulting in a decrease in the number of communication channels.
 
 However, a challenge arises as backend developers may not be willing to delve into frontend code. Why is that? The ecosystem surrounding frontend development, particularly JavaScript (JS) and CSS, can be vast. Furthermore, the learning curve associated with component-based frameworks such as React or Vue can be significant. As a result, developers' time allocation may increase due to the additional learning requirements and complexities involved.
 
-# liveview and hotwire, frameworks that are changing the game
+# Liveview and Hotwire, frameworks that are changing the game
 
 To address this challenge, we have Liveview and Hotwire frameworks. Liveview empowers developers to create reactive web applications using the Phoenix framework, while Hotwire offers a similar capability for Rails. Both frameworks are built on websockets and enable the development of reactive web applications without relying heavily on JavaScript. This breakthrough is truly revolutionary as it allows a single team to engage in full stack development without being heavily dependent on JavaScript. This is an enormous advantage for the monolith architecture.
 
