@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "The Implications of Serverless Architecture: Beyon the Hype"
+title: "The Implications of Serverless Architecture: Beyond the Hype"
 description: Navigating the realities and strategies of Serverless Architecture
-date: "2023-06-11T15:00:00-06:00"
+date: "2023-06-11T13:00:00-06:00"
 tags:
   - architecture
   - microservices
