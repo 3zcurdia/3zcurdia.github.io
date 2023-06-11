@@ -16,7 +16,7 @@ In recent years, cloud providers have been promoting serverless architecture as 
 
 The essence of serverless architecture lies in the execution of on-demand, stateless functions managed by the cloud provider. These functions run on scalable servers, adjusting to demand as required. By breaking down your system into multiple functions, you can achieve easier maintenance and cost efficiency. When the domain is well-defined, serverless architecture serves as a viable alternative to microservices.
 
-## Domains not well defined
+## Domains harder to define
 
 Event-driven design plays a central role in a serverless architecture. However, when developers are unfamiliar with this paradigm, it can lead to a chaotic situation. From its inception, serverless architecture abstracts away the context of a domain. In the early stages of a project, when many unknowns exist, multiple changes are expected. As these changes occur, patterns emerge, and the domains gradually become better defined over time. When starting a project with a serverless approach without a clear understanding of the domain, it can result in a chaotic architecture.
 
