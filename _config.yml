@@ -18,3 +18,10 @@ social:
   github: 3zcurdia
   twitter: 3zcurdia
   linkedin: 3zcurdia
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - AGENTS.md
+  - LICENSE
