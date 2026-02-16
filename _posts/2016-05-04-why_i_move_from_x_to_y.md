@@ -3,7 +3,6 @@ layout: post
 title: "5 reasons I move form X to Y programming language?"
 description: "The wrong reasons to switch programming language"
 date: "2016-05-04T22:50:05-05:00"
-background: /assets/images/post-bg.jpg
 tags:
   - programming languages
   - essay

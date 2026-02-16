@@ -3,7 +3,6 @@ layout: post
 title: "Benchmark tools for Rubyist"
 description: "4 useful tools to benchmark and profile your web application."
 date: 2015-12-12T13:37:48-06:00
-background: /assets/images/post-bg.jpg
 tags:
   - coding
   - tip
@@ -43,7 +42,7 @@ Getting as result but sometimes you need to get a better comparison.
     Rehearsal ------------------------------------------------
     string = ''    1.740000   0.010000   1.750000 (  1.755114)
     string.clear   1.550000   0.000000   1.550000 (  1.565770)
-    --------------------------------------- total: 3.300000sec        
+    --------------------------------------- total: 3.300000sec
 
                    user     system      total        real
     string = ''    1.740000   0.010000   1.750000 (  1.750512)
@@ -52,7 +51,7 @@ Getting as result but sometimes you need to get a better comparison.
 To get a more clear result you can use `benchmark-ips` which it will benchmark by iterations per second.
 
 {% highlight ruby linenos %}
-    require 'benchmark/ips'    
+    require 'benchmark/ips'
 
     n = 10_000_000
     Benchmark.ips do |x|
@@ -81,7 +80,7 @@ Getting a better presentation results in terms of comparsion
             string.clear     1.000  i/100ms
     -------------------------------------------------
              string = ''      0.548  (± 0.0%) i/s -      3.000  in   5.478312s
-            string.clear      0.608  (± 0.0%) i/s -      4.000  in   6.582271s  
+            string.clear      0.608  (± 0.0%) i/s -      4.000  in   6.582271s
 
     Comparison:
             string.clear:        0.6 i/s

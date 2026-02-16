@@ -3,7 +3,6 @@ layout: post
 title: "Speed things up with Go"
 description: "A use case with go and concurrency to improve speed"
 date: "2015-06-04T22:22:27-05:00"
-background: /assets/images/post-bg.jpg
 tags:
   - ruby
   - go

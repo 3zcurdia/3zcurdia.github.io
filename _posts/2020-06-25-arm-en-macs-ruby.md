@@ -8,31 +8,34 @@ tags:
   - arm
 ---
 
-Hace unos días Apple reveló sus planes de integrar procesadores con arquitectura ARM en sus equipos de escritorio, dejando a un lado los procesadores de Intel con  x86. Pero ¿qué significa esto para nosotros los developers?.
+A few days ago, Apple revealed its plans to integrate ARM-based processors into its desktop computers, leaving Intel's x86 processors behind. But what does this mean for us developers?
 
-Hoy, en la gran mayoría de proyectos, no nos preocupa pensar en la arquitectura a la cual será destinado nuestro software. Esta carga  la llevan los compiladores que actualmente nos permiten distribuir nuestro software para distintas plataformas. Lo cual no significa que dejemos desatendido el problema en el mediano y largo plazo.
+Today, in the vast majority of projects, we don't worry about the architecture our software will run on. This burden falls on the compilers that currently allow us to distribute our software for different platforms. However, this doesn't mean we'll ignore the issue in the medium and long term.
 
-## ARM esta en todos lados
+## ARM is everywhere
 
-Primero que nada hablemos del elefante en el cuarto. La arquitectura ARM está en todos lados, desde nuestros dispositivos móviles hasta nuestros vehículos, e incluso en nuestras consolas y tarjetas gráficas. Esto debido a que el modelo de negocio de ARM no es la manufactura, sino el diseño y licenciamiento de sus procesadores. Por ello, compañias como AMD, Qualcom, Nvida, Nintendo, Apple, entre otros pueden tener sus propios chips a la medida a un bajo costo. Además que con el inernet de las cosas, los fabricantes de gadgets tienen suficiente poder de procesamiento a un bajo consumo de energía. Y es por ello que en la última década ha explotado este mercado, y seguramente hay un procesador ARM cerca de ti.
+First, let's address the elephant in the room. ARM architecture is everywhere, from our mobile devices to our vehicles, and even in our consoles and graphics cards. This is because ARM's business model isn't manufacturing, but rather designing and licensing its processors. Therefore, companies like AMD, Qualcomm, Nvidia, Nintendo, Apple, and others can have their own custom chips at a low cost. Furthermore, with the Internet of Things, gadget manufacturers have sufficient processing power with low energy consumption. This is why this market has exploded in the last decade, and there's probably an ARM processor near you.
 
-## Lenguajes de Alto nivel
+## High-Level Languages
 
-La gran mayoría de nosotros trabajamos con lenguajes de muy alto nivel y en nuestro trabajo del día a día no nos enfocamos en cuestiones de bajo nivel, como compatilibildad para distintos procesadores. Como ya mencioné antes, esta carga de trabajo se lo dejamos a los compiladores, los cuales nos permiten tener binarios para cualquier arquitectura. En el caso de Java, con la introducción de Android, su la maquina virtual tuvo que ser capaz de funcionar en procesadores ARM y lo único que hizo la comunidad de desarrollo fue adaptar el ecosistema a recursos limitados y mejorar el perfomance. En el caso de lenguajes que dependen de un intérprete, como es el caso de Ruby o Python, funcionan perfectamente bien en sistemas embebidos o en la Paspbery pi. Inclusive en Japón, el uso de Ruby se enfoca más en este tipo de sistemas. Así que este cambio no debería preocuparnos a la gran mayoría.
+The vast majority of us work with very high-level languages, and in our day-to-day work, we don't focus on low-level issues, such as compatibility with different processors. As I mentioned before, we leave this workload to compilers, which allow us to have binaries for any architecture. In the case of Java, with the introduction of Android, its virtual machine had to be able to run on ARM processors, and all the development community did was adapt the ecosystem to limited resources and improve performance. In the case of languages ​​that depend on an interpreter, such as Ruby or Python, they work perfectly well on embedded systems or the Raspberry Pi. Even in Japan, Ruby's use is more focused on these types of systems. So this change shouldn't worry most of us.
 
-## Dependencias de terceros
+## Third-Party Dependencies
 
-Sin embargo, no todo el codigo que producimos viene de nuestras manos. Muchas veces dependemos de el trabajo de otros, que a su vez depdenden de otros y así sucesivamente. Esta práctica del software libre nos ha facilitado la vida y gracias a ella hemos evitado reinventar la rueda en cada proyecto. Sin embargo, es posible que tengamos dependencias que estén atadas a cierta arquitectura, y esto puede estar pasando sin que nos demos cuenta.  
-Para evitarlo tenemos que probar nuestro código en distintas plataformas. La opción más accesible sería probar nuestro proyecto de producción en una RaspberryPI o BeagleBone. Tal vez nuestro software require mucho más poder de procesamiento, pero por lo menos sabremos si en un futuro cercano nuestra dependencias funcionan, o si necesitamos hacer ajustes.
+However, not all the code we produce comes from our own hands. Often, we depend on the work of others, who in turn depend on others, and so on. This practice of free software has made our lives easier, and thanks to it, we've avoided reinventing the wheel with each project. However, we might have dependencies tied to a certain architecture, and this could be happening without us even realizing it.
 
-## Pero funciona en mi local
+To avoid this, we need to test our code on different platforms. The most accessible option would be to test our production project on a Raspberry Pi or BeagleBone. Perhaps our software requires much more processing power, but at least we'll know if our dependencies work in the near future, or if we need to make adjustments.
 
-Para aquellos que estan familizazados con esta frase, "Brace yourself" porque si eres backend developer, es posible que lo digamos aun mas amenudo de lo que estamos acostumbramos. Ya que la diferencia en el set de instrucciones de nuestros ambientes de desarrollo con nuestros ambientes de producción será considerable. Aunque si hacemos la transición bien, los problemas en ambientes de desarrollo podrían ser molestos pero manejables.
-Afortunadamente, el desarrollo movil se vería beneficiado ya que las applicaciones estarían desarrolladas en ambientes muy cercanos a los dispositivos móviles. Tanto el emulador de Android y el simulador de iOS tendrían una ventaja significativa.
+## But it works in my local environment
 
-## ¿ARM en el server?
+For those familiar with the phrase "Brace yourself," because if you're a backend developer, you might find yourself saying it even more often than you're used to. The difference in the instruction set between our development and production environments will be considerable. However, if we make the transition well, the problems in development environments might be annoying but manageable.
 
-Actualmente en el backend nuestros proyectos funcionan en la nube ya sea de Amazon, Google, u otro. Y si bien, el mercado de centros de datos esta enteramente dominado por Intel, esto no quiere decir que estas compañias de servicios en la nube no esten buscando alternativas con un mejor costo beneficio. En términos económicos reducir costos de energía y refrigeración pueden tener un gran impacto en las utilizades de estas compañias. Ya que alimentar y mantener a una temperatura de operación óptima estas instalaciones es realmente costoso. Por lo que en un futuro cercano sea más común ver opciones "eco-frendly" en el backend, sin la necesidad de sacrificar performance.
-En conclusión ARM es una tecnología con mas de 30 años en el mercado, que en la ultima década se ha incrustado en diversas industrias. Y gracias a su eficiencia térmica y consumo de energía, es muy atractiva para un futuro donde la eficiencia está por encima del performance en bruto. Y no debe  tomarnos por sorpresa este cambio tecnológico, porque nos guste o no Apple, lidera las tendencias en el mercado.
+Fortunately, mobile development would benefit since applications would be developed in environments very close to mobile devices. Both the Android emulator and the iOS simulator would have a significant advantage.
+
+## ARM on the server?
+
+Currently, our backend projects run in the cloud, whether it's Amazon, Google, or another provider. And while the data center market is entirely dominated by Intel, this doesn't mean that these cloud service companies aren't looking for more cost-effective alternatives. In economic terms, reducing energy and cooling costs can have a significant impact on these companies' profits, since powering and maintaining these systems at optimal operating temperatures is extremely expensive. Therefore, in the near future, we will likely see more eco-friendly options in the backend, without sacrificing performance.
+
+In conclusion, ARM is a technology with over 30 years in the market, which has become embedded in various industries in the last decade. Thanks to its thermal efficiency and low energy consumption, it is very attractive for a future where efficiency takes precedence over raw performance. This technological shift shouldn't surprise us, because whether we like it or not, Apple leads the market trends.
 
 [Fuente](https://sipsandbits.com/2020/06/26/arm-based-macs-from-the-developers-perspective/)

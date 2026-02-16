@@ -2,7 +2,6 @@
 layout: post
 title: "Lessons Learned from a computer graphics background"
 date: "2016-04-22T09:46:47-05:00"
-background: /assets/images/post-bg.jpg
 tags:
   - programming languages
   - computer graphics
@@ -74,7 +73,7 @@ need to write more code to do the same things that a few lines of ``Ruby`` or ``
 Being fast is expensive in terms of development effort, but sometimes is not worthy to load an entire page in nanoseconds,
 the business logic should not depend on the fast page delivery, but on the quality of the service you provide,
 and the ability to change fast and evolve with a changing market. Where you need to be more efficient is on your business
-not in the nanosecond window.  
+not in the nanosecond window.
 
 ## Don't build everything you need
 

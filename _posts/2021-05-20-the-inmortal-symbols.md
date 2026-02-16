@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Los simbolos inmortales
-description: Lo que el recolector de basura de ruby jamas limpiara
+title: The inmortal symbols
+description: What Ruby's garbage collector will never clean
 date: "2021-05-20T18:00:00-06:00"
 tags:
   - elixir
   - ruby
 ---
 
-#### TL;DR; 
-> Siempre Valida los nombres de los métodos admitidos cuando realices metaprogramación.
+#### TL;DR;
+> Always validate the names of the allowed methods when performing metaprogramming.
 
-En ruby es muy común usar símbolos para todo, casi todo, ya que son más eficientes a la hora de realizar búsquedas o comparaciones que simples cadenas. Y gracias al recolector de basura no nos preocupamos por las asignaciones de memoria que usan nuestros símbolos. Sin embargo, hay un escenario en el que el recolector de basura los ignora y habilita "símbolos inmortales". El cual nunca será eliminado por el recolector de basura y vivirá para siempre en la memoria. Hagamos una pequeña prueba, usaremos ObjectSpace para fines prácticos y en este caso, solo nos enfocaremos en símbolos y cadenas.
+In Ruby, it's very common to use symbols for almost everything, as they are more efficient for searches and comparisons than simple strings. And thanks to the garbage collector, we don't have to worry about the memory allocations used by our symbols. However, there's a scenario where the garbage collector ignores them and enables "immortal symbols." These symbols will never be removed by the garbage collector and will live in memory forever. Let's run a small test. We'll use ObjectSpace for practical purposes, and in this case, we'll focus only on symbols and strings.
 
-En la ejecución tenemos el siguiente resultado
+The execution yields the following result
 
 ```ruby
 require 'objspace'
@@ -30,9 +30,9 @@ GC.start
 puts ObjectSpace.count_objects.slice(:T_SYMBOL, :T_STRING)
 ```
 
-Como podemos ver al principio tenemos varias cadenas y símbolos cuando llamamos a SecureRandom.hex instanciamos una cadena y luego se convierte en un símbolo, ya que no se usa ninguno, el recolector de basura elimina estos símbolos y algunas otras cadenas.
+As we can see at the beginning, we have several strings and symbols. When we call `SecureRandom.hex`, we instantiate a string, and then it's converted into a symbol. Since neither is used, the garbage collector removes these symbols and some other strings.
 
-Ahora, supongamos que tenemos algo de metaprogramación en nuestro código, para lo cual usaremos `method_missing`, `send` y `define_method`
+Now, let's assume we have some metaprogramming in our code, for which we'll use `method_missing`, `send`, and `define_method`.
 
 ```ruby
 require 'objspace'
@@ -71,7 +71,7 @@ $ ruby inmortal.rb
 {:T_SYMBOL=>28, :T_STRING=>7787}
 ```
 
-¿Que pasó aquí? Cuando generamos 10 nuevos símbolos que nunca generamos. Para depurar agregaremoa a `method_missing`
+What happened here? When we generated 10 new symbols that we never generated before. To debug, we'll add `method_missing`.
 
 ```ruby
    def method_missing(method, *args, &block)
@@ -81,7 +81,7 @@ $ ruby inmortal.rb
   end
 ```
 
-y ahora pasa esto
+and now this happens
 
 ```shell
 {:T_SYMBOL=>28, :T_STRING=>10135}
@@ -99,7 +99,7 @@ Symbol
 {:T_SYMBOL=>38, :T_STRING=>7793}
 ```
 
-Ok, aparentemente `method_missing` está recibiendo un símbolo, ok pero ¿quién lo está enviando?, investiguemos dentro del método `send`
+Okay, apparently `method_missing` is receiving a symbol, okay, but who is sending it? Let's investigate inside the `send` method.
 
 ```ruby
   def send(method, *args, &block)
@@ -108,7 +108,7 @@ Ok, aparentemente `method_missing` está recibiendo un símbolo, ok pero ¿quié
   end
 ```
 
-y tenemos
+and we have
 
 ```shell
 $ ruby inmortal.rb
@@ -137,20 +137,21 @@ Symbol
 {:T_SYMBOL=>38, :T_STRING=>7794}
 ```
 
-Por lo tanto, el método `send` se llama dos veces, la primera vez como una cadena y luego llama al `metho_missing` y la convierte a al símbolo. Esto tiene sentido ya que la documentacion dice
+Therefore, the `send` method is called twice: first as a string, and then the `method_missing` method is called and converted back to a symbol. This makes sense, as the documentation states:
 
 > Send: Invokes the method identified by symbol, passing it any arguments specified. When the method is identified by a string, the string is converted to a symbol.
 
-De acuerdo, ya determinamos quién se convierte en símbolos, pero ¿por qué el recolector de basura nunca elimina esos símbolos?
+Okay, we've determined what gets converted to symbols, but why doesn't the garbage collector ever remove those symbols?
 
-Vamos a profundizar, si modificamos nuestra prueba para ver los métodos definidos en nuestra clase tendremos algo mas de informacion a detalle
+Let's delve deeper. If we modify our test to examine the methods defined in our class, we'll get more detailed information.
 
 ```ruby
 puts my_inmortal.methods.count
 10.times { my_inmortal.send(SecureRandom.hex) }
 puts my_inmortal.methods.count
 ```
-y conseguiremos
+
+and we will get
 
 ```shell
 $ ruby inmortal.rb
@@ -161,9 +162,9 @@ $ ruby inmortal.rb
 {:T_SYMBOL=>38, :T_STRING=>7793}
 ```
 
-Como podemos ver, nuestra instancia de clase tiene 10 nuevas definiciones de métodos que son símbolos, por lo tanto, el recolector de basura ignora esas referencias ya que pertenecen a una instancia de objeto. Incluso si la instancia del objeto se elimina por completo, la referencia a los métodos de ese objeto permanecen para siempre.
+As we can see, our class instance has 10 new method definitions that are symbols; therefore, the garbage collector ignores these references since they belong to an object instance. Even if the object instance is completely deleted, the references to that object's methods remain forever.
 
-Entonces, ¿cómo podemos evitar estas pérdidas de memoria? Simplemente evitando la creación de métodos no deseados
+So, how can we avoid these memory leaks? Simply by avoiding the creation of unwanted methods.
 
 ```ruby
 require 'objspace'
@@ -199,7 +200,7 @@ GC.start
 puts ObjectSpace.count_objects.slice(:T_SYMBOL, :T_STRING)
 ```
 
-Resultando con algo asi
+Resulting in something like this
 
 ```shell
 $ ruby inmortal.rb
@@ -208,9 +209,9 @@ $ ruby inmortal.rb
 {:T_SYMBOL=>38, :T_STRING=>7805}
 ```
 
-Como podemos ver, cuando validamos tanto en "respond_to_missing" como en "method_missing" se evita la creación de un nuevo método, por lo tanto no habrá símbolos "inmortales", entonces solo los requeridos para la instancia.
+As we can see, when we validate both `respond_to_missing` and `method_missing`, we prevent the creation of a new method. Therefore, there will be no "immortal" symbols, only those required for the instance.
 
-Basicamente prodrias hacer una bomba de memoria en ruby haciendo algo asi
+Basically, you could create a memory bomb in Ruby by doing something like this.
 
 ```ruby
 require 'SecureRandom'
@@ -225,7 +226,4 @@ end
 loop { Bomb.new.send(SecureRandom.hex) }
 ```
 
-Asi que ya lo sabes ten cuidado con el uso de simbolos cuando hagas metaprogamación.
-
-
-
+So now you know, be careful with the use of symbols when doing metaprogramming.

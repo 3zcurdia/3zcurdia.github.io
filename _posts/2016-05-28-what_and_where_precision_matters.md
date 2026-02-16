@@ -3,7 +3,6 @@ layout: post
 title: "What and where precision matters"
 description: "Examples and precision benchmarks"
 date: "2016-05-28T07:35:00-05:00"
-background: /assets/images/post-bg.jpg
 tags:
   - ruby
   - algorithms
@@ -41,7 +40,7 @@ As in an article recent published [here](http://www.jpl.nasa.gov/edu/news/2016/3
 
 I generate an SQLite database with around 1.5M data points and copy the values in four different data types:
 
-* Integer: using the four first decimals  
+* Integer: using the four first decimals
 * Integer: using the eight first decimals
 * Real: using the float value
 * Text: as it is from the source to be parsed within a BigDecimal
@@ -59,12 +58,12 @@ DB = SQLite3::Database.new 'data.db'
 
 def sum_int
   rows = DB.execute("SELECT value_int FROM points")
-  rows.flatten.map(&:to_i).inject(:+).to_i  / 10_000.0  
+  rows.flatten.map(&:to_i).inject(:+).to_i  / 10_000.0
 end
 
 def sum_big_int
   rows = DB.execute("SELECT value_big_int FROM points")
-  rows.flatten.map(&:to_i).inject(:+).to_i  / 100_000_000.0  
+  rows.flatten.map(&:to_i).inject(:+).to_i  / 100_000_000.0
 end
 
 def sum_real

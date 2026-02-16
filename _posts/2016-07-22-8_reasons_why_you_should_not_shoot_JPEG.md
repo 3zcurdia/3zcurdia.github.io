@@ -3,7 +3,6 @@ layout: post
 title: "8 Reasons Why You Should NOT Shoot in JPEG"
 description: "The math behind JPEG compression algorithms and why you should shoot RAW"
 date: "2016-07-22T13:47:50-05:00"
-background: /assets/images/post-bg.jpg
 tags:
   - math
   - computer science

@@ -3,7 +3,6 @@ layout: post
 title: "Heroku hybrid application with Go and Ruby"
 description: "How to make a Go application with sprockets"
 date: "2016-02-19T18:39:29-06:00"
-background: /assets/images/post-bg.jpg
 tags:
   - ruby
   - go

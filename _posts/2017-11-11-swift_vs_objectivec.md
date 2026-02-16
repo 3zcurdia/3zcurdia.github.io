@@ -3,7 +3,6 @@ layout: post
 title: "Swift Vs Objective-C"
 description: "languages perks and differences"
 date: "2017-11-11T20:55:32-06:00"
-background: /assets/images/post-bg.jpg
 tags:
   - swift
   - objective-c

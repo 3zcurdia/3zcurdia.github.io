@@ -3,7 +3,6 @@ layout: post
 title: "Divide and... conquer?"
 description: "A refactor case study for a slow process"
 date: "2016-05-13T15:19:32-05:00"
-background: /assets/images/post-bg.jpg
 tags:
   - programming
   - case study
@@ -11,7 +10,7 @@ tags:
   - big data
 ---
 
-It has been taught "divide and conquer" is a great technique to solve any problem. Well, sometimes in practice it is harder than we, though, here is a case study of how our team apply this concept and still wasn't enough, we need to divide even more and tweak some other things.  
+It has been taught "divide and conquer" is a great technique to solve any problem. Well, sometimes in practice it is harder than we, though, here is a case study of how our team apply this concept and still wasn't enough, we need to divide even more and tweak some other things.
 
 ## The problem
 

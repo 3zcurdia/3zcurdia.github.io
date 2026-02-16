@@ -3,7 +3,6 @@ layout: post
 title:  "Moving back to Jekyll!"
 description: "Why I migrate from hugo"
 date: 2018-05-15 20:48:03 -0500
-background: /assets/images/post-bg.jpg
 tags:
   - jekyll
   - case study

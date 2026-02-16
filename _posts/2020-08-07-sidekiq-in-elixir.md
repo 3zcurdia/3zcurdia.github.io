@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ¿Necesitamos Background Jobs en Elixir?
-description: Tal vez no, si conociéramos bien la OTP
+title: Do We Need Background Jobs in Elixir?
+description: Perhaps not, if we knew the OTP well
 date: "2020-08-07T18:00:00-06:00"
 tags:
   - elixir
@@ -9,39 +9,40 @@ tags:
   - background jobs
 ---
 
-En Ruby nos hemos acostumbrado al uso de background jobs por medio de herramientas como Sidekiq, o Resque. En este post veremos los beneficios de la OTP al utilizar la concurrencia que esta ofrece.
+In Ruby, we've become accustomed to using background jobs through tools like Sidekiq or Resque. In this post, we'll explore the benefits of One-to-One (OTP) concurrency.
 
 ## Hold your horses! OTP to the rescue
 
-Al enfrentarnos con procesamiento concurrente en el background nuestro instinto como desarrolladores nos dice "solo busca 'sidekiq en Elixir'". Lo cual nos llevaría a resultados entre los cuales encontraríamos alguna implementación de sistemas de encolado. Pero si conociéramos un poco de lo que nos ofrece la OTP no buscaríamos soluciones de terceros, sino implementariamos una solucion más de acuerdo a nuestra necesidad.
+When faced with concurrent background processing, our instinct as developers tells us to "just search 'sidekiq in Elixir'." This would lead us to results that include some implementation of queuing systems. But if we knew a little about what the OTP (One-to-One Process) offers, we wouldn't look for third-party solutions, but rather implement a solution better suited to our needs.
 
-Una de las caracterisicas más destacadas de elixir y de la cual Ruby carece, es la concurrencia. Y aunque la comunidad ha generado diversas soluciones con  processamiento paralelo, este solo aplica más a lenguajes en donde la concurrencia no existe. En el caso de backgroud jobs es muy común tener un proceso separado que corre en paralelo y se comunica  por medio de mensajes que viajan a través de Redis, RabitMQ o incluso la misma base de datos. Pero, ¿es necesario todo esto en elixir? ¿Como evitaríamos esa comunicación a servicios externos?
+One of Elixir's most prominent features, which Ruby lacks, is concurrency. And although the community has generated various parallel processing solutions, this is more applicable to languages ​​where concurrency doesn't exist. In the case of background jobs, it's very common to have a separate process that runs in parallel and communicates through messages that travel via Redis, RabbitMQ, or even the database itself. But is all this necessary in Elixir? How can we avoid this communication with external services?
 
 ## Procesos y Tareas
 
-De acuerdo a la documentacion de Elixir
-> Processes are isolated from each other, run concurrent to one another and communicate via message passing. Processes are not only the basis for concurrency in Elixir, but they also provide the means for building distributed and fault-tolerant programs.
+According to the Elixir documentation:
 
-Lo anterior es la base de la concurrencia en Elixir. Así com en Ruby todo es un objeto, en Elixir todo es un proceso o, mejor dicho, podemos poner todo en pequeños procesos, lo cual nos abre las puertas al mundo de la concurrencia.
+> Processes are isolated from each other, run concurrently, and communicate via message passing. Processes are not only the basis for concurrency in Elixir, but they also provide the means for building distributed and fault-tolerant programs.
 
-Supongamos que queremos tener un proceso que no nos importa si llega fallar, tal como es el caso de las métricas. En el caso de Ruby trataríamos de que tome el menor tiempo posible, o bien lo mandamos a un background job. ¿Cómo lo haríamos en Elixir? Simplemente enviándolo a un proceso diferente:
+This is the foundation of concurrency in Elixir. Just as in Ruby everything is an object, in Elixir everything is a process, or rather, we can put everything into smaller processes, which opens the door to the world of concurrency.
+
+Let's suppose we want to have a process that we don't mind failing, such as metrics. In Ruby, we would try to make it take the shortest possible time, or we would send it to a background job. How would we do it in Elixir? Simply by sending it to a different process:
 
 ```elixir
 spawn fn() -> Metrics.Purchase.complete end
 ```
 
-¿Es todo? Sí, realmente es todo lo que necesitamos en este caso, ya que lo único que nos importa es que no bloquee el proceso principal.
-Ahora, tambien podríamos hacer lo mismo utilizando tareas:
+Is that all? Yes, that's really all we need in this case, since the only thing that matters to us is that it doesn't block the main process.
+Now, we could also do the same thing using tasks:
 
 ```elixir
 Task.start fn() -> Metrics.Purchase.complete end
 ```
 
-¿Entonces cual es la diferencia? Las tareas estan construidas sobre procesos y proveen un mejor manejo de reporte de errores, ya que regresan una tupla de valores `{:ok, pid}`. Si lo deseamos, podemos implementar un mecanismo que nos brinde un mayor control sobre el resultado.
+So what's the difference? Tasks are built on processes and provide better error reporting, since they return a tuple of values ​​`{:ok, pid}`. If desired, we can implement a mechanism that gives us greater control over the result.
 
 ## GenServers
 
-Sin embargo, tanto los procesos como las tareas no persisten el estado una vez que finalizan. ¿Qué pasaría si quisiéramos almacenar algo en tiempo de ejecución? ¿Lo escribimos en disco? ¿Lo guardamos en la base de datos? Es cierto que en algunos casos será lo más conveniente, pero tenemos otra herramienta a nuestra disposicion. Los GenServers o servidores genéricos, los cuales nos permiten persistir el estado con una estructura base que podemos adaptar a nuestras necesidades.
+However, neither processes nor tasks persist their state once they finish. What if we wanted to store something at runtime? Would we write it to disk? Save it to the database? While this might be the most convenient approach in some cases, we have another tool at our disposal: GenServers, or generic servers. These allow us to persist state using a basic structure that we can adapt to our needs.
 
 ```elixir
 defmodule Example.Registry do
@@ -84,7 +85,7 @@ defmodule Example.Registry do
 end
 ```
 
-En este ejemplo podremos notar que hay mucho más código del que normalmente usaríamos en un worker de Ruby. Si lo analizamos a detalle notaremos que nuestro server cuenta con una pequeña arquitectura cliente-servidor. Por lo que utilizaríamos nuestro GenServer de la siguiente forma.
+In this example, we'll notice that there's much more code than we'd typically use in a Ruby worker. If we analyze it in detail, we'll see that our server has a small client-server architecture. Therefore, we would use our GenServer in the following way.
 
 ```
 iex> Example.Registry.add("something")
@@ -92,20 +93,20 @@ iex> Example.Registry.find("something")
 {:ok, 21wqeds24354trgfdq2365ytgfde23465}
 ```
 
-Ahora, del lado del server tenemos una inicialización del estado init y manejadores. La función handle_cast nos permite hacer llamadas asíncronas que esperan una tupla `{:noreply, state}` como valor de retorno, mientras que handle_call espera una respuesta sincronía con la tupla `{:reply, value, state}`.
-El equivalente en Ruby sería tener un worker en el background job, un estado almacenado en un medio externo y un cliente que nos de acceso a él. Mientras que aquí, con el uso de un simple GenServer, tenemos una aplicación cliente-servidor asíncrona en unas cuantas líneas de código.
+Now, on the server side, we have an initialization of the `init` state and handlers. The `handle_cast` function allows us to make asynchronous calls that expect a tuple `{:noreply, state}` as the return value, while `handle_call` expects a synchronous response with the tuple `{:reply, value, state}`.
 
-## ¿Entonces cuándo utilizo Background Jobs?
+The equivalent in Ruby would be having a worker in the background job, state stored on an external medium, and a client that grants us access to it. Here, however, with the use of a simple `GenServer`, we have an asynchronous client-server application in just a few lines of code.
 
-En la mayoría de los casos no requerimos de un background job en Elixir, practicamente podríamos construir todo lo que necesitamos utilizando la OTP. Pero es posible que queramos tener un mayor control, tal como persitencia en disco, definir un pool de workers, reintentos, entre otras cosas. Para ello existen varias soluciones, de las cuales las más populares son:
-- [Oban](https://github.com/sorentwo/oban) un robusto sistema de queue backend process basado en postgresql. Cuenta con una UI en su version pro
-- [Exq](https://github.com/akira/exq) una biblioteca de procesamiento compatible con Resque y Sidekiq basada en Redis. Cuenta con una UI open source exq_ui
-- [verk](https://github.com/edgurgel/verk) al igual que Exq es compatible con jobs de Resque y Sidekiq
-Existen otras opciones, sin embargo, son proyectos que no son tan populares y estan parcialmente abandonados. Si te aventuras a utilizarlos ten en cuenta que esto puede traducirse en deuda tecnica.
+## So When Do I Use Background Jobs?
 
-## Conclusión
+In most cases, we don't need a background job in Elixir; we could practically build everything we need using the OTP (One-Time Processor). However, we might want greater control, such as disk persistence, defining a worker pool, retries, and other features. Several solutions exist for this, the most popular of which are:
+- [Oban](https://github.com/sorentwo/oban) a robust PostgreSQL-based backend queue processing system. It has a UI in its pro version.
+- [Exq](https://github.com/akira/exq) a Redis-based processing library compatible with Resque and Sidekiq. It has an open-source UI, exq_ui.
+- [verk](https://github.com/edgurgel/verk) like Exq, it is compatible with Resque and Sidekiq jobs. Other options exist, but these projects are not as popular and are partially abandoned. If you venture to use them, keep in mind that this can result in technical debt.
 
-Gracias a la OTP en Elixir contamos con una amplia gama de herramientas que nos facilitan el procesamiento concurrente y que podrian evitarnos incluir dependencias de terceros. En este post solo mencione algunas de ellas, pero valdría la pena que las revisaras por tu cuenta.
+## Conclusion
+
+Thanks to the OTP in Elixir, we have a wide range of tools that facilitate concurrent processing and could eliminate the need for third-party dependencies. In this post, I only mentioned a few of them, but it would be worthwhile to explore them further on your own.
 
 - [Task](https://hexdocs.pm/elixir/Task.html)
 - [GenServer](http://elixir-lang.org/getting-started/mix-otp/genserver.html)
@@ -113,4 +114,4 @@ Gracias a la OTP en Elixir contamos con una amplia gama de herramientas que nos 
 - [Supervisor](http://elixir-lang.org/getting-started/mix-otp/supervisor-and-application.html)
 - [OTP](http://erlang.org/doc/)
 
-[Fuente](https://sipsandbits.com/2020/08/07/do-we-need-background-jobs-in-elixir/)
+[source](https://sipsandbits.com/2020/08/07/do-we-need-background-jobs-in-elixir/)

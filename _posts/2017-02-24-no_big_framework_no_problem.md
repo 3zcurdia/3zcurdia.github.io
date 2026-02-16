@@ -2,7 +2,6 @@
 layout: post
 title: "No big framework, No problem"
 date: "2017-02-24T11:19:04-06:00"
-background: /assets/images/post-bg.jpg
 tags:
   - javascript
   - design pattern
