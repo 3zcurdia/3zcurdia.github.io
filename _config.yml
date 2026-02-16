@@ -11,6 +11,11 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
+collections:
+  stories:
+    output: true
+    permalink: /stories/:slug/
+
 feed:
   path: atom.xml
 
