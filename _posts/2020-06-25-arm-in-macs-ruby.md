@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ARM en la MAC, desde la perspectiva del developer
-description: ¿ARM-Based afectara los desarrollo de software?
+title: ARM on the Mac, from a developer's perspective
+description: Will ARM-based technologies affect software development?
 date: "2020-06-25T20:55:32-06:00"
 tags:
   - apple
@@ -38,4 +38,4 @@ Currently, our backend projects run in the cloud, whether it's Amazon, Google, o
 
 In conclusion, ARM is a technology with over 30 years in the market, which has become embedded in various industries in the last decade. Thanks to its thermal efficiency and low energy consumption, it is very attractive for a future where efficiency takes precedence over raw performance. This technological shift shouldn't surprise us, because whether we like it or not, Apple leads the market trends.
 
-[Fuente](https://sipsandbits.com/2020/06/26/arm-based-macs-from-the-developers-perspective/)
+[Source](https://sipsandbits.com/2020/06/26/arm-based-macs-from-the-developers-perspective/)
