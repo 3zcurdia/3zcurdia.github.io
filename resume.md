@@ -11,20 +11,22 @@ permalink: /about/resume
 
 ## <i class="fa fa-briefcase"></i> Introduction
 
-Senior Software Engineer with a passion for building robust and scalable products using Ruby and Ruby on Rails. With over 13 years of expertise, I have honed my skills as a tech lead and software architect. I thrive on challenging projects and possess a proven track record of delivering exceptional results. Additionally, I actively seek out opportunities to expand my knowledge and stay up-to-date with emerging technologies, ensuring I can provide innovative solutions that drive business success
+Senior Software Engineer with a passion for building robust and scalable products using Elixir and Ruby on Rails. With over 15 years of expertise, I have honed my skills as a tech lead and software architect. I thrive on challenging projects and possess a proven track record of delivering exceptional results. Additionally, I actively seek out opportunities to expand my knowledge and stay up-to-date with emerging technologies, ensuring I can provide innovative solutions that drive business success
 
 
----
+## Senior Software Engineer, Koombea, Medellin Colombia *(Jul 2024 - Present)*
+  * Implemented a customer service ticketing system integrating third-party services with the main platform
+  * Developed real-time chat functionality for customer service operations
+  * Integrated automated bot responses using Large Language Models (LLM)
+  * Implemented monitoring tools and telemetry instrumentation for usage statistics tracking
 
-### <i class="fa fa-cogs"></i> Main Tech Stack
+## Software Engineer III, TigerConnect, Mexico City *(Jan 2024 - Jun 2024)*
+  * Addressed performance issues related to mobile application API consumption changes
+  * Migrated authentication services for push notifications
+  * Mentored and trained junior developers on best practices
+  * Developed tools for architecture archaeology and documentation
 
-  - Ruby, Ruby and Rails, Hotwire
-  - Elixir, Phoenix, LiveView
-  - Swift, SwiftUI, Rust
-
----
-
-## Tech Lead, Mind Group, Remote CA, US *(Oct 2021 - Present)*
+## Tech Lead, michelada.io, Remote CA, US *(Oct 2021 - Nov 2023)*
 I have successfully led developer teams and played a pivotal role in delivering from the Minimum Viable Product (MVP) to Full Fledges Products. By providing guidance and direction, I ensured the teams' efforts were aligned with project goals, resulting in efficient and timely deliveries.
 
   * Led developer teams in the timely delivery of products, driving successful outcomes.
@@ -76,16 +78,17 @@ As a sysadmin, I maintained the existing infrastructure for a virtual reality de
 ---
 <div class="page-break"></div>
 
+### <i class="fa fa-trophy"></i> Awards
+
+* **Semifinalist - StartupBus**, Austin, TX *(August 2022)*
+  Tech lead for "Chila" - A market research tool to improve design briefs using AI analysis.
+
 ### <i class="far fa-lightbulb"></i> Side projects
-* **[Anealing](https://github.com/3zcurdia/annealing)**: A ruby implementation of the annealing algorithm
-* **[Amaca](https://github.com/3zcurdia/Amaca)**: Network layer oriented to services and codable protocol.
-* **[reportcopter](https://github.com/3zcurdia/reportcopter)**: Tool to generate changelog files using the git log
-* **[waqi](https://github.com/3zcurdia/waqi)**: Air Quality Open Data Platform api wrapper
-* ~~**[gbelt](https://github.com/3zcurdia/gbelt)**: Github tool belt to search, profile, and generate metrics on users and repositories~~ (deprecated)
-* ~~**[capybara page mapper](https://github.com/3zcurdia/capybara-page_mapper)**: Simple object mapper for page objects with capybara~~ (deprecated)
+* **[annealing](https://github.com/3zcurdia/annealing)**: Simulated annealing ruby gem
+* **[chroma](https://github.com/3zcurdia/chroma)**: ChromaDB Elixir Client
+* **[nojx](https://github.com/3zcurdia/nojx)**: CLI webscrapper
 
 ### <i class="fa fa-bullhorn"></i> Speeches
-* ***"The Happy Developer Guide"*** Speaker at Happy Hacking Festival UNAM 2016 (November 2016)
 * ***"EOS: 3D file structure over SQLite"*** Speaker at PreFilsol UNAM 2010 (March 2010)
 * ***"Google Sketchup for CAD developemtn"*** Speaker at PreFilsol UNAM 2010 (March 2010)
 * ***"D Programming language: The Evolution of C++"***  Speaker at PUMASOL 2009 UNAM (April 2009)
@@ -94,6 +97,19 @@ As a sysadmin, I maintained the existing infrastructure for a virtual reality de
 * Instructor at ***iOS Development Diploma course - 1st to 6th Generation*** (UNAM iOSLab January 2018 - present)
 * Instructor at ***Ruby Basic*** (Hackergarage June 2013)
 * Instructor at ***Python Basics*** course (April 2009)
+
+---
+
+### <i class="fa fa-cogs"></i> Skills
+
+**Expert**
+Elixir, Ruby, Phoenix, Rails, PostgreSQL, Redis, Git
+
+**Proficient**
+Javascript, Swift, Go, HTML, CSS, LiveView, Hotwire, RabbitMQ, MySQL, SQLite, ETS, Docker, AWS
+
+**Familiar**
+Erlang, Objective-C, Python, Java, Mnesia, Kubernetes, XMPP
 
 ---
 
