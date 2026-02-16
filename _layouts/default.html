@@ -1,28 +1,88 @@
 ---
 layout: base
 ---
-<div class="flex flex-col md:flex-row w-full min-h-screen">
-  <aside class="basis-1/4 bg-gradient-to-r from-indigo-dye to-oxford-blue text-slate-100">
-    <header class="mt-7 mx-5 text-right">
-      <div class="flex items-center columns-2">
-        <div class="w-full mx-3">
-          <p class="text-3xl font-bold uppercase">{{ site.title }}</p>
-          <p class="text-xl font-normal leading-tight">{{ site.description }}</p>
-        </div>
-        <a href="/" class="w-full">
-          <img class="max-w-full h-auto rounded-full" src="https://s.gravatar.com/avatar/acb85d71b90905e69b95fd02fbe6f828?s=128">
+<header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gradient-to-r from-oxford-blue to-indigo-dye shadow-lg">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center">
+        <a href="/" class="flex items-center space-x-3">
+          <img class="h-10 w-10 rounded-full border-2 border-columbia-blue" src="https://s.gravatar.com/avatar/acb85d71b90905e69b95fd02fbe6f828?s=64" alt="Profile">
+          <span class="font-bold text-xl tracking-tight text-white">{{ site.title }}</span>
         </a>
       </div>
-      <div class="mt-3 mb-5 columns-1 text-center">
-        <a class="m-2 w-full text-xl" title="blog posts" href="{{"/posts" | relative_url }}"><i class="fa fa-bullhorn"></i> Blog</a>
-        <a class="m-2 w-full text-xl" title="about me" href="{{"/about" | relative_url }}"><i class="fa fa-address-card"></i> About</a>
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-baseline space-x-4">
+          <a href="{{"/" | relative_url }}" class="hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-sm font-medium text-white transition-colors duration-200">Home</a>
+          <a href="{{"/posts" | relative_url }}" class="hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-sm font-medium text-white transition-colors duration-200">Blog</a>
+          <a href="{{"/stories" | relative_url }}" class="hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-sm font-medium text-white transition-colors duration-200">Stories</a>
+          <a href="{{"/about" | relative_url }}" class="hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-sm font-medium text-white transition-colors duration-200">About</a>
+        </div>
       </div>
-    </header>
-  </aside>
-  <section class="basis-3/4">
-    <div class="mt-7 mx-5">
-      {{ content }}
-      {% include footer.html %}
+      <div class="md:hidden">
+        <button id="mobile-menu-btn" class="p-2 rounded-md hover:bg-indigo-dye/50 focus:outline-none">
+          <i class="fas fa-bars text-xl text-white"></i>
+        </button>
+      </div>
     </div>
-  </section>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-oxford-blue">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="{{"/" | relative_url }}" class="block hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-base font-medium text-white">Home</a>
+      <a href="{{"/posts" | relative_url }}" class="block hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-base font-medium text-white">Blog</a>
+      <a href="{{"/stories" | relative_url }}" class="block hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-base font-medium text-white">Stories</a>
+      <a href="{{"/about" | relative_url }}" class="block hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-base font-medium text-white">About</a>
+    </div>
+  </div>
+</header>
+
+<div id="hero-section" class="relative h-[35vh] min-h-[250px] flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{{ "/assets/images/glacier.png" | relative_url }}');"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-oxford-blue/70 to-indigo-dye/70"></div>
+  <div class="relative z-10 text-center text-white px-4 max-w-3xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold mb-3 tracking-tight">{{ site.title }}</h1>
+    <p class="text-lg md:text-xl text-columbia-blue mb-4">{{ site.description }}</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="{{"/posts" | relative_url }}" class="inline-block bg-white text-oxford-blue px-5 py-2 rounded-full font-semibold hover:bg-columbia-blue transition-colors duration-300 text-sm">Read Blog</a>
+      <a href="{{"/about" | relative_url }}" class="inline-block border-2 border-white text-white px-5 py-2 rounded-full font-semibold hover:bg-white hover:text-oxford-blue transition-colors duration-300 text-sm">About Me</a>
+    </div>
+  </div>
+  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce">
+    <i class="fas fa-chevron-down text-xl text-white"></i>
+  </div>
 </div>
+
+<main class="bg-slate-50 -mt-20 relative z-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    {{ content }}
+  </div>
+</main>
+
+<footer class="bg-white border-t border-slate-200">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <p class="text-slate-500 text-sm">&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="https://github.com/{{site.social.github}}" class="text-slate-400 hover:text-oxford-blue transition-colors">
+          <span class="fab fa-github text-xl"></span>
+        </a>
+        <a href="https://twitter.com/{{site.social.twitter}}" class="text-slate-400 hover:text-oxford-blue transition-colors">
+          <span class="fab fa-twitter text-xl"></span>
+        </a>
+        <a href="http://www.linkedin.com/in/{{site.social.linkedin}}" class="text-slate-400 hover:text-oxford-blue transition-colors">
+          <span class="fab fa-linkedin text-xl"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    
+    btn.addEventListener('click', function() {
+      menu.classList.toggle('hidden');
+    });
+  });
+</script>

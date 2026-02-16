@@ -2,19 +2,57 @@
 layout: default 
 ---
 <section>
-  {% for post in site.posts limit : 5 %}
-  <article class="my-3">
-    <h1 class="text-2xl font-bold">
-      <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
-    </h1>
-    <p class="text-lg font-thin italic">{{ post.date | date: '%B %d, %Y' }}</p>
-    <p class="text-base font-light mt-2">
-      {% if post.subtitle %}
-      {{ post.subtitle }}
-      {% else %}
-      {{ post.excerpt | strip_html | truncatewords: 25 }}
-      {% endif %}
-    </p>
-  </article>
-  {% endfor %}
+  <div class="flex items-center justify-between mb-6">
+    <h2 class="text-2xl font-bold text-oxford-blue">Latest Posts</h2>
+    <a href="{{"/posts" | relative_url }}" class="text-indigo-dye hover:text-oxford-blue font-medium transition-colors">View all <i class="fas fa-arrow-right ml-1"></i></a>
+  </div>
+  <div class="grid gap-6 md:grid-cols-2">
+    {% for post in site.posts limit: 4 %}
+    <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100">
+      <div class="p-6">
+        <p class="text-sm text-slate-400 mb-2">{{ post.date | date: '%B %d, %Y' }}</p>
+        <h3 class="text-xl font-bold mb-2">
+          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="text-oxford-blue hover:text-indigo-dye transition-colors">
+            {{ post.title }}
+          </a>
+        </h3>
+        <p class="text-slate-600">
+          {% if post.subtitle %}
+          {{ post.subtitle }}
+          {% else %}
+          {{ post.excerpt | strip_html | truncatewords: 20 }}
+          {% endif %}
+        </p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="mt-12">
+  <div class="flex items-center justify-between mb-6">
+    <h2 class="text-2xl font-bold text-oxford-blue">Recent Stories</h2>
+    <a href="{{"/stories" | relative_url }}" class="text-indigo-dye hover:text-oxford-blue font-medium transition-colors">View all <i class="fas fa-arrow-right ml-1"></i></a>
+  </div>
+  {% if site.stories.size > 0 %}
+  <div class="grid gap-6 md:grid-cols-2">
+    {% for story in site.stories limit: 2 %}
+    <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100">
+      <div class="p-6">
+        <p class="text-sm text-slate-400 mb-2">{{ story.date | date: '%B %d, %Y' }}</p>
+        <h3 class="text-xl font-bold mb-2">
+          <a href="{{ story.url | prepend: site.baseurl | replace: '//', '/' }}" class="text-oxford-blue hover:text-indigo-dye transition-colors">
+            {{ story.title }}
+          </a>
+        </h3>
+        <p class="text-slate-600">{{ story.excerpt | strip_html | truncatewords: 20 }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="bg-columbia-blue/30 rounded-xl p-6 text-center">
+    <p class="text-slate-600">No stories yet. <a href="{{"/stories" | relative_url }}" class="text-indigo-dye hover:underline">Check back soon!</a></p>
+  </div>
+  {% endif %}
 </section>

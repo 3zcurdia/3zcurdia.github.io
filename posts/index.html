@@ -1,18 +1,38 @@
 ---
 layout: default
 ---
-{% for post in site.posts %}
-<article class="my-3">
-  <h1 class="text-2xl font-bold">
-    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
-  </h1>
-  <p class="text-lg font-thin italic">{{ post.date | date: '%B %d, %Y' }}</p>
-  <p class="text-base font-light mt-2">
-    {% if post.subtitle %}
-    {{ post.subtitle }}
-    {% else %}
-    {{ post.excerpt | strip_html | truncatewords: 35 }}
-    {% endif %}
-  </p>
-</article>
-{% endfor %}
+<section>
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold text-oxford-blue mb-2">Blog</h1>
+    <p class="text-slate-600">Thoughts on software engineering and technology</p>
+  </div>
+
+  <div class="grid gap-6">
+    {% for post in site.posts %}
+    <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-slate-100">
+      <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="block p-6">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div class="flex-1">
+            <p class="text-sm text-slate-400 mb-2">{{ post.date | date: '%B %d, %Y' }}</p>
+            <h2 class="text-xl font-bold mb-2 text-oxford-blue hover:text-indigo-dye transition-colors">
+              {{ post.title }}
+            </h2>
+            <p class="text-slate-600">
+              {% if post.subtitle %}
+              {{ post.subtitle }}
+              {% else %}
+              {{ post.excerpt | strip_html | truncatewords: 30 }}
+              {% endif %}
+            </p>
+          </div>
+          <div class="hidden md:block">
+            <span class="inline-flex items-center text-indigo-dye hover:text-oxford-blue transition-colors">
+              Read <i class="fas fa-arrow-right ml-2"></i>
+            </span>
+          </div>
+        </div>
+      </a>
+    </article>
+    {% endfor %}
+  </div>
+</section>

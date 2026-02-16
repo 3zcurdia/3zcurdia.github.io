@@ -20,12 +20,23 @@
               "columbia-blue": "#D4EBFA",
               "oxford-blue": "#0F2945",
               "indigo-dye": "#1C476C"
+            },
+            fontFamily: {
+              'sans': ['Inter', 'system-ui', 'sans-serif']
             }
           }
         }
       }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style type="text/tailwindcss">
+      @layer base {
+        body {
+          font-family: 'Inter', system-ui, sans-serif;
+        }
+      }
       @layer utilities {
         @media print{
           .no-print,.no-print *, aside, header, footer { display: none !important; }
