@@ -15,7 +15,7 @@ Remember when Facebook showed you posts from actual friends? When Uber cars had 
 ## Enshittification
 The concept was coined by Cory Doctorow and it describes the inevitable lifecycle of platforms:
 
-> "First, they are good to their users; then they abuse their users to make things better for their business customers; finally, they abuse those business customers to claw back all the value for themselves."
+> "First, they are good to their users; then they abuse their users to make things better for their business customers; finally, they abuse those business customers to claw back all the value for themselves. Then, they die"
 
 **The Pattern:**
 - **Phase 1:** Subsidize an excellent experience to capture market share
@@ -33,3 +33,5 @@ Once you're captive, they don't need to please you. Facebook has your social gra
 ## What To Do
 
 Recognize the pattern early. Support alternatives before they scale. Be willing to walk away even when it's difficult; it is better to leave early than to be captive forever. Because once you're captive, they do whatever they want. And they will.
+
+[source](https://en.wikipedia.org/wiki/Enshittification)
