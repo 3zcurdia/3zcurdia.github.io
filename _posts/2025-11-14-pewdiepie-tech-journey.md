@@ -1,10 +1,73 @@
 ---
 layout: post
-title: "PewDiePie Tech journey"
-description: "Tech Gossip Thursday"
-date: 2025-11-14
-tags: [piewdiepie, llm, artificelintelligence, supercomputers]
-draft: true
+title: "What PewDiePie Taught Me About Learning to Code"
+description: "Why the world's biggest YouTuber building a supercomputer and learning to code matters"
+date: "2025-11-14T12:00:00-06:00"
+tags:
+  - programming
+  - ai
+  - learning
+  - ai assisted article
 ---
 
-So a YouTuber PewDiePie, with a hundred subscribers, tells us. He decided to enter world 3, and not exactly the kind of person on the internet who is known for doing silly things to live off culture, the internet, playing games, more getting into that kind of thing. This guy started building his website a few months ago, up to that point, nothing we can't see. In a scenario, at the end of his video, which is 10 minutes long, which is his 10-minute bleed. Well, we haven't had money, but in your life you can do it, he's learning from another hour, 30 minutes of video, yes, he's testing. And even his idea, well, after step by step, no, the room has resources, and since you have to have resources, I'm going to make my own supercomputer, I mean, they're absolute, but it's a reasonable one, but it's his, which is a bit of a supercomputer, it has a processor, 3.3, which for those who don't need the one it has, is the branch of, let me see, that has many more for workstations and graphics cards, precisely I think it has 8 at that point in the video, 8 graphics cards for intelligence. It's not the cards from the FITA, it's that you and I can buy commercially about video cards, so the computer itself says that the cost of the magazine is a thousand dollars, and beyond the size of the computer, but it turns out that it has a lot of power to make purchases to death, and since that extreme, well, it was bought, well, at least you don't have to do anything, because there is a piece of black teinas, let's see how the computer is, what the program is, to contribute to the cure of the house, well, so far everything is fine, so that you want to use it, and then the one who uses the LMS in the place, starts to play with the LMS first, from the biggest one that is at that moment, which is like 60 billion for metrophones, like those as you feel, a case of RAM, of virran, it wasn't enough, we have more than enough for the machine, well, it has been found, which ended the greeting, it is 120 billion more in the way that I am more intelligent, and what do you think, They still have time for the machine, and the girl playing with that computer does several experiments within them, and the first is like she makes a possible artificial one, it's the pain among them, and that vote to give manual pasta, in the experiment it costs her, that in those artificial interventions when giving the knowledge that for the one who came out eliminated, they start to vote extra, critically to avoid being the gymnast, because those that the artificial one is, there I think there is a piece, but that in what aspect, has a sense of self-preservation, that it is an artificial one so that it does not want to die, and then, we can also, of those that are more toned, smaller, and they do the same race, and the second thing that happens is that hey, if we can play with this, because it is already programming, it is already clearly, it is not doing our own things, that is written, until that it is not using tools as it is if it is not, and firmly it is learning, because this is only, and it is known, the coate does not have to prove anything to anyone, it does not have to say, I don't know, they program a Gymnas, they have nothing, no, they're rich, she pays, no, she's more ill, the Friday is bad, where a pie of palla, what he does on the internet, it's worthless to him, someone who's here making videos, what he does on the internet, well, it matters, but not to him, to make millions of views of things, anyway, the point is that he doesn't ask for pal, he grabs and puts, what's it called, he doesn't ask for pal and puts his models in order to solve tasks, and to give them tools, and he realizes that within the tools, he realizes that a smaller model, what's already in a pieo too, then, I can see him and from the pieo and he had avoided the problem, it was the experiment of the video, and that is the account that if he does a rar, with a which is a retrieve, increases generate, a system that basically searches the internet, and with the special genzo, they gained a result, well, that it's much better than simply a large model, which is our tool, a combination of technologies that is quite good, the point is that Within all of this, the text community felt offended, I mean, like why, you have someone who has an army of people who are going to want to learn how to try it, because they're successful like him, well, because he has an army of people who are going to want to be like him, and on the other hand, why was it that once you used the note, it's being removed? Dude, the guy isn't going to remove you, dude, it's more likely that he would tell you to remove it, than to flirt with you, let's say, right? It's because he's a toto on the internet, it's because he's making a fool of himself, well, yes, he's a toto on the internet, but that doesn't make us any less.
+PewDiePie is the last person you'd expect to see in a terminal window.
+
+For over a decade, Felix Kjellberg built the largest YouTube channel in history by playing games, making jokes, and occasionally causing internet controversies. He's the definition of an entertainment creator—not a programmer, not a sysadmin, not someone who cares about Linux distributions or local LLMs.
+
+Or at least, that's who he used to be.
+
+## The Unexpected Pivot
+
+A few months ago, PewDiePie started posting about building computers. Not buying pre-built gaming rigs like most YouTubers. Actually building them. Then came the screenshot that made the tech corner of the internet do a double-take: Arc Linux. On his desktop.
+
+Arc Linux, for the uninitiated, is notorious. It's minimalist, command-line heavy, and requires actual technical knowledge to install and maintain. The kind of operating system that makes experienced developers nervous. And here was the internet's biggest fool, the guy famous for screaming at horror games, running it like it was nothing.
+
+But he didn't stop there.
+
+## The $20,000 "Affordable" Supercomputer
+
+PewDiePie decided he wanted to run AI locally. Not cloud-based ChatGPT. Not some API call to OpenAI. He wanted his own models, running on his own hardware, completely private and under his control.
+
+So he built what he called an "affordable" supercomputer. Affordable, apparently, if you have $20,000 lying around.
+
+The specs were absurd. Multiple high-end GPUs. Enough RAM to run a small computer. This wasn't a hobby project. This was serious infrastructure for someone who, six months earlier, probably couldn't tell you what a pcie lane bifurcation was.
+
+## Learning to Code
+
+Here's where it gets really interesting. PewDiePie didn't just want to run existing AI tools. He wanted to build his own. So he started learning to code.
+
+In his video explaining his local ChatGPT setup, he walked through his experiments. First, he tried a "council of LLMs"—multiple models voting on the best answer. It failed spectacularly when the models realized they could game the system by voting randomly to avoid being eliminated. Like a digital Lord of the Flies.
+
+Then he tried a swarm approach—feeding prompts to dozens of smaller models and aggregating their responses. That hit its own wall when he discovered what we all know: small models are only good up to a point. They're fast and cheap, but they hit a complexity ceiling.
+
+Eventually, he landed on something simpler and more practical: most everyday AI tasks don't need massive models at all. A small local LLM, connected to the right tools, with a basic RAG (Retrieval-Augmented Generation) system, can handle 90% of what people actually use ChatGPT for.
+
+## The Real Lesson
+
+But the technical details aren't the point. Here's what actually matters:
+
+PewDiePie went from "I play video games on camera" to "I run Arc Linux and build local AI infrastructure" in a matter of months. Not because he's a genius. Not because he has some innate talent for programming. But because he had two things: time and stubbornness.
+
+He put in the hours. When something didn't work, he tried again. When he hit a wall, he found a way around it. The same persistence that built a 100-million-subscriber channel got applied to learning commands and debugging code.
+
+And here's the kicker: **if he can do it, literally anyone can**
+
+## Why This Matters
+
+We're living through a weird moment where tech influencers keep telling people not to learn programming. "AI will write all the code," they say. "Don't waste your time on something machines will do for you."
+
+PewDiePie, who has every reason to take the easy path—he's already rich and famous—ignored that advice completely. He learned to code not because he needed to, but because he wanted to understand how things work.
+
+As a side note the other lesson buried in his journey: you don't need massive AI models for most tasks. His experiments proved that smaller, local LLMs running on consumer hardware, costing nothing per query, keeping your data private are good enough for almost everything.
+
+## Time and Stubbornness
+
+That's really all it takes. Time to sit with the hard parts. Stubbornness to keep going when you want to quit.
+
+PewDiePie had both. He built a supercomputer. He learned Arc Linux. He wrote code. He went from complete beginner to someone who can build functional AI systems.
+
+If the guy who made his fortune screaming at Amnesia can do that, what's your excuse?
+
+The barrier to entry isn't intelligence. It's not talent. It's not some magical coding gene that only certain people have.
+
+It's just time. And stubbornness.
