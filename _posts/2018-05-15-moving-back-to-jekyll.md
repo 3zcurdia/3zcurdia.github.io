@@ -5,7 +5,7 @@ description: "Why I migrate from hugo"
 date: 2018-05-15 20:48:03 -0500
 tags:
   - jekyll
-  - case study
+  - go
 ---
 
 It has been a while since my last blog post, but before I start writing a new one, I need to do something.

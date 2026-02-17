@@ -5,7 +5,6 @@ description: "The wrong reasons to switch programming language"
 date: "2016-05-04T22:50:05-05:00"
 tags:
   - programming languages
-  - essay
 ---
 
 These days there is the a trend of experienced developers leaving X programming language to move to Y, but why is this happening? Is X awful? Is Y the future? The answers is simple, personal preferences. Here in this article, I try to expose some of the wrong reasons you shouldn’t consider moving to another programming language where most of your current experience and knowledge is useless, and you will start almost from zero.

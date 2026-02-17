@@ -5,10 +5,9 @@ description: "Why your CDs, DVDs, and favorite shows won't last—and what you s
 date: "2025-10-14T12:00:00-06:00"
 tags:
   - tech
-  - preservation
   - media
-  - backup
-  - ai assisted article
+  - home server
+  - ai-assisted
 ---
 
 You probably have a box of CDs somewhere. Maybe DVDs of movies you love. Perhaps video games from your childhood sitting on a shelf. You haven't touched them in years because, well, streaming exists now. Spotify has millions of songs. Netflix has thousands of shows. Your entertainment is safe in the cloud, right?

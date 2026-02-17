@@ -6,8 +6,8 @@ date: "2025-10-31T12:00:00-06:00"
 tags:
   - tech
   - platforms
-  - consumer-rights
-  - ai assisted article
+  - consumer rights
+  - ai-assisted
 ---
 
 Remember when Facebook showed you posts from actual friends? When Uber cars had water bottles and candy? That wasn't kindness—it was bait.

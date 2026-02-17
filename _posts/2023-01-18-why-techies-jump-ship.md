@@ -5,7 +5,7 @@ description: The Top 3 Reasons for Job-Hopping in the Tech Industry
 date: "2022-01-18T18:00:00-06:00"
 tags:
   - tech
-  - work
+  - engineering
 ---
 
 Tech professionals are known for being in high demand, and it's not uncommon for them to change jobs frequently. But what exactly motivates these tech employees to make a move? In this blog post, I'll explore the top three reasons I think tech workers to change jobs.
@@ -20,7 +20,7 @@ This is the most important resason for employees to stay, because once ww lose i
 
 Tech professionals are always looking for ways to improve their skills and advance their careers. We want to work for a company that will invest in their professional development and provide us with opportunities to learn and grow.
 
-Once an employee finds out there is nothing else to move forward, it will start looking for other oportunities. If there is no room for growth, then it's time to move on. 
+Once an employee finds out there is nothing else to move forward, it will start looking for other oportunities. If there is no room for growth, then it's time to move on.
 
 ## Compensation and benefits
 

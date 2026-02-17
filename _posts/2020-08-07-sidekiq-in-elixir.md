@@ -6,7 +6,7 @@ date: "2020-08-07T18:00:00-06:00"
 tags:
   - elixir
   - ruby
-  - background jobs
+  - concurrency
 ---
 
 In Ruby, we've become accustomed to using background jobs through tools like Sidekiq or Resque. In this post, we'll explore the benefits of One-to-One (OTP) concurrency.

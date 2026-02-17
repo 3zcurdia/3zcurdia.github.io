@@ -5,10 +5,10 @@ description: "How to tell if technology actually serves its users or just its cr
 image: /images/good-and-the-bad.jpeg
 date: 2026-02-17
 tags:
-  - technology
-  - user-experience
-  - product-design
-  - proffread applied
+  - ux
+  - tech
+  - product design
+  - ai proffreaded
 ---
 
 In this day and age, new technologies come up almost every day. A naive assumption is that all technological innovation is good; however, there are cases when a new technology comes into the scene that make you question, "Who exactly is this for?"

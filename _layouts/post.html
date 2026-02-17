@@ -12,6 +12,13 @@ layout: base
         <p class="text-xl text-columbia-blue mb-4">{{ page.description }}</p>
       {% endif %}
       <p class="text-slate-300">{{ page.date | date: '%B %d, %Y' }}</p>
+      {% if page.tags %}
+      <div class="flex flex-wrap gap-2 mt-4">
+        {% for tag in page.tags %}
+        <span class="bg-columbia-blue/20 text-columbia-blue px-3 py-1 rounded-full text-sm">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
     </div>
   </header>
 

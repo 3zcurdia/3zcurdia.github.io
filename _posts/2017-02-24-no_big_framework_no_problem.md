@@ -3,8 +3,8 @@ layout: post
 title: "No big framework, No problem"
 date: "2017-02-24T11:19:04-06:00"
 tags:
-  - javascript
-  - design pattern
+  - programming
+  - design patterns
 ---
 
 Recently you might face the need to learn a new frontend framework, and last year you had to do the same. Unfortunately, this is a very common practice among web developers, spending too much time during the learning curve for a technology that won't be using in their next job. A pure javascript solution is not very sexy, but with the right architecture, any developer can be productive since the first day. Here are the patterns that I found very useful to clean up my frontend code, without the need of many dependencies.

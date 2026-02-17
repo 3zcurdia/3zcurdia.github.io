@@ -4,7 +4,6 @@ title: The inmortal symbols
 description: What Ruby's garbage collector will never clean
 date: "2021-05-20T18:00:00-06:00"
 tags:
-  - elixir
   - ruby
 ---
 

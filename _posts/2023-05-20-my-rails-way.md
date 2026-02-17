@@ -4,7 +4,8 @@ title: My Rails Way!
 description: Crafting Ruby on Rails applications with simplicity, patterns, and seamless integration of third-party services for maintainable and testable code.
 date: "2023-05-20T15:00:00-06:00"
 tags:
-  - ruby on rails
+  - ruby
+  - rails
   - architecture
   - design patterns
 ---
@@ -107,7 +108,7 @@ In query objects, one essential feature I incorporate is the ability to pass the
 
 The *Query Object* is a specialized form of Service Objects that focuses solely on querying data. However, what happens when you need to perform more than just data queries? This is where I employ service objects to encapsulate business logic and ensure lean controllers.
 
-In such cases, you have the flexibility to choose the approach that suits your needs. Some opt for interactors, while others prefer commands, and so on. I prefer to keep it simple by using POROs. 
+In such cases, you have the flexibility to choose the approach that suits your needs. Some opt for interactors, while others prefer commands, and so on. I prefer to keep it simple by using POROs.
 
 Here's an example of a `CreatePostService`:
 

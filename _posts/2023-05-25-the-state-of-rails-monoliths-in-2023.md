@@ -4,10 +4,10 @@ title: The State of Rails Monoliths in 2023
 description: Unlocking the Power of Monolith Architecture with Full-Stack Engineers and Modern Frameworks
 date: "2023-05-25T15:00:00-06:00"
 tags:
-  - ruby on rails
+  - ruby
+  - rails
   - architecture
   - monolith
-  - hotwire
 ---
 
 It's 2023, and I'd like to share my perspective on the Monolith architecture, particularly in the context of Ruby on Rails. Over the years, we've witnessed various trends ranging from SOA to microservices, serverless, and even edge computing. Despite these advancements, the monolith architecture continues to stand strong and shows no signs of fading away. Although it may not be the most popular choice, there is still relevance and value in adopting a monolithic approach in 2023, despite the abundance of articles advocating against it. Allow me to explain my viewpoint and shed light on the benefits it can offer.
@@ -46,4 +46,4 @@ In conclusion, I have presented a compelling case for utilizing full-stack engin
 
 It's important to note that I deliberately excluded discussions on microservices and serverless architectures in this article. I believe that, for the majority of companies, these architectural styles may not be the optimal fit. In a future article, I will delve into the reasons behind this viewpoint, providing a comprehensive analysis to further support my perspective.
 
-By embracing the strengths of full-stack engineers and capitalizing on the capabilities of the monolith architecture, companies can streamline their development processes, enhance productivity, and achieve cost efficiency, all while building robust applications. 
+By embracing the strengths of full-stack engineers and capitalizing on the capabilities of the monolith architecture, companies can streamline their development processes, enhance productivity, and achieve cost efficiency, all while building robust applications.

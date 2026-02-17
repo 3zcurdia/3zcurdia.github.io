@@ -4,11 +4,11 @@ title: "What If All Food Was McDonald's?"
 description: "Why AI-generated software risks becoming as bland and predictable as fast food"
 date: "2025-08-15T12:00:00-06:00"
 tags:
-  - artificial intelligence
+  - ai
   - creativity
-  - programming
   - software design
-  - ai assisted article
+  - engineering
+  - ai-assisted
 ---
 
 Imagine a world where McDonald's is the only restaurant. Every meal, every day, everywhere—nothing but the golden arches. No tacos, no sushi, no homemade pasta. No chile en nogada, no Mexican cuisine, no nada. Just Big Macs, fries, and nuggets.

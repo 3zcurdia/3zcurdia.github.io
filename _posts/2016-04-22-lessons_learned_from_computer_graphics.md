@@ -3,9 +3,9 @@ layout: post
 title: "Lessons Learned from a computer graphics background"
 date: "2016-04-22T09:46:47-05:00"
 tags:
-  - programming languages
+  - programming-languages
   - computer graphics
-  - lessons learned
+  - learning
   - coding
 ---
 

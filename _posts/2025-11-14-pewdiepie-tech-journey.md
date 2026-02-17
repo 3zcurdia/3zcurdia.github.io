@@ -4,10 +4,10 @@ title: "What PewDiePie Taught Me About Learning to Code"
 description: "Why the world's biggest YouTuber building a supercomputer and learning to code matters"
 date: "2025-11-14T12:00:00-06:00"
 tags:
-  - programming
   - ai
   - learning
-  - ai assisted article
+  - programming
+  - ai-assisted
 ---
 
 PewDiePie is the last person you'd expect to see in a terminal window.
