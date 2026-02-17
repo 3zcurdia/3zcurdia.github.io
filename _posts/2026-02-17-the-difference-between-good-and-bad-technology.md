@@ -2,6 +2,7 @@
 layout: post
 title: "The Difference Between Good and Bad Technology"
 description: "How to tell if technology actually serves its users or just its creators"
+image: /images/good-and-the-bad.jpeg
 date: 2026-02-17
 tags:
   - technology

@@ -17,6 +17,9 @@ layout: base
 
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="prose prose-lg prose-slate max-w-none prose-headings:text-oxford-blue prose-a:text-indigo-dye hover:prose-a:text-oxford-blue">
+      {% if page.image %}
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}" class="w-full rounded-lg mb-8">
+      {% endif %}
       {{ content }}
     </div>
 
