@@ -7,7 +7,8 @@ tags:
   - ai
   - learning
   - programming
-  - ai-assisted
+  - human inspired
+  - ai assisted
 ---
 
 PewDiePie is the last person you'd expect to see in a terminal window.

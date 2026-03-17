@@ -7,7 +7,8 @@ tags:
   - tech
   - media
   - home server
-  - ai-assisted
+  - human inspired
+  - ai assisted
 ---
 
 You probably have a box of CDs somewhere. Maybe DVDs of movies you love. Perhaps video games from your childhood sitting on a shelf. You haven't touched them in years because, well, streaming exists now. Spotify has millions of songs. Netflix has thousands of shows. Your entertainment is safe in the cloud, right?

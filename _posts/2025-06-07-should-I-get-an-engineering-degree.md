@@ -7,7 +7,8 @@ tags:
   - programming
   - university
   - engineering
-  - ai-assisted
+  - human inspired
+  - ai assisted
 ---
 
 The tech industry loves debating whether you need a degree. Bootcamp graduates, self-taught developers, and startup founders all claim you can skip university and go straight to coding. For some markets, that might work. But if you're in Mexico, my answer is clear: yes, you should get that engineering degree.

@@ -7,7 +7,8 @@ tags:
   - tech
   - platforms
   - consumer rights
-  - ai-assisted
+  - human inspired
+  - ai assisted
 ---
 
 Remember when Facebook showed you posts from actual friends? When Uber cars had water bottles and candy? That wasn't kindness—it was bait.

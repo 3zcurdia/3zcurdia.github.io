@@ -5,6 +5,7 @@ date: "2026-03-10T23:30:00-06:00"
 tags:
   - literatura
   - ficcion
+  - human written
   - ai free
 ---
 

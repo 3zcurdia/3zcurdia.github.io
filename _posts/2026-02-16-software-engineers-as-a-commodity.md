@@ -6,7 +6,8 @@ date: "2026-02-16T12:00:00-06:00"
 tags:
   - ai
   - engineering
-  - ai-assisted
+  - human inspired
+  - ai assisted
 ---
 
 Let me tell you about something that happened a few years ago. Someone who actually worked at Warner Bros. posted this story on Reddit about what went down at HBO Max, and it stuck with me because it perfectly captures how companies think about us (enginners).

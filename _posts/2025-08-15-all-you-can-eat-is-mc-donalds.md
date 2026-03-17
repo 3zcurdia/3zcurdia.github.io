@@ -8,7 +8,8 @@ tags:
   - creativity
   - software design
   - engineering
-  - ai-assisted
+  - human inspired
+  - ai assisted
 ---
 
 Imagine a world where McDonald's is the only restaurant. Every meal, every day, everywhere—nothing but the golden arches. No tacos, no sushi, no homemade pasta. No chile en nogada, no Mexican cuisine, no nada. Just Big Macs, fries, and nuggets.

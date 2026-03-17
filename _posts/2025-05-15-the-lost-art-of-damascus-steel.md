@@ -7,7 +7,8 @@ tags:
   - ai
   - programming
   - history
-  - ai-assisted
+  - human inspired
+  - ai assisted
 ---
 
 Throughout history, humanity has developed remarkable techniques and technologies, only to lose them to time. Today, as artificial intelligence reshapes how we build software, we face a similar risk with programming itself becoming a lost art.
