@@ -47,6 +47,7 @@ But single-core speed is just the warm-up. Elixir (and the BEAM VM) were built f
       end
 ```
 
+{% raw %}
 ```elixir
       (height - 1)..0//-1
       |> Task.async_stream(
@@ -60,6 +61,7 @@ But single-core speed is just the warm-up. Elixir (and the BEAM VM) were built f
         line
       end)
 ```
+{% endraw %}
 
 That’s it. By handing each render line to the scheduler and processing them in parallel across a 12-core Apple Silicon machine, runtime dropped from **42 min to 3 min**. **14× faster**, just by embracing functional concurrency.
 
