@@ -36,9 +36,12 @@ It’s not magic, it’s architecture.
 | GC | Stop-the-world mark-sweep | Per-process generational, concurrent | No pause spikes during long renders |
 | Math calls | `Math.sqrt` (C), but through Ruby's method dispatch | `:math.sqrt` (Erlang NIF, direct) | Slightly faster FP ops |
 
-That **2.5× single-core advantage** comes primarily from **BEAM’s per-process memory management** and **struct memory density**. Each `Vector3D` in Ruby carries a full Ruby object header and hash-table lookups, whereas an Elixir `%Vector{}` struct is a compact tagged tuple under the hood. With roughly **225 billion allocations** over a single render, that memory efficiency compounds into a real-world speed advantage.
+That **2.5× single-core advantage** comes primarily from **BEAM’s per-process memory management** and **struct memory density**. Each `Vector3D` in Ruby carries a full Ruby object header and hash-table lookups, whereas an Elixir `%Vector{}` struct is a compact tagged tuple under the hood. With **millions allocations** over a single render, that memory efficiency compounds into a real-world speed advantage.
+
+> Note: At this moment this is the most interesting fact about this project I need to investigate deeper what caused elixir to be faster than ruby, both run with native code underneath
 
 But single-core speed is just the warm-up. Elixir (and the BEAM VM) were built for concurrency. So I made the simplest possible change: swap the nested `for` loop for `Task.async_stream`.
+
 
 ```elixir
       for j <- (height - 1)..0//-1, i <- 0..(width - 1), into: [] do
