@@ -111,6 +111,6 @@ A pesar de su vasta potencia en matemáticas y física, el desempeño fluctuante
 
 Como herramienta, la inteligencia artificial es magnífica. Los resultados de las pruebas muestran que todos los modelos exhiben un comportamiento logarítmico que tiende al 100%; sin embargo, debido a los sesgos y a los métodos de entrenamiento, en realidad no progresan en esa dirección. Los modelos abiertos no se quedan atrás respecto a sus homólogos que cuentan con recursos ilimitados. Un pequeño modelo abierto acompañado de herramientas y algunos ajustes puede ofrecer una mayor utilidad a menor costo.
 
-No cabe duda que el avance tecnologico es impresionante, pero el hecho que en todas las implementaciones fallen en  10%, muestra que el factor humano es la clave del éxito en su implementacion. Tener una confianza ciega o negligente en el uso LLMs, aun puede conducirnos al fracaso. Por que para fines practicvos este año la IA no entro a medicina, tal ves el proximo año.
+No cabe duda que el avance tecnologico es impresionante, pero el hecho que en todas las implementaciones fallen en  10%, muestra que el factor humano es la clave del éxito en su implementacion. Tener una confianza ciega o negligente en el uso LLMs, aun puede conducirnos al fracaso. Por que para fines practicos este año la IA no entro a medicina, tal ves el proximo año.
 
 > Yo no culparia a los adolecentes en confiar ciegamente en la IA, hay CEOs que lo hacen todo el tiempo.
