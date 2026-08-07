@@ -64,7 +64,7 @@ Quizás el hallazgo más prometedor fue la brillantez de los modelos locales, aq
 *   **Qwen 3.6 (35B con 3B activos):** Un modelo MOE (Mixture of Experts) alcanzó un impresionante 94.17% de aciertos, situándose a una distancia mínima del máximo global.
 *   **DeepSeek v4 Flash 0731:** Un modelo denso cuantizado, alcanzó entre 93% y 94%. Que aunque requiere alrededor de 128 GB de VRAM, aún se encuentra en las posibilidades de un consumidor final.
 
-Estos hallazgos sugieren que la sofisticación académica no está colonizada exclusivamente por las arquitecturas propietarias de las gigantes tecnológicas, sino que es accesible mediante diseños eficientes y ejecutables localmente.
+Estos hallazgos sugieren que la sofisticación académica no es exclusiva de tecnologias propietarias de los gigantes tecnológicos, sino que es accesible a traves de diseños abiertos y mas eficientes.
 
 ## Análisis Profundo: La Tríada Score, Esfuerzo y Costo
 
@@ -72,7 +72,7 @@ La mera cifra del puntaje es insuficiente; para comprender la eficiencia de un L
 
 ### La Dinámica Esfuerzo vs. Rendimiento
 
-El parámetro de "Esfuerzo" demostró que aumentar la complejidad no siempre garantiza un mejor resultado. Observamos casos donde el aumento declarado de razonamiento ("Alto" vs. "Bajo") no se tradujo linealmente en una mejora de la calidad o acierto:
+El parámetro de "Esfuerzo" demostró que aumentar la complejidad no siempre garantiza un mejor resultado. Observamos casos donde el aumento de razonamiento ("Alto" vs. "Bajo") no es directamente proporcional a la calidad de respuesta:
 
 *   **DeepSeek v4 Flash (Esfuerzos):** Una ejecución con esfuerzo bajo logró un 94%, mientras que su contraparte con esfuerzo medio obtuvo 93.5%. Esto pone en duda la mera correlación entre el *prompt* de esfuerzo y la calidad del resultado.
 *   **Gemini 3.5 Flash:** Pese a ser una versión más actualizada, obtuvo el mismo resultado pero a mayor costo y tiempo que su antecesor Gemini 2.5.
