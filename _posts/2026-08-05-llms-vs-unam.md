@@ -74,9 +74,9 @@ La mera cifra del puntaje es insuficiente; para comprender la eficiencia de un L
 
 El parámetro de "Esfuerzo" demostró que aumentar la complejidad no siempre garantiza un mejor resultado. Observamos casos donde el aumento de razonamiento ("Alto" vs. "Bajo") no es directamente proporcional a la calidad de respuesta:
 
-*   **DeepSeek v4 Flash (Esfuerzos):** Una ejecución con esfuerzo bajo logró un 94%, mientras que su contraparte con esfuerzo medio obtuvo 93.5%. Esto pone en duda la mera correlación entre el *prompt* de esfuerzo y la calidad del resultado.
-*   **Gemini 3.5 Flash:** Pese a ser una versión más actualizada, obtuvo el mismo resultado pero a mayor costo y tiempo que su antecesor Gemini 2.5.
-*   **Gemma 4 e4b:** Un modelo que no requiere más de 16 GB de VRAM para una ejecución cuantizada da resultados que no distan mucho de los grandes modelos, además que en esfuerzo bajo superó a sus ejecuciones con esfuerzo medio y alto.
+*   **DeepSeek v4 Flash (Esfuerzos):** Una ejecución con esfuerzo bajo logró un 94%, mientras que su contraparte con esfuerzo medio obtuvo 93.5%.
+*   **Gemini 3.5 Flash:** Pese a ser una versión más actualizada, obtuvo el mismo resultado pero a mayor costo y tiempo que su antecesor lite.
+*   **Gemma 4 e4b:** Un modelo que no requiere más de 16 GB de VRAM para una ejecución cuantizada da resultados que no distan mucho de los grandes exponentes, además que en esfuerzo bajo superó a sus ejecuciones con esfuerzo medio y alto.
 *   **Microsoft Phi 4:** Un modelo local que se caracteriza por ser lento, pero al no contar con capa de pensamiento, casi iguala a resultados de sus equivalentes en una fraccion del tiempo.
 
 > Pensar más no te hace más inteligente, solo gastas más energía.
@@ -109,6 +109,8 @@ A pesar de su vasta potencia en matemáticas y física, el desempeño fluctuante
 
 ## Conclusión: ¿Una Potente Herramienta, pero Imperfecta?
 
-Como herramienta, la inteligencia artificial es magnífica. En los resultados de las pruebas, todos los modelos muestran un comportamiento logarítmico que tiende al 100%, pero dado los sesgos y tipos de entrenamiento, no avanzan en ese sentido. Los modelos pequeños no distan por mucho de sus contrapartes de recursos ilimitados. Los modelos abiertos pueden tener un mejor uso que uno privado, desde customizaciones hasta implementaciones de sistemas RAG.
+Como herramienta, la inteligencia artificial es magnífica. Los resultados de las pruebas muestran que todos los modelos exhiben un comportamiento logarítmico que tiende al 100%; sin embargo, debido a los sesgos y a los métodos de entrenamiento, en realidad no progresan en esa dirección. Los modelos abiertos no se quedan atrás respecto a sus homólogos que cuentan con recursos ilimitados. Un pequeño modelo abierto acompañado de herramientas y algunos ajustes puede ofrecer una mayor utilidad a menor costo.
 
-No cabe duda que el 10% o 5% es el factor humano, y el hecho que en todas las implementaciones de inteligencia artificial, el factor humano es clave en su éxito o fracaso. Puedes tener el modelo más inteligente de todos y aun así fallar en su implementación, ya sea por una excesiva confianza o por negligencia.
+No cabe duda que el avance tecnologico es impresionante, pero el hecho que en todas las implementaciones fallen en  10%, muestra que el factor humano es la clave del éxito en su implementacion. Tener una confianza ciega o negligente en el uso LLMs, aun puede conducirnos al fracaso. Por que para fines practicvos este año la IA no entro a medicina, tal ves el proximo año.
+
+> Yo no culparia a los adolecentes en confiar ciegamente en la IA, hay CEOs que lo hacen todo el tiempo.
