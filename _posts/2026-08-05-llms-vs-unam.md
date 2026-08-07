@@ -10,7 +10,6 @@ tags:
   - llms
   - AI assisted
 ---
-# LLM vs Examen de Admisión UNAM
 
 ¿Puede una Inteligencia Artificial aprobar el examen de admisión de la Universidad Nacional Autónoma de México (UNAM)? Tras la controversia sobre los resultados del examen a nivel licenciatura 2026, donde claramente aspirantes utilizaron herramientas para hacer trampa, entre ellas el uso de la IA, el debate trascendió rápidamente en muchas aristas. Sin embargo, ninguna de ellas respondía la pregunta central: ¿Puede una IA responder el examen de admisión de la UNAM?
 
