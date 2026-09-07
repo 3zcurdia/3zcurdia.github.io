@@ -80,7 +80,7 @@ Con dos peros. Primero: esos precios no son el costo real; los subsidia la burbu
 
 Cuando la burbuja estalle y las suscripciones suban al costo real ~$400/mes, por ejemplo, el Ultra de $5,499 se pagaría solo en ~14 meses y el de $3,000 en menos de 8; ese capricho pasa a ser una inversión. Sin embargo el costo tiene una moraleja más incómoda:
 
-> Quien compra un equipo para IA esta pagando por ser el beta-tester de modelos gratuitos de mañana.**
+> Quien compra un equipo para IA esta pagando por ser el beta-tester de modelos gratuitos de mañana.
 
 El top 1% del top 1% prueba hoy, a precio de lujo, lo que las versiones abiertas volverán commodity mañana.
 
