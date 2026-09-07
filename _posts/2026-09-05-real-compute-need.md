@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "La demanda de poder de cómputo que nunca llegó"
-description: "Quince años de avance tecnológico, ¿para qué?"
+title: "No necesitas más poder de procesamiento"
+description: "La demanda de hardware se estancó, solo la IA podría ser la respuesta"
+meta_description: "La demanda de hardware se estancó desde 2016: 15 años de avances y un software congelado. La IA local podría romper la inercia, pero su beta es cara."
 date: 2026-09-05
 tags:
   - hardware
@@ -11,26 +12,23 @@ tags:
   - AI assisted
 ---
 
-## La PC de 100 dólares
+Hace poco compré una Lenovo ThinkCentre M920Q usada por alrededor de 100 dólares: la típica mini-PC de oficina con un Intel Core i5-8500T de 6 núcleos y 16 GB de RAM. Es el tipo de máquina que las empresas venden en lotes cuando renuevan su inventario.
 
-Hace poco compré una Lenovo ThinkCentre M920Q usada por alrededor de 100 dólares: la típica mini-PC de oficina con un Intel Core i5-8500T de 6 núcleos y 16 GB de RAM.
-Thinkers y homelabs la adoran, pero en esta ocasión la adquirí para mi padre, quien toda su vida ha utilizado la computadora para tareas básicas de ofimática. Me pareció un buen trato dado que su computadora tiene más de 10 años y está teniendo problemas de rendimiento, por lo que este upgrade mejoró su experiencia.
-
-Este equipo en Geekbench 7 marca alrededor de 1,235 puntos en single core y 5,138 en multicore. En comparación con mi daily driver, una Mac Mini con chip M4 Pro, esta última es 3.2 veces más rápida por núcleo y 4.4 veces en multicore ([comparativa aquí](https://browser.geekbench.com/v7/cpu/compare/205229?baseline=201516)). Para la mayoría de las personas, la ofimática básica cubre sus necesidades, si bien no es el equipo más reciente: ninguna hoja de cálculo o procesador de texto se queja. Y si encima le conectara una GPU usada, técnicamente podría correr juegos AAA a 1080p en calidad baja.
+En Geekbench 7 marca ~1,235 puntos en single core y 5,138 en multicore ([comparativa](https://browser.geekbench.com/v7/cpu/compare/205229?baseline=201516)). Un Mac con chip M4 Pro es unas 3.2 veces más rápido por núcleo y 4.4 veces en multicore. Para navegacion y ofimática es mas que suficiente, si bien no es el equipo más reciente: ninguna hoja de cálculo o procesador de texto se queja. Y si le montara una GPU usada, podría correr juegos AAA a 1080p en calidad baja.
 
 Lo que me lleva a pensar: si una máquina de 100 dólares de 2018 cubre el 95% de los casos de uso, ¿para qué sirvió el progreso tecnológico de los últimos años?
 
-## Lo que el software de verdad pide
+## Lo que el software realmente pide
 
-En 2010, Office arrancaba con un procesador de 500 MHz y 256 MB de RAM. Hoy, Office 2024 y Microsoft 365 piden 1.6 GHz, 2 núcleos y 4 GB. El requerimiento mínimo se incrementó unas tres veces en quince años. A la par, Windows mantuvo el mismo requerimiento durante ese periodo ("1 GHz", de Windows 7 a Windows 10); fue hasta Windows 11 que se incrementó el requerimiento mínimo: 4 GB, chip TPM 2.0 y, por primera vez, una lista de CPUs compatibles que empieza en la 8ª generación de Intel (2017).
+En 2010, Office pedía un procesador de 500 MHz y 256 MB de RAM. Hoy, Office 2024 y Microsoft 365 piden 1.6 GHz, 2 núcleos y 4 GB. El requerimiento mínimo se incrementó unas tres veces en quince años. Windows mantuvo los mismos requerimentos durante ese tiempo ("1 GHz", de Windows 7 a Windows 10); Windows 11 fue el único muro real: 4 GB, chip TPM 2.0 y, por primera vez, una lista de CPUs compatibles que empieza en la 8ª generación de Intel (2017). Es una pared de seguridad y de política, no de rendimiento.
 
-El escenario para los creativos no dista mucho: Final Cut Pro pide 8 GB de RAM (16 recomendados), y Blender, el estándar abierto del 3D, pide 4 núcleos con SSE4.2, 8 GB de RAM y 2 GB de VRAM. ¿Y para programar? Un IDE moderno pide 4 núcleos y 8 GB. Todo eso lo cumple, con margen sobrado, una ThinkCentre de 100 dólares; y ni hablemos de Linux, que le da más potencia a la computadora.
+El escenario para los creativos no dista mucho: Final Cut Pro pide 8 GB de RAM (16 recomendados), y Blender —el estándar abierto del 3D—, 4 núcleos con SSE4.2, 8 GB de RAM y 2 GB de VRAM. ¿Y para programar? Un IDE moderno pide 4 núcleos y 8 GB. Todo eso lo cumple una ThinkCentre de 100 dólares y con margen de sobra; y ya ni hablemos de Linux. Los requisitos mínimos llevan congelados desde ~2016
 
-Los requisitos mínimos llevan congelados desde ~2016; solo los "recomendados" apenas se incrementaron.
+> Cabe aclarar que: mínimo no es lo mismo que cómodo. Aunque Blender arranque con 8 GB no significa que un render de 4K con shaders complejos sea comodo; un artista con deadlines devora 32 GB y todos los núcleos que le des. La ThinkCentre no roza el mínimo: sus 16 GB están cómodamente por encima de la base. La tesis no es "nadie necesita más poder", sino que el minimo que fija la industria lleva una década sin moverse, y la mayoría compra muy por encima de él sin notar la diferencia. Si tu oficio es render, compilación o edición pesada, el progreso sí te sirve: te encuentras por encima de la curva, no en la media.
 
 ## El maratón del silicio
 
-Pongamos por ejemplo a Intel y sus procesadores de los últimos quince años. Seis años estancados en 4 núcleos (2009–2017) hasta que AMD Ryzen llegó y asustó al mercado con procesadores de 6 y 8 núcleos; después el desarrollo en multicore se aceleró, llegando a 2021 con dos generaciones en doce meses y la arquitectura híbrida P+E; y en 2024 el adiós al apellido "i": bienvenida la era Core Ultra, sin Hyper-Threading y con DDR5 obligatoria. Aquí les dejo la tabla:
+Mientras el software dormía, el silicio corría una maratón, Tan solo veamos el desarrollo en intel, durante seis años quedo atrapado en 4 núcleos (2009–2017), hasta que AMD Ryzen llegó y asustó: de golpe, +2 núcleos. Después la escalada, el loco 2021 con dos generaciones en doce meses y la arquitectura híbrida P+E, y en 2024 el adiós al apellido "i": bienvenida la era Core Ultra, y con DDR5 obligatoria. La tabla:
 
 | Año | Generación Intel | Gama media (i5 / i7) | Núcleos/hilos (i5 / i7) | Frec. base media, GHz (i5 / i7) | Turbo máx., GHz (i5 / i7) | Memoria |
 |---|---|---|---|---|---|---|
@@ -54,34 +52,38 @@ Pongamos por ejemplo a Intel y sus procesadores de los últimos quince años. Se
 
 *\*La 5ª generación (Broadwell, 2014–2015) apenas llegó al escritorio: solo un par de modelos sueltos, como el i5-5675C.*
 
-## Lo que los power users realmente usan
+## El hardware de power users
 
 Dentro del cómputo es bien sabido que los gráficos siempre han sido la carga más demandante; por ello, la [Encuesta de Hardware de Steam](https://store.steampowered.com/hwsurvey/) funciona como el mejor censo del segmento más exigente del planeta:
 
-- Alrededor del 33% de los Intel está en el rango de 2.3 a 2.99 GHz, y solo ~2.7% corre a más de 3.7 GHz: las frecuencias de reloj en condiciones reales son mucho más bajas que las cifras en modo *boost*.
-- Los sistemas de 4, 6 y 8 núcleos suman ~67.9%; es decir, aproximadamente dos de cada tres jugadores utilizan 8 núcleos o menos. La tecnología Hyper-Threading está presente en el 87.86% de los sistemas.
-- La GPU más común sigue siendo la **RTX 3060… de 2021** (3.76%).
+- Alrededor del 33% de los Intel estan por debajo de lo 3 GHz, y solo ~2.7% corre a más de 3.7 GHz: las frecuencias de reloj en condiciones reales son mucho más bajas que las cifras en modo *boost*
+- Los sistemas de 4, 6 y 8 núcleos suman ~67.9%
+- La GPU más común sigue siendo la **RTX 3060… de 2021** (3.76%)
 - Las seis tope de gama de tres generaciones —3080, 3090, 4080, 4090, 5080, 5090— **suman ~5% entre todas**. Las "90", juntas: 1.5%.
 - El 50.5% juega a 1080p; 4K, apenas 5%. Dos tercios tienen 8 hilos o menos. La RAM modal: 16 GB (41%), con 32 GB pisándole los talones (37%).
 
-Si incluso los gamers, a quienes se consideraría los usuarios más hambrientos de cómputo, viven en el mid-range de hace 3 a 5 años, ¿qué clase de software podría demandar más poder de procesamiento que el que ya existe?
+Es decir: incluso los gamers —los usuarios más hambrientos de procesamiento que existen— viven en el rango medio de hace 3 a 5 años. ¿Qué clase de software podría demandar más poder de procesamiento que el que ya existe?
 
 ## La pieza de software que faltaba
 
-No existe pieza de software más ineficiente que la IA —en concreto, los LLMs—: para lograr capacidades superiores requieren una cantidad exorbitante de VRAM, además de alta velocidad de transferencia (hablamos de terabytes en capacidad y ancho de banda). Para que un modelo de lenguaje local (cuantizado) funcione de forma útil se requieren al menos 16 GB de VRAM; poniéndolo en contexto, es como tener toda la Wikipedia cargada en memoria (~9 GB) para poder hacer el resumen de este artículo que estás leyendo.
+No existe pieza de software más ineficiente que la IA —en concreto, los LLMs—: para lograr capacidades superiores requieren una cantidad exorbitante de memoria, además de alta velocidad de transferencia (en la escala de terabytes en capacidad industrial). Para que un modelo de lenguaje local (cuantizado) funcione de forma útil se requieren al menos 16 GB de VRAM; poniéndolo en contexto, es como tener toda la Wikipedia cargada en memoria (~9 GB) para poder hacer el resumen de este artículo que estás leyendo.
 
-Esta pieza de software que todos quieren, con el pretexto de la privacidad y el control sobre los datos, justifica la aparición de monstruos de procesamiento como el reciente lanzamiento del Mac Studio con **M5 Ultra**: 30 núcleos de CPU, 96 GB de memoria unificada (configurable a 512 GB), 1.2 TB/s de ancho de banda, desde $5,499 ([specs](https://www.apple.com/mac-studio/specs/)). Eso no lo necesita un editor de video 4K: un equipo pro de hace 6 años puede manejar la mayoría de los flujos creativos. El Ultra existe para una sola cosa del mundo real: **correr modelos de IA gigantes en local**.
+Esta pieza de software que todos quieren, con el pretexto de la privacidad y el control sobre los datos, justifica la aparición de monstruos de procesamiento como el reciente lanzamiento del Mac Studio con **M5 Ultra**: 30 núcleos de CPU, 96 GB de memoria unificada (configurable a 512 GB), 1.2 TB/s de ancho de banda, desde la modica cantidad de $5,499 USD ([specs](https://www.apple.com/mac-studio/specs/)). Eso no lo necesita un editor de video 4K: un equipo pro de hace 6 años puede manejar la mayoría de los flujos creativos. El Ultra existe para una sola cosa del mundo real: **correr modelos de IA gigantes en local**.
 
-Del lado PC, el mismo patrón se repite: la RTX 5090 y sus 32 GB de VRAM solo representan el 0.41% de los gamers. El segmento conocido como entusiasta apenas tiene la capacidad de correr modelos de lenguaje pequeños como Qwen3 27B y darle un uso real; por más que queramos correrlo en una 5060 Ti, sus 3 tok/s no son suficientes para correr flujos agénticos.
+Del lado PC, el mismo patrón: la RTX 5090, con sus 32 GB de VRAM, la tiene el 0.41% de Steam. El segmento conocido como entusiasta apenas tiene la capacidad de correr modelos de lenguaje pequeños como **Qwen3.8 27B** y darle un uso intensivo; una RTX 5060 Ti da ~3 tok/s que solo sirven para procesar prompts pequeños.
 
 ## La aritmética incómoda de la IA local
 
-Entonces, ¿la IA forzará la innovación? Hasta el momento es el único candidato real: la primera carga de trabajo nueva y pesada en quince años. Sin embargo, una suscripción a un modelo de frontera (~$200/mes) cuesta alrededor de $2,400 USD al año; una M5 Ultra de $5,499 equivale a 2.3 años de suscripción. Mientras estos precios se mantengan, la nube sigue ganando.
+¿Rompe la IA el estancamiento? Es el único candidato real: la primera carga de trabajo nueva y pesada en quince años. Sin embargo, una suscripción a un modelo de frontera (~$200/mes) cuesta alrededor de $2,400 USD al año; una M5 Ultra de $5,499 equivale a 2.3 años de suscripción. Mientras estos precios se mantengan, la nube sigue ganando.
 
-Por otro lado: primero, esos precios no representan el costo real; están subsidiados por la burbuja de capital. Segundo: los modelos abiertos avanzan más rápido que los cerrados. Qwen3 27B marca ~52 puntos en [Artificial Analysis](https://artificialanalysis.ai); Claude Opus 4.5/4.6 de Anthropic, los modelos de frontera del año pasado, se quedan en ~48 puntos, apenas 4 puntos por debajo. En otras palabras: **calidad de frontera de hace un año, en un modelo que cabe en 24 GB de VRAM** — una RTX 3090 usada de ~$800, o el Mac Studio base con M5 Max (36 GB, ~$3,000).
+Con dos peros. Primero: esos precios no son el costo real; los subsidia la burbuja de capital. Segundo: los modelos abiertos avanzan más rápido que los cerrados. **Qwen3.8 27B** marca ~52 puntos en [Artificial Analysis](https://artificialanalysis.ai); Claude Opus 4.5 y 4.6 de Anthropic, los modelos de frontera del año pasado, se quedan en ~48 puntos, apenas 4 puntos por debajo. En otras palabras: **calidad de frontera de hace un año, en un modelo que cabe en 24 GB de VRAM** — una RTX 3090 usada de ~$800, o el Mac Studio base con M5 Max (36 GB, ~$3,000).
 
-Cuando la burbuja estalle y las suscripciones suban al costo real (~$400/mes, por ejemplo), el Ultra de $5,499 se pagaría solo en ~14 meses y el de $3,000 en menos de 8; ese capricho pasa a ser una inversión. La élite que hoy compra el Ultra no está comprando poder: **está pagando por beta-testear el nivel gratis que todos correremos en local mañana.**
+Cuando la burbuja estalle y las suscripciones suban al costo real ~$400/mes, por ejemplo, el Ultra de $5,499 se pagaría solo en ~14 meses y el de $3,000 en menos de 8; ese capricho pasa a ser una inversión. Sin embargo el costo tiene una moraleja más incómoda:
+
+> Quien compra un equipo para IA esta pagando por ser el beta-tester de modelos gratuitos de mañana.**
+
+El top 1% del top 1% prueba hoy, a precio de lujo, lo que las versiones abiertas volverán commodity mañana.
 
 ## La demanda que nunca llegó
 
-Por eso el FOMO de los últimos lanzamientos se siente tan vacío. No hay una tarea cotidiana que la mayoría no pueda resolver con hardware de hace cinco años, y ni el top 5% de los gamers aprovecha el salto generacional. Quince años de avance tecnológico no trajeron ninguna demanda nueva para el usuario común: la única carga que de verdad pide más poder es la IA, y los equipos de marketing harán lo posible por hacerte sentir que la necesitas hoy. Pero no la necesitas: la única razón real para comprar ese hardware es la IA del futuro, y esa todavía no existe. Puedes esperar.
+Por eso el FOMO de los últimos lanzamientos se siente tan vacío. No hay una tarea cotidiana que la mayoría no pueda resolver con hardware de hace cinco años, y ni el top 5% de los gamers aprovecha el salto generacional. Quince años de avance tecnológico no trajeron ninguna demanda nueva para el usuario común: la única carga que de verdad pide más poder es la IA, y los equipos de marketing harán lo posible por hacerte sentir que la necesitas hoy. Pero la realidad es que no lo necesitas: la única razón real para comprar ese hardware es la IA del futuro, y esa todavía no existe. Por lo que puedes esperar.
