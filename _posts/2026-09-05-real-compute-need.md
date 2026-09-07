@@ -74,7 +74,7 @@ Del lado PC, el mismo patrón: la RTX 5090, con sus 32 GB de VRAM, la tiene el 0
 
 ## La aritmética incómoda de la IA local
 
-¿Rompe la IA el estancamiento? Es el único candidato real: la primera carga de trabajo nueva y pesada en quince años. Sin embargo, una suscripción a un modelo de frontera (~$200/mes) cuesta alrededor de $2,400 USD al año; una M5 Ultra de $5,499 equivale a 2.3 años de suscripción. Mientras estos precios se mantengan, la nube sigue ganando.
+¿Rompe la IA el estancamiento? Es el único candidato real: la primera carga de trabajo nueva y pesada en quince años. Sin embargo, una suscripción a un modelo de frontera (~$100/mes) cuesta alrededor de $1,200 USD al año; una M5 Ultra de $5,499 equivale a 4.6 años de suscripción. Mientras estos precios se mantengan, la nube sigue ganando.
 
 Con dos peros. Primero: esos precios no son el costo real; los subsidia la burbuja de capital. Segundo: los modelos abiertos avanzan más rápido que los cerrados. **Qwen3.8 27B** marca ~52 puntos en [Artificial Analysis](https://artificialanalysis.ai); Claude Opus 4.5 y 4.6 de Anthropic, los modelos de frontera del año pasado, se quedan en ~48 puntos, apenas 4 puntos por debajo. En otras palabras: **calidad de frontera de hace un año, en un modelo que cabe en 24 GB de VRAM** — una RTX 3090 usada de ~$800, o el Mac Studio base con M5 Max (36 GB, ~$3,000).
 
