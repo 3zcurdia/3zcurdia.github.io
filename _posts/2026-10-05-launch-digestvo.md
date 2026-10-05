@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Launching digesTvo"
-description: "My personal feed — no cookies, no users, five minutes of your day"
+description: "Mi personal feed de noticias sin cookies, usuarios, 5 minutos de tu dia"
 date: 2026-10-05
 tags:
   - release
