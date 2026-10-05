@@ -13,7 +13,7 @@ tags:
 
 ## El problema de los *feeds*
 
-Parte de mi rutina diaria consiste en revisar Hacker News de vez en cuando; a veces visito otros sitios como lobste.rs. Sin embargo, esta especie de adicción a las noticias constantes y a los *feeds* ya no tiene sentido para mí. Necesito distraerme menos en lugar de dejarme llevar constantemente por las novedades del mundo tecnológico. Por lo general, un artículo es relevante el día que se publica y genera conversación a lo musho por una semana.
+Parte de mi rutina diaria consiste en revisar Hacker News de vez en cuando; a veces visito otros sitios como lobste.rs. Sin embargo, esta especie de adicción a las noticias constantes y a los *feeds* ya no tiene sentido para mí. Necesito distraerme menos en lugar de dejarme llevar constantemente por las novedades del mundo tecnológico. Por lo general, un artículo es relevante el día que se publica y genera conversación a lo mucho por una semana.
 
 Y hay algo que detesto: a veces veo un titular que parece aburrido o poco interesante y, en cambio, el contenido resulta ser todo lo contrario. Por eso, si quiero descubrir lo que realmente vale la pena, tengo que consultar esos sitios. Pero para hacerlo revisar una página con 20 titulares no es algo que me llama la atencion, sobre todo cuando descarto a la mayoría de los cuales tratan temas que no me interesan en absoluto.
 
@@ -39,14 +39,14 @@ Sin suscripciones, sin cookies, sin usuarios, sin nada de eso. Un sitio sencillo
 
 ## ¿Qué incluye hoy?
 
-Como dije, no tiene muchas funciones. Es solo un resumen de Hacker News y lobste.rs, pero tal vez en el futuro incluya un resumen de los vídeos que veo durante el día, o noticias y artículos interesantes sobre programación, lenguajes, tecnología o incluso historia. De momento, no estoy seguro.
+Como dije, no tiene muchas funciones. Es solo un resumen de Hacker News y lobste.rs, y uno que otro tweet, tal vez en el futuro incluya un resumen de los vídeos que te recomiendo, o noticias y artículos interesantes sobre programación, lenguajes, tecnología o incluso historia. De momento, no estoy seguro.
 
-Pero sí tengo claro que quiero mantener esto como mi espacio personal para consumir noticias.
+Pero sí tengo claro que quiero mantener esto como mi espacio personal para consumir noticias **nerd**.
 
 ## Un compromiso diario
 
-A partir de ahora, me comprometo a ejecutar mi agente a diario —mientras los *tokens* sean gratuitos (o al menos se sientan como tales) y a actualizar la página. Probablemente esto se automatice más en el futuro, pero por ahora esa es la razón por la que quiero hacerlo: me servirá para recordar cuántas noticias hay ahí fuera que no me interesan, frente a esta selección curada de las cosas que sí me importan.
+A partir de ahora, como parte de mi rutina diaria replazare el leed desde HN o lobsters y dejarselo a mi agente —siempre y cuando los *tokens* sean gratuitos (o al menos se sientan como tales) y a actualizare el feed. Probablemente automatice esto en el futuro, pero por ahora esa es la razón por la que quiero hacerlo: me servirá para recordar cuántas noticias hay ahí fuera que no me interesan, frente a esta selección curada de las cosas que sí me importan.
 
 ## Dónde encontrarlo
 
-Puedes visitarlo o suscribirte al *feed* RSS en [http://digest.ezcurdia.dev](http://digest.ezcurdia.dev), y puedes enviarme tus comentarios a través de Twitter.
+Puedes visitarlo o suscribirte al *feed* RSS en [http://digest.ezcurdia.dev](http://digest.ezcurdia.dev), y puedes enviarme tus comentarios a través de Twitter. O incluso revisar el codigo fuente [aqui](https://github.com/3zcurdia/digestvo)
