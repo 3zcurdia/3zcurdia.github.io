@@ -3,6 +3,7 @@ layout: post
 title: "El futuro es solar"
 description: "O al menos para latino america"
 date: 2026-10-15
+image: /images/energy-chart.png
 tags:
   - thoughts
   - energy
