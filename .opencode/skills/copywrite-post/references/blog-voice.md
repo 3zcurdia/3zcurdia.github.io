@@ -88,7 +88,7 @@ Never rewrite front matter during a copywriting pass. Flag oddities instead.
   part is in — including an English body under a Spanish title. If a
   translation is wanted, it is a separate, explicit request.
 - **Code-switching texture:** English tech terms sit un-italicized inside
-  Spanish prose ("code", "mood", "training dataset"); borrowed everyday
+  Spanish prose ("pull request", "mood", "training dataset"); borrowed everyday
   words get italics (*nerd*, *feeds*, *spanglish*).
 - **Mexican/LatAm texture is identity, not decoration:** UNAM, CFE,
   pesos, "tía panista", chile en nogada, Cortázar, Mexico City life. Keep
