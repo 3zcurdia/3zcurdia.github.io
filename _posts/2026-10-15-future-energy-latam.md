@@ -12,7 +12,7 @@ tags:
   - AI assisted
 ---
 
-Hace unos días me metí en uno de esos rabbit holes del internet que comienzo con un artículo y terminé cuestionándome el modelo energético del país. Todo empezó con [este artículo de Our World in Data](https://ourworldindata.org/data-insights/electricity-generation-per-person-in-the-united-kingdom-has-fallen-by-a-third-from-its-early-2000s-peak) sobre la generación de electricidad en el Reino Unido.
+Hace unos días, me perdí en uno de esos rabbit holes del internet: empezó con un simple artículo y terminé cuestionando el modelo energético del país. Todo empezó con [este artículo de Our World in Data](https://ourworldindata.org/data-insights/electricity-generation-per-person-in-the-united-kingdom-has-fallen-by-a-third-from-its-early-2000s-peak) sobre la generación de electricidad en el Reino Unido.
 
 El titular me sorprendió: la generación de electricidad por habitante en el Reino Unido ha caído un tercio respecto a su punto máximo a principios de la década de 2000. En 2003, a cada británico le correspondían unos 6,700 kWh de electricidad generada al año; hoy, la cifra ronda los 4,200 kWh, un nivel similar al que tenía el país a finales de la década de 1960.
 
