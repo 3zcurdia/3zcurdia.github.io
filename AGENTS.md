@@ -1,13 +1,13 @@
 # AGENTS.md
 
-This file contains instructions for agentic coding agents working on this Jekyll portfolio site.
+This file contains instructions for agentic coding agents working on this Bridgetown portfolio site.
 
 ## Project Overview
 
-This is a Jekyll 4.3.4 static site generator for a personal artist portfolio. The site uses:
-- Jekyll (Ruby) for static site generation
-- Tailwind CSS via CDN for styling
-- Vanilla JavaScript (no frameworks)
+This is a Bridgetown 2.x (Ruby) static site generator for a personal artist portfolio. The site uses:
+- Bridgetown for static site generation (content lives in `src/`, templates in Liquid)
+- Tailwind CSS v3 bundled locally with esbuild + PostCSS (no CDN)
+- Vanilla JavaScript (no frameworks), bundled with esbuild
 - English language content
 
 ## Build and Development Commands
@@ -16,23 +16,23 @@ This is a Jekyll 4.3.4 static site generator for a personal artist portfolio. Th
 # Install dependencies
 bundle install
 
-# Development server (runs at http://localhost:4000)
-bundle exec jekyll serve
+# Build frontend assets (Tailwind CSS + JS) into output/_bridgetown/static/
+yarn build
 
-# Build for production
-bundle exec jekyll build
+# Development server (frontend bundler + site watcher, http://localhost:4000)
+bundle exec bridgetown start
 
-# Check Jekyll configuration
-bundle exec jekyll doctor
+# Build for production into output/
+bundle exec bridgetown build
 
 # Clean generated files
-bundle exec jekyll clean
+bundle exec bridgetown clean
 ```
 
 ## Testing
 
 No automated testing framework is configured. Testing should be done manually by:
-1. Running `bundle exec jekyll serve` and testing in browser
+1. Running `bundle exec bridgetown start` and testing in browser
 2. Checking responsive design at different viewport sizes
 3. Verifying form functionality and navigation
 4. Testing lightbox gallery functionality
@@ -40,19 +40,19 @@ No automated testing framework is configured. Testing should be done manually by
 ## Code Style Guidelines
 
 ### File Organization
-- Jekyll directories use underscore prefix: `_layouts/`, `_includes/`, `_config.yml`
+- Bridgetown directories use underscore prefix: `src/_layouts/`, `src/_partials/`, `src/_data/`
 - Regular files use kebab-case: `about.markdown`, `main.js`
 - Assets in `assets/` directory: `assets/js/`, `assets/images/`, `assets/css/`
 
 ### HTML/Liquid Conventions
 - Use semantic HTML5 elements
-- Include proper Jekyll front matter with YAML (`---`)
+- Include proper front matter with YAML (`---`)
 - Use Liquid templating: `{{ variable }}` for output, `{% tag %}` for logic
 - English language content: `lang="en"` on HTML element
 - Mobile-first responsive design with Tailwind utilities
 
 ### CSS/Styling
-- Use Tailwind CSS utility classes via CDN
+- Use Tailwind CSS utility classes (compiled locally, config in `tailwind.config.js`)
 - Custom color palette: `blush`, `rose-light`, `cream`, `rose-gold`, `dusty-rose`, `soft-pink`
 - Custom fonts: Playfair Display (serif), Quicksand (sans-serif)
 - Add custom CSS only in `<head>` section of layouts
@@ -68,8 +68,8 @@ No automated testing framework is configured. Testing should be done manually by
 
 ### Import Patterns
 - No ES6 imports/exports - use global scope
-- Include Jekyll partials with `{% include file.html %}`
-- Load external CSS via CDN in layout head
+- Include Bridgetown partials with `{% render "file.html" %}`
+- Load the bundled CSS/JS via `{% asset_path css %}` / `{% asset_path js %}` in `src/_layouts/base.html`
 - Place JavaScript in `assets/js/main.js`
 
 ### Error Handling
@@ -83,7 +83,7 @@ No automated testing framework is configured. Testing should be done manually by
 #### Files and Directories
 - **Files**: kebab-case (`main.js`, `about.md`)
 - **Directories**: lowercase with underscores (`_layouts`, `_includes`)
-- **Jekyll special files**: underscore prefix (`_config.yml`)
+- **Bridgetown special files**: underscore prefix (`src/_data/`), config in `bridgetown.config.yml`
 
 #### JavaScript
 - **Variables/Functions**: camelCase (`highlightNav`, `updateNavbar`)
@@ -92,7 +92,7 @@ No automated testing framework is configured. Testing should be done manually by
 
 #### HTML/Liquid
 - **IDs/Classes**: kebab-case (`lightbox-img`, `mobile-menu`)
-- **Jekyll variables**: snake_case (`site.title`, `page.description`)
+- **Site variables**: `site.metadata.title`, `site.data.site.*`, `page.description`
 
 ## Content Guidelines
 
@@ -115,24 +115,24 @@ No automated testing framework is configured. Testing should be done manually by
 
 ## Performance Guidelines
 
-- Use Tailwind CSS via CDN (no local CSS build process)
+- Tailwind CSS is compiled by the esbuild/PostCSS pipeline (`yarn build`)
 - Optimize images for web (appropriate sizes, formats)
 - Minimize JavaScript - use vanilla JS only
-- Leverage Jekyll's built-in optimization
+- Leverage Bridgetown's built-in optimization
 - Use responsive images with appropriate sizing
 
 ## Deployment
 
 - Site is configured for GitHub Pages (CNAME file present)
-- Use `bundle exec jekyll build` for production builds
-- Ensure `_site/` directory is gitignored
+- Use `bundle exec bridgetown build` for production builds (after `yarn build`)
+- Ensure `output/` directory is gitignored
 - Test thoroughly before deployment
 
 ## Common Tasks
 
 ### Adding New Pages
 1. Create new file in root directory (e.g., `contact.markdown`)
-2. Add Jekyll front matter with layout and title
+2. Add front matter with layout and title
 3. Include in navigation if needed
 
 ### Modifying Styles
@@ -152,9 +152,9 @@ No automated testing framework is configured. Testing should be done manually by
 
 ## Important Notes
 
-- No package.json - this is a Ruby/Jekyll project
-- No build process for CSS/JS - uses CDN and vanilla JS
+- Ruby + Node project: `Gemfile` for Bridgetown, `package.json` for esbuild/PostCSS/Tailwind
+- CSS/JS are bundled locally with esbuild (no CDNs except FontAwesome and Google Fonts)
 - All user-facing content should be in English
-- Keep dependencies minimal - Jekyll + Tailwind only
+- Keep dependencies minimal - Bridgetown + Tailwind only
 - Test responsive design thoroughly
 - Maintain clean, semantic HTML structure

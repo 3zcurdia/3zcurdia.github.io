@@ -28,10 +28,10 @@ layout: base
       </a>
       <div class="flex space-x-4">
         <span class="text-slate-400 text-sm">Share:</span>
-        <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url | uri_escape }}" target="_blank" class="text-slate-400 hover:text-indigo-dye transition-colors">
+        <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.relative_url | absolute_url | uri_escape }}" target="_blank" class="text-slate-400 hover:text-indigo-dye transition-colors">
           <span class="fab fa-twitter"></span>
         </a>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url | uri_escape }}&title={{ page.title | uri_escape }}" target="_blank" class="text-slate-400 hover:text-indigo-dye transition-colors">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.relative_url | absolute_url | uri_escape }}&title={{ page.title | uri_escape }}" target="_blank" class="text-slate-400 hover:text-indigo-dye transition-colors">
           <span class="fab fa-linkedin"></span>
         </a>
       </div>
@@ -42,15 +42,15 @@ layout: base
 <footer class="bg-white border-t border-slate-200">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
     <div class="flex flex-col md:flex-row justify-between items-center">
-      <p class="text-slate-500 text-sm">&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+      <p class="text-slate-500 text-sm">&copy; {{ "now" | date: "%Y" }} {{ site.metadata.title }}. All rights reserved.</p>
       <div class="flex space-x-4 mt-4 md:mt-0">
-        <a href="https://github.com/{{site.social.github}}" class="text-slate-400 hover:text-oxford-blue transition-colors">
+        <a href="https://github.com/{{site.data.site.social.github}}" class="text-slate-400 hover:text-oxford-blue transition-colors">
           <span class="fab fa-github text-xl"></span>
         </a>
-        <a href="https://twitter.com/{{site.social.twitter}}" class="text-slate-400 hover:text-oxford-blue transition-colors">
+        <a href="https://twitter.com/{{site.data.site.social.twitter}}" class="text-slate-400 hover:text-oxford-blue transition-colors">
           <span class="fab fa-twitter text-xl"></span>
         </a>
-        <a href="http://www.linkedin.com/in/{{site.social.linkedin}}" class="text-slate-400 hover:text-oxford-blue transition-colors">
+        <a href="http://www.linkedin.com/in/{{site.data.site.social.linkedin}}" class="text-slate-400 hover:text-oxford-blue transition-colors">
           <span class="fab fa-linkedin text-xl"></span>
         </a>
       </div>

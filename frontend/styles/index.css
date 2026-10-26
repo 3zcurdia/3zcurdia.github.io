@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+@media print {
+  .no-print,
+  .no-print *,
+  aside,
+  header,
+  footer {
+    display: none !important;
+  }
+  .page-break {
+    page-break-before: always;
+  }
+}

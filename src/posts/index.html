@@ -6,12 +6,12 @@ subtitle: Thoughts on software engineering and technology
 
 <section>
   <div class="grid gap-6">
-    {% for post in site.posts %}
+    {% for post in collections.posts.resources %}
     <article
       class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-slate-100"
     >
       <a
-        href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}"
+        href="{{ post.relative_url | prepend: site.baseurl | replace: '//', '/' }}"
         class="block p-6"
       >
         <div
@@ -24,11 +24,11 @@ subtitle: Thoughts on software engineering and technology
             <h2
               class="text-xl font-bold mb-2 text-oxford-blue hover:text-indigo-dye transition-colors"
             >
-              {{ post.title }}
+              {{ post.data.title }}
             </h2>
             <p class="text-slate-600">
-              {% if post.subtitle %} {{ post.subtitle }} {% else %} {{
-              post.excerpt | strip_html | truncatewords: 30 }} {% endif %}
+              {% if post.data.subtitle %} {{ post.data.subtitle }} {% else %} {{
+              post.summary | strip_html | truncatewords: 30 }} {% endif %}
             </p>
           </div>
           <div class="hidden md:block">

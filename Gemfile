@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-source 'https://rubygems.org'
-git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+source "https://rubygems.org"
 
 ruby File.read('.ruby-version').strip
 
-gem 'jekyll'
-gem 'webrick'
-
-group :jekyll_plugins do
-  gem 'jekyll-feed'
-  gem 'jekyll-paginate'
-end
+gem "bridgetown", "~> 2.0"
+gem "bridgetown-feed", "~> 4.0"
+gem "bridgetown-paginate", "~> 2.0"
+gem "webrick", "~> 1.8"
