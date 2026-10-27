@@ -6,14 +6,14 @@ permalink: /stories/
 ---
 
 <section>
-  {% if site.stories.size > 0 %}
+  {% if collections.stories.resources.size > 0 %}
   <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-    {% for story in site.stories %}
+    {% for story in collections.stories.resources %}
     <article
       class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-slate-100 group"
     >
       <a
-        href="{{ story.url | prepend: site.baseurl | replace: '//', '/' }}"
+        href="{{ story.relative_url | prepend: site.baseurl | replace: '//', '/' }}"
         class="block p-6"
       >
         <p class="text-sm text-slate-400 mb-2">
@@ -22,10 +22,10 @@ permalink: /stories/
         <h2
           class="text-xl font-bold mb-2 text-oxford-blue group-hover:text-indigo-dye transition-colors"
         >
-          {{ story.title }}
+          {{ story.data.title }}
         </h2>
         <p class="text-slate-600 line-clamp-3">
-          {{ story.excerpt | strip_html | truncatewords: 25 }}
+          {{ story.summary | strip_html | truncatewords: 25 }}
         </p>
         <div class="mt-4 text-indigo-dye font-medium text-sm">
           Read more <i class="fas fa-arrow-right ml-1"></i>

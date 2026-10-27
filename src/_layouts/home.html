@@ -7,20 +7,20 @@ layout: default
     <a href="{{"/posts" | relative_url }}" class="text-indigo-dye hover:text-oxford-blue font-medium transition-colors">View all <i class="fas fa-arrow-right ml-1"></i></a>
   </div>
   <div class="grid gap-6 md:grid-cols-2">
-    {% for post in site.posts limit: 4 %}
+    {% for post in collections.posts.resources limit: 4 %}
     <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100">
       <div class="p-6">
         <p class="text-sm text-slate-400 mb-2">{{ post.date | date: '%B %d, %Y' }}</p>
         <h3 class="text-xl font-bold mb-2">
-          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="text-oxford-blue hover:text-indigo-dye transition-colors">
-            {{ post.title }}
+          <a href="{{ post.relative_url | prepend: site.baseurl | replace: '//', '/' }}" class="text-oxford-blue hover:text-indigo-dye transition-colors">
+            {{ post.data.title }}
           </a>
         </h3>
         <p class="text-slate-600">
-          {% if post.subtitle %}
-          {{ post.subtitle }}
+          {% if post.data.subtitle %}
+          {{ post.data.subtitle }}
           {% else %}
-          {{ post.excerpt | strip_html | truncatewords: 20 }}
+          {{ post.summary | strip_html | truncatewords: 20 }}
           {% endif %}
         </p>
       </div>
@@ -34,18 +34,18 @@ layout: default
     <h2 class="text-2xl font-bold text-oxford-blue">Recent Stories</h2>
     <a href="{{"/stories" | relative_url }}" class="text-indigo-dye hover:text-oxford-blue font-medium transition-colors">View all <i class="fas fa-arrow-right ml-1"></i></a>
   </div>
-  {% if site.stories.size > 0 %}
+  {% if collections.stories.resources.size > 0 %}
   <div class="grid gap-6 md:grid-cols-2">
-    {% for story in site.stories limit: 2 %}
+    {% for story in collections.stories.resources limit: 2 %}
     <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100">
       <div class="p-6">
         <p class="text-sm text-slate-400 mb-2">{{ story.date | date: '%B %d, %Y' }}</p>
         <h3 class="text-xl font-bold mb-2">
-          <a href="{{ story.url | prepend: site.baseurl | replace: '//', '/' }}" class="text-oxford-blue hover:text-indigo-dye transition-colors">
-            {{ story.title }}
+          <a href="{{ story.relative_url | prepend: site.baseurl | replace: '//', '/' }}" class="text-oxford-blue hover:text-indigo-dye transition-colors">
+            {{ story.data.title }}
           </a>
         </h3>
-        <p class="text-slate-600">{{ story.excerpt | strip_html | truncatewords: 20 }}</p>
+        <p class="text-slate-600">{{ story.summary | strip_html | truncatewords: 20 }}</p>
       </div>
     </article>
     {% endfor %}

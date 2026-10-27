@@ -7,7 +7,7 @@ layout: base
       <div class="flex items-center">
         <a href="/" class="flex items-center space-x-3">
           <img class="h-10 w-10 rounded-full border-2 border-columbia-blue" src="https://s.gravatar.com/avatar/acb85d71b90905e69b95fd02fbe6f828?s=64" alt="Profile">
-          <span class="font-bold text-xl tracking-tight text-white">{{ site.title }}</span>
+          <span class="font-bold text-xl tracking-tight text-white">{{ site.metadata.title }}</span>
         </a>
       </div>
       <div class="hidden md:block">
@@ -36,29 +36,29 @@ layout: base
 </header>
 
 <div id="hero-section" class="relative h-[35vh] min-h-[250px] flex items-center justify-center overflow-hidden">
-  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{{ "/assets/images/glacier.png" | relative_url }}');"></div>
+  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{{ "/images/glacier.png" | relative_url }}');"></div>
   <div class="absolute inset-0 bg-gradient-to-r from-oxford-blue/70 to-indigo-dye/70"></div>
   <div class="relative z-10 text-center text-white px-4 max-w-3xl mx-auto">
     <h1 class="text-4xl md:text-5xl font-bold mb-3 tracking-tight">
-      {% if page.url == "/" %}
-        {{ site.title }}
-      {% elsif page.url == "/posts/" %}
+      {% if page.relative_url == "/" %}
+        {{ site.metadata.title }}
+      {% elsif page.relative_url == "/posts/" %}
         Blog
-      {% elsif page.url == "/stories/" %}
+      {% elsif page.relative_url == "/stories/" %}
         Stories
       {% else %}
-        {{ site.title }}
+        {{ site.metadata.title }}
       {% endif %}
     </h1>
     <p class="text-lg md:text-xl text-columbia-blue mb-4">
-      {% if page.url == "/" %}
+      {% if page.relative_url == "/" %}
         I love to build stuff
-      {% elsif page.url == "/posts/" %}
+      {% elsif page.relative_url == "/posts/" %}
         Thoughts on software engineering and technology
-      {% elsif page.url == "/stories/" %}
+      {% elsif page.relative_url == "/stories/" %}
         Short stories and creative writing
       {% else %}
-        {{ site.description }}
+        {{ site.metadata.description }}
       {% endif %}
     </p>
   </div>
@@ -76,15 +76,15 @@ layout: base
 <footer class="bg-white border-t border-slate-200">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
     <div class="flex flex-col md:flex-row justify-between items-center">
-      <p class="text-slate-500 text-sm">&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+      <p class="text-slate-500 text-sm">&copy; {{ "now" | date: "%Y" }} {{ site.metadata.title }}. All rights reserved.</p>
       <div class="flex space-x-4 mt-4 md:mt-0">
-        <a href="https://github.com/{{site.social.github}}" class="text-slate-400 hover:text-oxford-blue transition-colors" aria-label="github">
+        <a href="https://github.com/{{site.data.site.social.github}}" class="text-slate-400 hover:text-oxford-blue transition-colors" aria-label="github">
           <span class="fab fa-github text-xl"></span>
         </a>
-        <a href="https://twitter.com/{{site.social.twitter}}" class="text-slate-400 hover:text-oxford-blue transition-colors" aria-label="twitter">
+        <a href="https://twitter.com/{{site.data.site.social.twitter}}" class="text-slate-400 hover:text-oxford-blue transition-colors" aria-label="twitter">
           <span class="fab fa-twitter text-xl"></span>
         </a>
-        <a href="http://www.linkedin.com/in/{{site.social.linkedin}}" class="text-slate-400 hover:text-oxford-blue transition-colors" aria-label="linkedin">
+        <a href="http://www.linkedin.com/in/{{site.data.site.social.linkedin}}" class="text-slate-400 hover:text-oxford-blue transition-colors" aria-label="linkedin">
           <span class="fab fa-linkedin text-xl"></span>
         </a>
       </div>
@@ -92,13 +92,3 @@ layout: base
   </div>
 </footer>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const btn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-
-    btn.addEventListener('click', function() {
-      menu.classList.toggle('hidden');
-    });
-  });
-</script>

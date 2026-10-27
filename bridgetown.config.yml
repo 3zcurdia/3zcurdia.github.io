@@ -1,0 +1,32 @@
+url: "http://ezcurdia.dev/"
+
+# Jekyll's default permalink style is "date"; Bridgetown's is "pretty".
+# Keep Jekyll's so post URLs stay /YYYY/MM/DD/slug.html
+permalink: date
+
+# Jekyll sets kramdown's syntax_highlighter_opts.default_lang to "plaintext"
+# (see Jekyll's KramdownParser#setup); without it, language-less code blocks
+# lose their language-plaintext classes and differ from the previous output.
+kramdown:
+  syntax_highlighter_opts:
+    default_lang: plaintext
+
+collections:
+  stories:
+    output: true
+    permalink: "/stories/:slug/"
+
+pagination:
+  enabled: true   # kept for parity of the gem; the posts index does not use it
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: stories
+    values:
+      layout: story

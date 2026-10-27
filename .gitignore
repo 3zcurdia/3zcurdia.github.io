@@ -87,3 +87,6 @@ _site
 .jekyll-metadata
 .jekyll-cache
 _drafts
+output
+node_modules
+.bridgetown-cache
