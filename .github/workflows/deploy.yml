@@ -17,7 +17,6 @@ jobs:
       - uses: actions/configure-pages@v5
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "4.0.7"
           bundler-cache: true
       - uses: actions/setup-node@v4
         with:
@@ -26,6 +25,14 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn build
       - run: bundle exec bridgetown build
+        env:
+          BRIDGETOWN_ENV: production
+      - name: Verify SEO output
+        run: |
+          test -f output/sitemap.xml
+          test -f output/robots.txt
+          ! grep -R -E "http://ezcurdia\.dev|ezcurdia\.dev//" output --include='*.html' --include='*.xml' --include='*.txt'
+          ! grep -q '/404' output/sitemap.xml
       - uses: actions/upload-pages-artifact@v3
         with:
           path: output

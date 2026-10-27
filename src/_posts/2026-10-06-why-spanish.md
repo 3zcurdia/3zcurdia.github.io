@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: es-MX
 title: "¿Por qué en español?"
 description: "O al menos estas son mis razones"
 date: 2026-10-06

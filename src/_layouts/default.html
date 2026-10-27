@@ -1,26 +1,29 @@
 ---
 layout: base
 ---
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-4 focus:left-4 focus:bg-white focus:text-oxford-blue focus:px-4 focus:py-2 focus:rounded-md focus:shadow-lg">
+  Skip to content
+</a>
 <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gradient-to-r from-oxford-blue to-indigo-dye shadow-lg">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <div class="flex items-center">
         <a href="/" class="flex items-center space-x-3">
-          <img class="h-10 w-10 rounded-full border-2 border-columbia-blue" src="https://s.gravatar.com/avatar/acb85d71b90905e69b95fd02fbe6f828?s=64" alt="Profile">
+          <img class="h-10 w-10 rounded-full border-2 border-columbia-blue" src="{{ '/images/avatar.png' | relative_url }}" width="40" height="40" alt="Luis Ezcurdia" fetchpriority="high">
           <span class="font-bold text-xl tracking-tight text-white">{{ site.metadata.title }}</span>
         </a>
       </div>
       <div class="hidden md:block">
         <div class="ml-10 flex items-baseline space-x-4">
           <a href="{{"/" | relative_url }}" class="hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-sm font-medium text-white transition-colors duration-200">Home</a>
-          <a href="{{"/posts" | relative_url }}" class="hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-sm font-medium text-white transition-colors duration-200">Blog</a>
-          <a href="{{"/stories" | relative_url }}" class="hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-sm font-medium text-white transition-colors duration-200">Stories</a>
-          <a href="{{"/about" | relative_url }}" class="hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-sm font-medium text-white transition-colors duration-200">About</a>
+          <a href="{{"/posts/" | relative_url }}" class="hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-sm font-medium text-white transition-colors duration-200">Blog</a>
+          <a href="{{"/stories/" | relative_url }}" class="hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-sm font-medium text-white transition-colors duration-200">Stories</a>
+          <a href="{{"/about/" | relative_url }}" class="hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-sm font-medium text-white transition-colors duration-200">About</a>
         </div>
       </div>
       <div class="md:hidden">
-        <button id="mobile-menu-btn" class="p-2 rounded-md hover:bg-indigo-dye/50 focus:outline-none">
-          <i class="fas fa-bars text-xl text-white"></i>
+        <button id="mobile-menu-btn" class="p-2 rounded-md hover:bg-indigo-dye/50 focus:outline-none" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation">
+          <i class="fas fa-bars text-xl text-white" aria-hidden="true"></i>
         </button>
       </div>
     </div>
@@ -28,9 +31,9 @@ layout: base
   <div id="mobile-menu" class="hidden md:hidden bg-oxford-blue">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
       <a href="{{"/" | relative_url }}" class="block hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-base font-medium text-white">Home</a>
-      <a href="{{"/posts" | relative_url }}" class="block hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-base font-medium text-white">Blog</a>
-      <a href="{{"/stories" | relative_url }}" class="block hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-base font-medium text-white">Stories</a>
-      <a href="{{"/about" | relative_url }}" class="block hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-base font-medium text-white">About</a>
+      <a href="{{"/posts/" | relative_url }}" class="block hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-base font-medium text-white">Blog</a>
+      <a href="{{"/stories/" | relative_url }}" class="block hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-base font-medium text-white">Stories</a>
+      <a href="{{"/about/" | relative_url }}" class="block hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-base font-medium text-white">About</a>
     </div>
   </div>
 </header>
@@ -47,18 +50,18 @@ layout: base
       {% elsif page.relative_url == "/stories/" %}
         Stories
       {% else %}
-        {{ site.metadata.title }}
+        {{ page.title | default: site.metadata.title }}
       {% endif %}
     </h1>
     <p class="text-lg md:text-xl text-columbia-blue mb-4">
       {% if page.relative_url == "/" %}
-        I love to build stuff
+        {{ site.metadata.tagline }}
       {% elsif page.relative_url == "/posts/" %}
         Thoughts on software engineering and technology
       {% elsif page.relative_url == "/stories/" %}
         Short stories and creative writing
       {% else %}
-        {{ site.metadata.description }}
+        {{ page.description | default: site.metadata.description }}
       {% endif %}
     </p>
   </div>
@@ -67,28 +70,11 @@ layout: base
   </div>
 </div>
 
-<main class="bg-slate-50 -mt-20 relative z-20">
+<main id="main-content" tabindex="-1" class="bg-slate-50 -mt-20 relative z-20">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     {{ content }}
   </div>
 </main>
 
-<footer class="bg-white border-t border-slate-200">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-    <div class="flex flex-col md:flex-row justify-between items-center">
-      <p class="text-slate-500 text-sm">&copy; {{ "now" | date: "%Y" }} {{ site.metadata.title }}. All rights reserved.</p>
-      <div class="flex space-x-4 mt-4 md:mt-0">
-        <a href="https://github.com/{{site.data.site.social.github}}" class="text-slate-400 hover:text-oxford-blue transition-colors" aria-label="github">
-          <span class="fab fa-github text-xl"></span>
-        </a>
-        <a href="https://twitter.com/{{site.data.site.social.twitter}}" class="text-slate-400 hover:text-oxford-blue transition-colors" aria-label="twitter">
-          <span class="fab fa-twitter text-xl"></span>
-        </a>
-        <a href="http://www.linkedin.com/in/{{site.data.site.social.linkedin}}" class="text-slate-400 hover:text-oxford-blue transition-colors" aria-label="linkedin">
-          <span class="fab fa-linkedin text-xl"></span>
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
+{% render "footer", site: site %}
 

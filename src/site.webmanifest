@@ -1,0 +1,21 @@
+{
+  "name": "Luis Ezcurdia",
+  "short_name": "Ezcurdia",
+  "description": "Personal blog by Luis Ezcurdia about software engineering, Elixir, Ruby, and building things.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#d4ebfa",
+  "theme_color": "#0f2945",
+  "icons": [
+    {
+      "src": "/images/logo-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

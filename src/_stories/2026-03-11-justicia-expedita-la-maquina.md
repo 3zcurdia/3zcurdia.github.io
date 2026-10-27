@@ -1,6 +1,8 @@
 ---
 layout: story
 title: "Justicia Expedita - La Maquina Expendedora"
+description: "Una máquina expendedora se niega a obedecer en Ciudad Universitaria. Segunda parte de Justicia Expedita."
+lang: es-MX
 date: "2026-03-11T00:00:00-06:00"
 tags:
   - literatura

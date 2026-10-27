@@ -145,9 +145,12 @@ Bridgetown.configure do |config|
   # RSS/Atom feed generation (/feed.xml)
   init :"bridgetown-feed"
 
-  # Pagination support (enabled in bridgetown.config.yml; the site's index
-  # pages don't use the paginate tag, so no paginated pages are generated)
-  init :"bridgetown-paginate"
+  # SEO meta tags (title, description, canonical, Open Graph, Twitter cards)
+  init :"bridgetown-seo-tag"
+
+  # sitemap.xml generation
+  init :"bridgetown-sitemap"
+
   # Add `sessions: true` if you need to use session data, flash, etc.
   #
 

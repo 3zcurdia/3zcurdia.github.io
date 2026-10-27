@@ -1,9 +1,15 @@
 ---
 layout: post
+lang: es-MX
 title: "El futuro es solar"
 description: "O al menos para latino america"
 date: 2026-10-15
-image: /images/energy-chart.png
+cover: /images/energy-chart.png
+image:
+  path: /images/energy-chart.png
+  alt: "El futuro es solar"
+  width: 1946
+  height: 1352
 tags:
   - thoughts
   - energy

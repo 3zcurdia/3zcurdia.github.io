@@ -1,5 +1,7 @@
 ---
 layout: default
+title: About
+description: "Luis Ezcurdia is a software engineer with over a decade of experience in Ruby and Elixir."
 permalink: /about/
 ---
 
@@ -12,8 +14,11 @@ permalink: /about/
       <div class="w-full flex justify-center">
         <div class="relative">
           <img
-            src="http://www.github.com/{{site.data.site.social.github}}.png"
+            src="{{ '/images/avatar.png' | relative_url }}"
             class="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"
+            width="150"
+            height="150"
+            alt="Luis Ezcurdia"
           />
         </div>
       </div>
@@ -25,8 +30,8 @@ permalink: /about/
               >Luis Ezcurdia</span
             >
             <span class="text-sm text-slate-400">
-              <a href="/about/resume" title="View Resume"
-                ><i class="fa fa-inbox"></i> Software engineer</a
+              <a href="{{ '/about/resume' | relative_url }}" title="View Resume"
+                ><i class="fa fa-inbox" aria-hidden="true"></i> Software engineer</a
               >
             </span>
           </div>
@@ -48,21 +53,27 @@ permalink: /about/
           <div class="font-normal">
             <a
               class="text-slate-700 hover:text-slate-400"
-              href="https://github.com/{{site.data.site.social.github}}"
+              href="https://github.com/{{site.metadata.social.github}}"
+              aria-label="GitHub"
+              rel="me"
             >
-              <span class="fab fa-github"></span>
+              <span class="fab fa-github" aria-hidden="true"></span>
             </a>
             <a
               class="text-slate-700 hover:text-slate-400"
-              href="https://twitter.com/{{site.data.site.social.twitter}}"
+              href="https://x.com/{{site.metadata.social.twitter}}"
+              aria-label="X (Twitter)"
+              rel="me"
             >
-              <span class="fab fa-twitter"></span>
+              <span class="fab fa-twitter" aria-hidden="true"></span>
             </a>
             <a
               class="text-slate-700 hover:text-slate-400"
-              href="http://www.linkedin.com/in/{{site.data.site.social.linkedin}}"
+              href="https://www.linkedin.com/in/{{site.metadata.social.linkedin}}"
+              aria-label="LinkedIn"
+              rel="me"
             >
-              <i class="fab fa-linkedin"></i>
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
             </a>
           </div>
         </div>

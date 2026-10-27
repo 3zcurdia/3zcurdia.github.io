@@ -1,5 +1,18 @@
 title: Luis Ezcurdia
-author: Luis Ezcurdia
-email: ing.ezcurdia@gmail.com
-description: I love to build stuff
-url: http://ezcurdia.dev/
+tagline: I love to build stuff
+description: "Personal blog by Luis Ezcurdia about software engineering, Elixir, Ruby, and building things."
+author:
+  name: Luis Ezcurdia
+  email: ing.ezcurdia@gmail.com
+  twitter: 3zcurdia
+twitter:
+  username: 3zcurdia
+  card: summary_large_image
+social:
+  github: 3zcurdia
+  twitter: 3zcurdia
+  linkedin: 3zcurdia
+  links:
+    - https://github.com/3zcurdia
+    - https://x.com/3zcurdia
+    - https://www.linkedin.com/in/3zcurdia

@@ -1,6 +1,8 @@
 ---
 layout: story
 title: "Justicia Expedita - La Audiencia"
+description: "Un tribunal distópico en el San Lorenzo de 2042 juzga a una sociedad entera. Primera parte de Justicia Expedita."
+lang: es-MX
 date: "2026-03-10T23:30:00-06:00"
 tags:
   - literatura

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Luis Ezcurdia
+title: Resume
 description: Software Engineer
 permalink: /about/resume
 ---

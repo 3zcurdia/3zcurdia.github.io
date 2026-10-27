@@ -1,8 +1,14 @@
 ---
 layout: post
+lang: es-MX
 title: "Typo is Human"
 description: "Errar es humano, o mejor dicho: no es un bug, es un feature"
-image: /images/cortazar-vs-llms.jpeg
+cover: /images/cortazar-vs-llms.jpeg
+image:
+  path: /images/cortazar-vs-llms.jpeg
+  alt: "Typo is Human"
+  width: 1408
+  height: 768
 date: 2026-02-21
 tags:
   - literature

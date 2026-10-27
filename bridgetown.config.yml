@@ -1,4 +1,5 @@
-url: "http://ezcurdia.dev/"
+url: "https://ezcurdia.dev"
+lang: es-MX
 
 # Jekyll's default permalink style is "date"; Bridgetown's is "pretty".
 # Keep Jekyll's so post URLs stay /YYYY/MM/DD/slug.html
@@ -16,17 +17,33 @@ collections:
     output: true
     permalink: "/stories/:slug/"
 
-pagination:
-  enabled: true   # kept for parity of the gem; the posts index does not use it
-
 defaults:
   - scope:
       path: ""
       type: posts
     values:
       layout: post
+      image:
+        path: /images/og-default.jpg
+        alt: "Luis Ezcurdia — software engineering blog"
+        width: 1200
+        height: 630
   - scope:
       path: ""
       type: stories
     values:
       layout: story
+      image:
+        path: /images/og-default.jpg
+        alt: "Luis Ezcurdia — short stories"
+        width: 1200
+        height: 630
+  - scope:
+      path: ""
+      type: pages
+    values:
+      image:
+        path: /images/og-default.jpg
+        alt: "Luis Ezcurdia — software engineering blog"
+        width: 1200
+        height: 630

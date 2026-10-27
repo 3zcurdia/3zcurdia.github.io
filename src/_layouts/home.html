@@ -4,7 +4,7 @@ layout: default
 <section>
   <div class="flex items-center justify-between mb-6">
     <h2 class="text-2xl font-bold text-oxford-blue">Latest Posts</h2>
-    <a href="{{"/posts" | relative_url }}" class="text-indigo-dye hover:text-oxford-blue font-medium transition-colors">View all <i class="fas fa-arrow-right ml-1"></i></a>
+    <a href="{{"/posts/" | relative_url }}" class="text-indigo-dye hover:text-oxford-blue font-medium transition-colors">View all <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i></a>
   </div>
   <div class="grid gap-6 md:grid-cols-2">
     {% for post in collections.posts.resources limit: 4 %}
@@ -12,7 +12,7 @@ layout: default
       <div class="p-6">
         <p class="text-sm text-slate-400 mb-2">{{ post.date | date: '%B %d, %Y' }}</p>
         <h3 class="text-xl font-bold mb-2">
-          <a href="{{ post.relative_url | prepend: site.baseurl | replace: '//', '/' }}" class="text-oxford-blue hover:text-indigo-dye transition-colors">
+          <a href="{{ post.relative_url | relative_url }}" class="text-oxford-blue hover:text-indigo-dye transition-colors">
             {{ post.data.title }}
           </a>
         </h3>
@@ -32,7 +32,7 @@ layout: default
 <section class="mt-12">
   <div class="flex items-center justify-between mb-6">
     <h2 class="text-2xl font-bold text-oxford-blue">Recent Stories</h2>
-    <a href="{{"/stories" | relative_url }}" class="text-indigo-dye hover:text-oxford-blue font-medium transition-colors">View all <i class="fas fa-arrow-right ml-1"></i></a>
+    <a href="{{"/stories/" | relative_url }}" class="text-indigo-dye hover:text-oxford-blue font-medium transition-colors">View all <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i></a>
   </div>
   {% if collections.stories.resources.size > 0 %}
   <div class="grid gap-6 md:grid-cols-2">
@@ -41,7 +41,7 @@ layout: default
       <div class="p-6">
         <p class="text-sm text-slate-400 mb-2">{{ story.date | date: '%B %d, %Y' }}</p>
         <h3 class="text-xl font-bold mb-2">
-          <a href="{{ story.relative_url | prepend: site.baseurl | replace: '//', '/' }}" class="text-oxford-blue hover:text-indigo-dye transition-colors">
+          <a href="{{ story.relative_url | relative_url }}" class="text-oxford-blue hover:text-indigo-dye transition-colors">
             {{ story.data.title }}
           </a>
         </h3>

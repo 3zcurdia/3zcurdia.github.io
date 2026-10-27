@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: es-MX
 title: "No necesitas más poder de procesamiento"
 description: "La demanda de hardware se estancó, solo la IA podría ser la respuesta"
 meta_description: "La demanda de hardware se estancó desde 2016: 15 años de avances y un software congelado. La IA local podría romper la inercia, pero su beta es cara."

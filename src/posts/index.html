@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Post
+title: Blog
 subtitle: Thoughts on software engineering and technology
 ---
 
@@ -11,7 +11,7 @@ subtitle: Thoughts on software engineering and technology
       class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-slate-100"
     >
       <a
-        href="{{ post.relative_url | prepend: site.baseurl | replace: '//', '/' }}"
+        href="{{ post.relative_url | relative_url }}"
         class="block p-6"
       >
         <div

@@ -1,14 +1,14 @@
 # AGENTS.md
 
-This file contains instructions for agentic coding agents working on this Bridgetown portfolio site.
+This file contains instructions for agentic coding agents working on this Bridgetown blog site.
 
 ## Project Overview
 
-This is a Bridgetown 2.x (Ruby) static site generator for a personal artist portfolio. The site uses:
+This is a Bridgetown 2.x (Ruby) static site generator for a personal blog. The site uses:
 - Bridgetown for static site generation (content lives in `src/`, templates in Liquid)
 - Tailwind CSS v4 bundled locally with esbuild + PostCSS (no CDN)
 - Vanilla JavaScript (no frameworks), bundled with esbuild
-- English language content
+- English content by default, with Spanish posts/stories marked via `lang` front matter
 
 ## Build and Development Commands
 
@@ -23,7 +23,7 @@ yarn build
 bundle exec bridgetown start
 
 # Build for production into output/
-bundle exec bridgetown build
+BRIDGETOWN_ENV=production bundle exec bridgetown build
 
 # Clean generated files
 bundle exec bridgetown clean
@@ -34,43 +34,45 @@ bundle exec bridgetown clean
 No automated testing framework is configured. Testing should be done manually by:
 1. Running `bundle exec bridgetown start` and testing in browser
 2. Checking responsive design at different viewport sizes
-3. Verifying form functionality and navigation
-4. Testing lightbox gallery functionality
+3. Verifying navigation, mobile menu ARIA state, and keyboard access
+4. Checking generated `sitemap.xml`, `feed.xml`, and JSON-LD
 
 ## Code Style Guidelines
 
 ### File Organization
-- Bridgetown directories use underscore prefix: `src/_layouts/`, `src/_partials/`, `src/_data/`
-- Regular files use kebab-case: `about.markdown`, `main.js`
-- Assets in `assets/` directory: `assets/js/`, `assets/images/`, `assets/css/`
+- Bridgetown directories use underscore prefix: `src/_layouts/`, `src/_components/`, `src/_data/`
+- Regular files use kebab-case: `about.html`, `main.js`
+- Frontend assets: `frontend/javascript/`, `frontend/styles/`, `src/images/`
+- `src/_partials/` is not used by Liquid; renderable Liquid components live in `src/_components/`
 
 ### HTML/Liquid Conventions
 - Use semantic HTML5 elements
 - Include proper front matter with YAML (`---`)
 - Use Liquid templating: `{{ variable }}` for output, `{% tag %}` for logic
-- English language content: `lang="en"` on HTML element
+- Set `lang` on the HTML element; non-English documents set `lang: es-MX` (or similar) in front matter
 - Mobile-first responsive design with Tailwind utilities
 
 ### CSS/Styling
 - Use Tailwind CSS utility classes (compiled locally; custom colors and fonts are `@theme` tokens in `frontend/styles/index.css`)
 - Custom color palette: `columbia-blue`, `oxford-blue`, `indigo-dye`
 - Custom fonts: Inter (sans-serif)
-- Add custom CSS only in `<head>` section of layouts
+- Add custom CSS in `frontend/styles/index.css`, not in layout `<head>` sections
 - Use CSS custom properties for animations and transitions
 
 ### JavaScript Conventions
 - Use modern ES6+ JavaScript
-- camelCase for variables and functions: `mobileMenuBtn`, `openLightbox()`
-- kebab-case for CSS classes and IDs: `mobile-menu`, `lightbox-img`
+- camelCase for variables and functions: `mobileMenuBtn`, `toggleMenu()`
+- kebab-case for CSS classes and IDs: `mobile-menu`, `mobile-menu-btn`
 - Use defensive programming with element existence checks
 - Add JSDoc-style comments for functions
 - Event-driven architecture with `DOMContentLoaded` listener
 
 ### Import Patterns
-- No ES6 imports/exports - use global scope
-- Include Bridgetown partials with `{% render "file.html" %}`
+- Use ES module imports in `frontend/javascript/index.js`
+- Liquid components live in `src/_components/` and are rendered with a filename sans extension:
+  `{% render "footer", site: site %}`. Liquid `render` is isolated, so pass every variable the component needs.
 - Load the bundled CSS/JS via `{% asset_path css %}` / `{% asset_path js %}` in `src/_layouts/base.html`
-- Place JavaScript in `assets/js/main.js`
+- Place JavaScript in `frontend/javascript/index.js`
 
 ### Error Handling
 - Use simple validation with user-friendly alerts (in English)
@@ -82,7 +84,7 @@ No automated testing framework is configured. Testing should be done manually by
 
 #### Files and Directories
 - **Files**: kebab-case (`main.js`, `about.md`)
-- **Directories**: lowercase with underscores (`_layouts`, `_includes`)
+- **Directories**: lowercase with underscores (`_layouts`, `_components`)
 - **Bridgetown special files**: underscore prefix (`src/_data/`), config in `bridgetown.config.yml`
 
 #### JavaScript
@@ -91,13 +93,14 @@ No automated testing framework is configured. Testing should be done manually by
 - **CSS Classes/IDs**: kebab-case (`mobile-menu-btn`, `nav-link`)
 
 #### HTML/Liquid
-- **IDs/Classes**: kebab-case (`lightbox-img`, `mobile-menu`)
-- **Site variables**: `site.metadata.title`, `site.data.site.*`, `page.description`
+- **IDs/Classes**: kebab-case (`mobile-menu-btn`, `mobile-menu`)
+- **Site variables**: `site.metadata.title`, `site.metadata.social.*`, `page.description`, `page.cover`, `page.image`
 
 ## Content Guidelines
 
 ### Language
-- All content should be in English
+- English is the default site language
+- Spanish posts and stories set `lang: es-MX` in front matter
 - Use appropriate English terminology for UI elements
 - Error messages and alerts should be in English
 
@@ -108,10 +111,12 @@ No automated testing framework is configured. Testing should be done manually by
 - Maintain proper heading hierarchy
 
 ### SEO
-- Include meta descriptions for pages
-- Use proper heading structure (h1, h2, h3, etc.)
-- Add descriptive alt text for images
-- Maintain clean URL structure
+- Metadata is generated by `bridgetown-seo-tag` (`{% seo %}` in `src/_layouts/base.html`)
+- `sitemap.xml` and `robots.txt` are generated/added by `bridgetown-sitemap`
+- Give every post/story a unique `description` (roughly 120–160 characters)
+- Use `cover` for the in-page hero image and `image` for the social/OG image
+- JSON-LD structured data lives in `src/_components/schema.html`
+- Keep `url` in `bridgetown.config.yml` as `https://ezcurdia.dev` with no trailing slash
 
 ## Performance Guidelines
 

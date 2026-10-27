@@ -1,0 +1,21 @@
+<footer class="bg-white border-t border-slate-200">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-slate-500 text-sm">&copy; {{ "now" | date: "%Y" }} {{ site.metadata.title }}. All rights reserved.</p>
+      <div class="flex items-center space-x-4">
+        <a href="https://github.com/{{ site.metadata.social.github }}" class="text-slate-400 hover:text-oxford-blue transition-colors" aria-label="GitHub" rel="me">
+          <span class="fab fa-github text-xl" aria-hidden="true"></span>
+        </a>
+        <a href="https://x.com/{{ site.metadata.social.twitter }}" class="text-slate-400 hover:text-oxford-blue transition-colors" aria-label="X (Twitter)" rel="me">
+          <span class="fab fa-twitter text-xl" aria-hidden="true"></span>
+        </a>
+        <a href="https://www.linkedin.com/in/{{ site.metadata.social.linkedin }}" class="text-slate-400 hover:text-oxford-blue transition-colors" aria-label="LinkedIn" rel="me">
+          <span class="fab fa-linkedin text-xl" aria-hidden="true"></span>
+        </a>
+        <a href="{{ '/feed.xml' | relative_url }}" class="text-slate-400 hover:text-oxford-blue transition-colors" aria-label="RSS feed">
+          <span class="fas fa-rss text-xl" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

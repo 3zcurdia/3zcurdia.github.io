@@ -2,7 +2,12 @@
 layout: post
 title: "The Difference Between Good and Bad Technology"
 description: "How to tell if technology actually serves its users or just its creators"
-image: /images/good-and-the-bad.jpeg
+cover: /images/good-and-the-bad.jpeg
+image:
+  path: /images/good-and-the-bad.jpeg
+  alt: "The Difference Between Good and Bad Technology"
+  width: 1280
+  height: 738
 date: 2026-02-17
 tags:
   - ux

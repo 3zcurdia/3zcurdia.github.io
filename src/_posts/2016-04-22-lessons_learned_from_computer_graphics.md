@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Lessons Learned from a computer graphics background"
+description: "Lessons from computer graphics that still apply to web development: loading data carefully, parsing files, and building robust systems."
 date: "2016-04-22T09:46:47-05:00"
 tags:
   - programming-languages

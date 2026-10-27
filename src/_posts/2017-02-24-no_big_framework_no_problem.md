@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "No big framework, No problem"
+description: "Why you don't need a big frontend framework: practical JavaScript and CoffeeScript patterns for maintainable code without heavy dependencies."
 date: "2017-02-24T11:19:04-06:00"
 tags:
   - programming

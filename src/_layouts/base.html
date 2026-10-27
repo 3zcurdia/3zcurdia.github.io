@@ -1,70 +1,28 @@
 <!doctype html>
-<html lang="en-us">
+<html lang="{% if page.lang %}{{ page.lang | replace: '_', '-' | split: '-' | first }}{% else %}en{% endif %}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="{{ page.summary | strip_html | normalize_whitespace | default: site.metadata.description | truncate: 160 | escape }}"
-    />
-
-    <!-- Open Graph / Facebook / LinkedIn -->
-    <meta
-      property="og:title"
-      content="{{ page.title | default: site.metadata.title | escape }}"
-    />
-    <meta
-      property="og:description"
-      content="{{ page.summary | strip_html | normalize_whitespace | default: site.metadata.description | truncate: 160 | escape }}"
-    />
-    <meta
-      property="og:url"
-      content="{{ page.relative_url | replace:'index.html','' | absolute_url }}"
-    />
-    <meta
-      property="og:type"
-      content="{% if page.layout == 'post' %}article{% else %}website{% endif %}"
-    />
-    {% if page.image %}
-    <meta property="og:image" content="{{ page.image | absolute_url }}" />
-    {% endif %}
-
-    <!-- Twitter / X -->
-    {% if page.description %}
-    <meta name="twitter:card" content="{{ page.description }}" />
-    {% endif %}
-    <meta
-      name="twitter:title"
-      content="{{ page.title | default: site.metadata.title | escape }}"
-    />
-    <meta
-      name="twitter:description"
-      content="{{ page.summary | strip_html | normalize_whitespace | default: site.metadata.description | truncate: 160 | escape }}"
-    />
-    {% if site.data.site.social.twitter %}
-    <meta name="twitter:site" content="@{{ site.data.site.social.twitter }}" />
-    {% endif %} {% if page.image %}
-    <meta name="twitter:image" content="{{ page.image | absolute_url }}" />
-    {% endif %}
-
-    <title>
-      {% if page.title %}{{ page.title | escape }} - {{ site.metadata.title | escape }}
-      {% else %}{{ site.metadata.title | escape }}{% endif %}
-    </title>
+    <meta name="theme-color" content="#0f2945" />
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any" />
     <link
-      rel="canonical"
-      href="{{ page.relative_url | replace:'index.html','' | absolute_url }}"
+      rel="icon"
+      type="image/png"
+      sizes="128x128"
+      href="{{ '/images/logo-128.png' | relative_url }}"
     />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="{{ site.metadata.title | escape }}"
-      href="{{ '/feed.xml' | relative_url }}"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon.png' | relative_url }}" />
+    <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}" />
+    {% if page.noindex %}
+    <meta name="robots" content="noindex, nofollow" />
+    {% endif %}
+    {% seo %}
+    {% render "schema", site: site, page: page %}
+    {% feed_meta %}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{% asset_path css %}" />

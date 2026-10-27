@@ -13,7 +13,7 @@ permalink: /stories/
       class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-slate-100 group"
     >
       <a
-        href="{{ story.relative_url | prepend: site.baseurl | replace: '//', '/' }}"
+        href="{{ story.relative_url | relative_url }}"
         class="block p-6"
       >
         <p class="text-sm text-slate-400 mb-2">

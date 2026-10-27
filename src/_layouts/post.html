@@ -4,8 +4,8 @@ layout: base
 <article class="min-h-screen">
   <header class="bg-gradient-to-r from-oxford-blue to-indigo-dye text-slate-100 py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <a href="{{"/posts" | relative_url }}" class="inline-flex items-center text-columbia-blue hover:text-white mb-6 transition-colors">
-        <i class="fas fa-arrow-left mr-2"></i> Back to Blog
+      <a href="{{"/posts/" | relative_url }}" class="inline-flex items-center text-columbia-blue hover:text-white mb-6 transition-colors">
+        <i class="fas fa-arrow-left mr-2" aria-hidden="true"></i> Back to Blog
       </a>
       <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ page.title }}</h1>
       {% if page.description %}
@@ -24,8 +24,11 @@ layout: base
 
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="prose prose-lg prose-slate max-w-none prose-headings:text-oxford-blue prose-a:text-indigo-dye hover:prose-a:text-oxford-blue">
-      {% if page.image %}
-      <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}" class="w-full rounded-lg mb-8">
+      {% assign cover = page.cover.path | default: page.cover %}
+      {% assign cover_width = page.cover.width | default: page.image.width %}
+      {% assign cover_height = page.cover.height | default: page.image.height %}
+      {% if cover %}
+      <img src="{{ cover | relative_url }}" alt="{{ page.cover.alt | default: page.title | escape }}" {% if cover_width %}width="{{ cover_width }}"{% endif %} {% if cover_height %}height="{{ cover_height }}"{% endif %} class="w-full rounded-lg mb-8" decoding="async" fetchpriority="high">
       {% endif %}
       {{ content }}
     </div>
@@ -33,38 +36,21 @@ layout: base
     <hr class="my-12 border-slate-200">
 
     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-      <a href="{{"/posts" | relative_url }}" class="inline-flex items-center text-indigo-dye hover:text-oxford-blue transition-colors">
-        <i class="fas fa-arrow-left mr-2"></i> All Posts
+      <a href="{{"/posts/" | relative_url }}" class="inline-flex items-center text-indigo-dye hover:text-oxford-blue transition-colors">
+        <i class="fas fa-arrow-left mr-2" aria-hidden="true"></i> All Posts
       </a>
       <div class="flex items-center space-x-4">
         <span class="text-slate-400 text-sm">Share:</span>
-        <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.relative_url | absolute_url | uri_escape }}" target="_blank" class="text-slate-400 hover:text-indigo-dye transition-colors">
-          <span class="fab fa-twitter"></span>
+        <a href="https://x.com/intent/post?text={{ page.title | uri_escape }}&amp;url={{ page.relative_url | absolute_url | uri_escape }}" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-indigo-dye transition-colors" aria-label="Share on X">
+          <span class="fab fa-twitter" aria-hidden="true"></span>
         </a>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.relative_url | absolute_url | uri_escape }}&title={{ page.title | uri_escape }}" target="_blank" class="text-slate-400 hover:text-indigo-dye transition-colors">
-          <span class="fab fa-linkedin"></span>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ page.relative_url | absolute_url | uri_escape }}&amp;title={{ page.title | uri_escape }}" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-indigo-dye transition-colors" aria-label="Share on LinkedIn">
+          <span class="fab fa-linkedin" aria-hidden="true"></span>
         </a>
       </div>
     </div>
   </div>
 </article>
 
-<footer class="bg-white border-t border-slate-200">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-    <div class="flex flex-col md:flex-row justify-between items-center">
-      <p class="text-slate-500 text-sm">&copy; {{ "now" | date: "%Y" }} {{ site.metadata.title }}. All rights reserved.</p>
-      <div class="flex space-x-4 mt-4 md:mt-0">
-        <a href="https://github.com/{{site.data.site.social.github}}" class="text-slate-400 hover:text-oxford-blue transition-colors">
-          <span class="fab fa-github text-xl"></span>
-        </a>
-        <a href="https://twitter.com/{{site.data.site.social.twitter}}" class="text-slate-400 hover:text-oxford-blue transition-colors">
-          <span class="fab fa-twitter text-xl"></span>
-        </a>
-        <a href="http://www.linkedin.com/in/{{site.data.site.social.linkedin}}" class="text-slate-400 hover:text-oxford-blue transition-colors">
-          <span class="fab fa-linkedin text-xl"></span>
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
+{% render "footer", site: site %}
 

@@ -1,0 +1,101 @@
+{% unless page.noindex %}
+{% assign description = page.description | default: page.subtitle | default: page.summary | strip_html | normalize_whitespace | truncate: 160 | default: site.metadata.description %}
+{% assign seo_image = page.image.path | default: page.image | default: '/images/og-default.jpg' %}
+{% assign author_name = site.metadata.author.name | default: site.metadata.title %}
+{% assign author_url = '/about/' | absolute_url %}
+{% assign same_as = site.metadata.social.links %}
+{% assign language = page.lang | default: 'en' | replace: '_', '-' %}
+{% if page.layout == 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ description | jsonify }},
+  "image": {{ seo_image | absolute_url | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": {{ author_name | jsonify }},
+    "url": {{ author_url | jsonify }},
+    "sameAs": {{ same_as | jsonify }}
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": {{ author_name | jsonify }}
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ page.relative_url | absolute_url | jsonify }}
+  },
+  "keywords": {{ page.tags | join: ', ' | jsonify }},
+  "inLanguage": {{ language | jsonify }}
+}
+</script>
+{% elsif page.layout == 'story' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": {{ page.title | jsonify }},
+  "description": {{ description | jsonify }},
+  "image": {{ seo_image | absolute_url | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": {{ author_name | jsonify }},
+    "url": {{ author_url | jsonify }},
+    "sameAs": {{ same_as | jsonify }}
+  },
+  "genre": "Short story",
+  "inLanguage": {{ language | jsonify }}
+}
+</script>
+{% elsif page.relative_url == '/about/' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": {{ author_name | jsonify }},
+    "description": {{ description | jsonify }},
+    "url": {{ author_url | jsonify }},
+    "image": {{ '/images/avatar.png' | absolute_url | jsonify }},
+    "sameAs": {{ same_as | jsonify }}
+  },
+  "inLanguage": {{ language | jsonify }}
+}
+</script>
+{% elsif page.relative_url == '/' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.metadata.title | jsonify }},
+  "description": {{ site.metadata.description | jsonify }},
+  "url": {{ '/' | absolute_url | jsonify }},
+  "inLanguage": {{ language | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": {{ author_name | jsonify }},
+    "url": {{ author_url | jsonify }},
+    "sameAs": {{ same_as | jsonify }}
+  }
+}
+</script>
+{% else %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": {{ page.title | default: site.metadata.title | jsonify }},
+  "description": {{ description | jsonify }},
+  "url": {{ page.relative_url | absolute_url | jsonify }},
+  "inLanguage": {{ language | jsonify }}
+}
+</script>
+{% endif %}
+{% endunless %}
