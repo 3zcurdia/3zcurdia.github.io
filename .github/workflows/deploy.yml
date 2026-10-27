@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # Required metadata for Pages deployments. Note: when publishing with a
+      # custom Actions workflow, the src/CNAME file is ignored — the custom
+      # domain must be configured in the repository's Pages settings.
+      - uses: actions/configure-pages@v5
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "4.0.7"
