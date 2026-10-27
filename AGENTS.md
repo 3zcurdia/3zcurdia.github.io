@@ -6,7 +6,7 @@ This file contains instructions for agentic coding agents working on this Bridge
 
 This is a Bridgetown 2.x (Ruby) static site generator for a personal artist portfolio. The site uses:
 - Bridgetown for static site generation (content lives in `src/`, templates in Liquid)
-- Tailwind CSS v3 bundled locally with esbuild + PostCSS (no CDN)
+- Tailwind CSS v4 bundled locally with esbuild + PostCSS (no CDN)
 - Vanilla JavaScript (no frameworks), bundled with esbuild
 - English language content
 
@@ -52,9 +52,9 @@ No automated testing framework is configured. Testing should be done manually by
 - Mobile-first responsive design with Tailwind utilities
 
 ### CSS/Styling
-- Use Tailwind CSS utility classes (compiled locally, config in `tailwind.config.js`)
-- Custom color palette: `blush`, `rose-light`, `cream`, `rose-gold`, `dusty-rose`, `soft-pink`
-- Custom fonts: Playfair Display (serif), Quicksand (sans-serif)
+- Use Tailwind CSS utility classes (compiled locally; custom colors and fonts are `@theme` tokens in `frontend/styles/index.css`)
+- Custom color palette: `columbia-blue`, `oxford-blue`, `indigo-dye`
+- Custom fonts: Inter (sans-serif)
 - Add custom CSS only in `<head>` section of layouts
 - Use CSS custom properties for animations and transitions
 

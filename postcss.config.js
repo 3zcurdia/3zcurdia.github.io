@@ -1,6 +1,6 @@
 export default {
   plugins: {
-    'tailwindcss': {},
+    '@tailwindcss/postcss': {},
     'postcss-flexbugs-fixes': {},
     'postcss-preset-env': {
       autoprefixer: {

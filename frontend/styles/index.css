@@ -1,6 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@source "../../src";
+
+/*
+  Theme tokens for Tailwind v4. These replace the old tailwind.config.js.
+  Custom colors are exposed as utilities (bg-oxford-blue, text-indigo-dye, …).
+*/
+@theme {
+  --color-columbia-blue: #d4ebfa;
+  --color-oxford-blue: #0f2945;
+  --color-indigo-dye: #1c476c;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
 
 body {
   font-family: "Inter", system-ui, sans-serif;
