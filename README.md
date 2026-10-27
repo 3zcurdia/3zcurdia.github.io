@@ -3,7 +3,7 @@
 Personal blog, contact and portfolio site.
 
 Built with [Bridgetown](https://www.bridgetownrb.com/). Requires Ruby (see
-`.ruby-version`) and Node 20+ with yarn.
+`.ruby-version`) and Node 22+ with yarn.
 
 ```bash
 # Install dependencies
