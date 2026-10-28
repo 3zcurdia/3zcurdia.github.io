@@ -717,12 +717,18 @@ a {
   }
 }
 
+@page {
+  margin: 0.5in;
+}
+
 @media print {
   .no-print,
   .no-print *,
   aside,
   header,
-  footer {
+  footer,
+  .skip-link,
+  .page-hero {
     display: none !important;
   }
 
@@ -733,10 +739,65 @@ a {
   .page-main,
   .article-body {
     padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0 !important;
+  }
+
+  .page-main > .mx-auto {
+    max-width: none;
+    padding: 0;
   }
 
   .page-break {
     page-break-before: always;
+  }
+
+  /* ATS-friendly print output: drop icon glyphs and expose link URLs as text */
+  .article-content h2 i,
+  .article-content h3 i,
+  .article-content h2 svg,
+  .article-content h3 svg {
+    display: none !important;
+  }
+
+  .article-content a[href^="http"]:not(.resume-url)::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    word-break: break-all;
+  }
+
+  .article-content h2,
+  .article-content h3 {
+    break-after: avoid;
+  }
+
+  /* Compact typography so the printed resume stays short */
+  .article-content {
+    font-size: 10pt;
+    line-height: 1.28;
+  }
+
+  .article-content h2 {
+    font-size: 12.5pt;
+    margin: 0.6em 0 0.3em;
+  }
+
+  .article-content h3 {
+    font-size: 10.5pt;
+    margin: 0.55em 0 0.15em;
+  }
+
+  .article-content p,
+  .article-content ul {
+    margin: 0.2em 0;
+  }
+
+  .article-content li {
+    margin: 0.05em 0;
+  }
+
+  .article-content hr {
+    margin: 0.5em 0;
   }
 }
 
