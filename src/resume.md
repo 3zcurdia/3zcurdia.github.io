@@ -3,10 +3,11 @@ layout: page
 title: Resume
 description: Software Engineer
 permalink: /about/resume
+current_nav: about
 ---
 
-<a class="float-right no-print" href="#" onclick="window.print();return false;">
-  <i class="fa fa-print"></i> Print
+<a class="resume-print-link no-print" href="#" onclick="window.print();return false;">
+  <i class="fas fa-print" aria-hidden="true"></i> Print resume
 </a>
 
 ## <i class="fa fa-briefcase"></i> Introduction
@@ -87,6 +88,8 @@ As a sysadmin, I maintained the existing infrastructure for a virtual reality de
 * **[annealing](https://github.com/3zcurdia/annealing)**: Simulated annealing ruby gem
 * **[chroma](https://github.com/3zcurdia/chroma)**: ChromaDB Elixir Client
 * **[nojx](https://github.com/3zcurdia/nojx)**: CLI webscrapper
+* **[digestivo](https://digest.ezcurdia.dev)**: Daily digest of nerd news
+* **[ampwire](https://ampwire.ezcurdia.dev)**: TUI hi-def audio player
 
 ### <i class="fa fa-bullhorn"></i> Speeches
 * ***"EOS: 3D file structure over SQLite"*** Speaker at PreFilsol UNAM 2010 (March 2010)

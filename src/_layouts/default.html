@@ -1,80 +1,32 @@
 ---
 layout: base
 ---
-<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-4 focus:left-4 focus:bg-white focus:text-oxford-blue focus:px-4 focus:py-2 focus:rounded-md focus:shadow-lg">
-  Skip to content
-</a>
-<header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gradient-to-r from-oxford-blue to-indigo-dye shadow-lg">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      <div class="flex items-center">
-        <a href="/" class="flex items-center space-x-3">
-          <img class="h-10 w-10 rounded-full border-2 border-columbia-blue" src="{{ '/images/avatar.png' | relative_url }}" width="40" height="40" alt="Luis Ezcurdia" fetchpriority="high">
-          <span class="font-bold text-xl tracking-tight text-white">{{ site.metadata.title }}</span>
-        </a>
-      </div>
-      <div class="hidden md:block">
-        <div class="ml-10 flex items-baseline space-x-4">
-          <a href="{{"/" | relative_url }}" class="hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-sm font-medium text-white transition-colors duration-200">Home</a>
-          <a href="{{"/posts/" | relative_url }}" class="hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-sm font-medium text-white transition-colors duration-200">Blog</a>
-          <a href="{{"/stories/" | relative_url }}" class="hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-sm font-medium text-white transition-colors duration-200">Stories</a>
-          <a href="{{"/about/" | relative_url }}" class="hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-sm font-medium text-white transition-colors duration-200">About</a>
-        </div>
-      </div>
-      <div class="md:hidden">
-        <button id="mobile-menu-btn" class="p-2 rounded-md hover:bg-indigo-dye/50 focus:outline-none" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation">
-          <i class="fas fa-bars text-xl text-white" aria-hidden="true"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div id="mobile-menu" class="hidden md:hidden bg-oxford-blue">
-    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-      <a href="{{"/" | relative_url }}" class="block hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-base font-medium text-white">Home</a>
-      <a href="{{"/posts/" | relative_url }}" class="block hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-base font-medium text-white">Blog</a>
-      <a href="{{"/stories/" | relative_url }}" class="block hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-base font-medium text-white">Stories</a>
-      <a href="{{"/about/" | relative_url }}" class="block hover:bg-indigo-dye/50 px-3 py-2 rounded-md text-base font-medium text-white">About</a>
-    </div>
-  </div>
-</header>
+{% render "site_header", site: site, current: page.current_nav %}
 
-<div id="hero-section" class="relative h-[35vh] min-h-[250px] flex items-center justify-center overflow-hidden">
-  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{{ "/images/glacier.png" | relative_url }}');"></div>
-  <div class="absolute inset-0 bg-gradient-to-r from-oxford-blue/70 to-indigo-dye/70"></div>
-  <div class="relative z-10 text-center text-white px-4 max-w-3xl mx-auto">
-    <h1 class="text-4xl md:text-5xl font-bold mb-3 tracking-tight">
-      {% if page.relative_url == "/" %}
-        {{ site.metadata.title }}
-      {% elsif page.relative_url == "/posts/" %}
-        Blog
-      {% elsif page.relative_url == "/stories/" %}
-        Stories
-      {% else %}
-        {{ page.title | default: site.metadata.title }}
-      {% endif %}
-    </h1>
-    <p class="text-lg md:text-xl text-columbia-blue mb-4">
-      {% if page.relative_url == "/" %}
-        {{ site.metadata.tagline }}
-      {% elsif page.relative_url == "/posts/" %}
-        Thoughts on software engineering and technology
-      {% elsif page.relative_url == "/stories/" %}
-        Short stories and creative writing
-      {% else %}
-        {{ page.description | default: site.metadata.description }}
-      {% endif %}
-    </p>
-  </div>
-  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce">
-    <i class="fas fa-chevron-down text-xl text-white"></i>
-  </div>
-</div>
+{% if page.relative_url == "/" %}
+  {% assign hero_size = "home" %}
+  {% assign hero_title = site.metadata.title %}
+  {% assign hero_description = site.metadata.tagline %}
+{% elsif page.relative_url == "/posts/" %}
+  {% assign hero_size = "compact" %}
+  {% assign hero_title = page.title | default: "Blog" %}
+  {% assign hero_description = page.subtitle | default: "Thoughts on software engineering and technology" %}
+{% elsif page.relative_url == "/stories/" %}
+  {% assign hero_size = "compact" %}
+  {% assign hero_title = page.title | default: "Stories" %}
+  {% assign hero_description = page.subtitle | default: "Short stories and creative writing" %}
+{% else %}
+  {% assign hero_size = "compact" %}
+  {% assign hero_title = page.title | default: site.metadata.title %}
+  {% assign hero_description = page.description | default: site.metadata.description %}
+{% endif %}
 
-<main id="main-content" tabindex="-1" class="bg-slate-50 -mt-20 relative z-20">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+{% render "page_hero", title: hero_title, description: hero_description, size: hero_size %}
+
+<main id="main-content" tabindex="-1" class="page-main relative z-10 -mt-10">
+  <div class="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8 py-10">
     {{ content }}
   </div>
 </main>
 
 {% render "footer", site: site %}
-

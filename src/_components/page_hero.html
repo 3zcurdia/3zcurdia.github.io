@@ -1,0 +1,15 @@
+{% assign hero_size = size | default: "compact" %}
+<section class="page-hero page-hero--{{ hero_size }}" aria-labelledby="page-hero-title">
+  <div
+    class="page-hero-image"
+    style="background-image: url('{{ image | default: "/images/glacier.png" | relative_url }}');"
+    aria-hidden="true"
+  ></div>
+  <div class="page-hero-overlay" aria-hidden="true"></div>
+  <div class="page-hero-content">
+    <h1 id="page-hero-title" class="page-hero-title">{{ title }}</h1>
+    {% if description %}
+      <p class="page-hero-description">{{ description }}</p>
+    {% endif %}
+  </div>
+</section>

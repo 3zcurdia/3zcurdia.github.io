@@ -1,16 +1,9 @@
 ---
 layout: default
+current_nav: about
 ---
 <section class="content mx-auto w-full">
-  <p class="text-4xl font-bold">{{ page.title }}</p>
-  {% if page.description %}
-  <p class="text-xl font-normal">
-    {{ page.description }}
-  </p>
-  {% endif %}
-  <hr>
-  <div class="prose max-w-none">
+  <div class="prose article-content max-w-none">
     {{ content }}
   </div>
 </section>
-

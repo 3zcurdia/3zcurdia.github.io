@@ -4,13 +4,8 @@ title: Page not found
 noindex: true
 sitemap: false
 ---
-<main class="h-screen w-full flex flex-col justify-center items-center bg-oxford-blue">
-  <h1 class="text-9xl font-extrabold text-white tracking-widest">404</h1>
-  <div class="bg-columbia-blue px-2 text-md rounded rotate-12 absolute">
-    Page Not Found
-  </div>
-  <a href="{{ '/' | relative_url }}" class="relative inline-block mt-5 text-sm font-medium text-columbia-blue group active:text-indigo-dye focus:outline-none focus:ring" aria-label="Go to homepage">
-    <span class="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-columbia-blue group-hover:translate-y-0 group-hover:translate-x-0"></span>
-    <span class="relative block px-8 py-3 bg-oxford-blue border border-current">Go Home</span>
-  </a>
+<main id="main-content" tabindex="-1" class="not-found-page">
+  <h1 class="not-found-title">404</h1>
+  <p class="not-found-badge">Page Not Found</p>
+  <a href="{{ '/' | relative_url }}" class="not-found-link" aria-label="Go to homepage">Go Home</a>
 </main>

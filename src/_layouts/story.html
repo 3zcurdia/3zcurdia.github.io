@@ -1,42 +1,68 @@
 ---
 layout: base
+current_nav: stories
 ---
-<article class="min-h-screen">
-  <header class="bg-gradient-to-r from-oxford-blue to-indigo-dye text-slate-100 py-12">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <a href="{{"/stories/" | relative_url }}" class="inline-flex items-center text-columbia-blue hover:text-white mb-6 transition-colors">
-        <i class="fas fa-arrow-left mr-2" aria-hidden="true"></i> Back to Stories
-      </a>
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ page.title }}</h1>
-      {% if page.description %}
-        <p class="text-xl text-columbia-blue mb-4">{{ page.description }}</p>
-      {% endif %}
-      <p class="text-slate-300">{{ page.date | date: '%B %d, %Y' }}</p>
-    </div>
-  </header>
+{% render "site_header", site: site, current: "stories" %}
 
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="prose prose-lg prose-slate max-w-none prose-headings:text-oxford-blue prose-a:text-indigo-dye hover:prose-a:text-oxford-blue">
-      {{ content }}
-    </div>
-
-    <hr class="my-12 border-slate-200">
-
-    <div class="flex justify-between items-center">
-      <a href="{{"/stories/" | relative_url }}" class="inline-flex items-center text-indigo-dye hover:text-oxford-blue transition-colors">
-        <i class="fas fa-arrow-left mr-2" aria-hidden="true"></i> All Stories
-      </a>
-      <div class="flex space-x-4">
-        <span class="text-slate-400 text-sm">Share:</span>
-        <a href="https://x.com/intent/post?text={{ page.title | uri_escape }}&amp;url={{ page.relative_url | absolute_url | uri_escape }}" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-indigo-dye transition-colors" aria-label="Share on X">
-          <span class="fab fa-twitter" aria-hidden="true"></span>
+<main id="main-content" tabindex="-1" class="min-h-screen">
+  <article class="min-h-screen">
+    <header class="article-hero article-hero--story">
+      <div class="reading-container">
+        <a href="{{ '/stories/' | relative_url }}" class="article-back-link">
+          <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Stories
         </a>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ page.relative_url | absolute_url | uri_escape }}&amp;title={{ page.title | uri_escape }}" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-indigo-dye transition-colors" aria-label="Share on LinkedIn">
-          <span class="fab fa-linkedin" aria-hidden="true"></span>
+        <h1 class="article-title">{{ page.title }}</h1>
+        {% if page.description %}
+          <p class="article-description">{{ page.description }}</p>
+        {% endif %}
+        <p class="article-meta">
+          <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%B %d, %Y' }}</time>
+        </p>
+        {% if page.tags %}
+          <div class="article-tags" role="list" aria-label="Tags">
+            {% for tag in page.tags %}
+              <span class="article-tag" role="listitem">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </header>
+
+    <div class="reading-container article-body">
+      <div class="prose article-content article-content--story max-w-none">
+        {{ content }}
+      </div>
+
+      <hr class="article-divider">
+
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <a href="{{ '/stories/' | relative_url }}" class="article-back-link article-back-link--light">
+          <i class="fas fa-arrow-left" aria-hidden="true"></i> All Stories
         </a>
+        <div class="flex items-center gap-1" role="group" aria-label="Share this story">
+          <span class="mr-2 text-glacier-muted text-sm">Share:</span>
+          <a
+            href="https://x.com/intent/post?text={{ page.title | uri_escape }}&amp;url={{ page.relative_url | absolute_url | uri_escape }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="share-link"
+            aria-label="Share on X"
+          >
+            <span class="fab fa-twitter" aria-hidden="true"></span>
+          </a>
+          <a
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ page.relative_url | absolute_url | uri_escape }}&amp;title={{ page.title | uri_escape }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="share-link"
+            aria-label="Share on LinkedIn"
+          >
+            <span class="fab fa-linkedin" aria-hidden="true"></span>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</article>
+  </article>
+</main>
 
 {% render "footer", site: site %}

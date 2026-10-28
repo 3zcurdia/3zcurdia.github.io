@@ -1,0 +1,22 @@
+{% assign item_href = href | default: item.relative_url %}
+{% assign card_summary_words = summary_words | default: 30 %}
+{% assign card_cta = cta | default: "Read" %}
+<article class="content-card">
+  <a class="content-card-link" href="{{ item_href | relative_url }}">
+    <p class="text-sm text-glacier-muted">
+      <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%B %d, %Y' }}</time>
+    </p>
+    <h3 class="mt-2 text-xl font-semibold text-oxford-blue">{{ item.data.title }}</h3>
+    <p class="mt-2 text-glacier-muted">
+      {% if item.data.subtitle %}
+        {{ item.data.subtitle }}
+      {% else %}
+        {{ item.summary | strip_html | truncatewords: card_summary_words }}
+      {% endif %}
+    </p>
+    <p class="mt-auto pt-5 text-sm font-semibold text-indigo-dye">
+      {{ card_cta }}
+      <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+    </p>
+  </a>
+</article>
