@@ -22,7 +22,7 @@
     "postcss-load-config": "^6.0.1",
     "postcss-preset-env": "^11.6.1",
     "read-cache": "^1.0.0",
-    "sass": "^1.106.1",
+    "sass": "^1.107.1",
     "tailwindcss": "^4.3.3"
   }
 }
