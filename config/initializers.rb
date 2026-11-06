@@ -148,9 +148,6 @@ Bridgetown.configure do |config|
   # SEO meta tags (title, description, canonical, Open Graph, Twitter cards)
   init :"bridgetown-seo-tag"
 
-  # sitemap.xml generation
-  init :"bridgetown-sitemap"
-
   # Add `sessions: true` if you need to use session data, flash, etc.
   #
 

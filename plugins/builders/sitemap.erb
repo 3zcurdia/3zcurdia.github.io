@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<% output_collection_names = site.config.collections.select { |_name, data| data.output }.keys %>
+
+<% collections.slice(*output_collection_names).each do |_name, collection| %>
+  <% collection.resources.each do |resource| %>
+    <% next if resource.data.sitemap == false %>
+    <url>
+      <loc><%= xml_escape resource.absolute_url %></loc>
+      <xhtml:link rel="alternate" hreflang="<%= resource.data.lang || "en" %>" href="<%= xml_escape resource.absolute_url %>" />
+      <lastmod><%= (resource.data.date || site.time).to_time.localtime.xmlschema %></lastmod>
+    </url>
+  <% end %>
+<% end %>
+
+<% site.generated_pages.each do |page| %>
+  <% next if page.data.sitemap == false %>
+  <% next unless page.url&.end_with?(".html", "/") %>
+  <url>
+    <loc><%= xml_escape absolute_url(page.url) %></loc>
+    <xhtml:link rel="alternate" hreflang="<%= page.data.lang || "en" %>" href="<%= xml_escape absolute_url(page.url) %>" />
+    <lastmod><%= site.time.localtime.xmlschema %></lastmod>
+  </url>
+<% end %>
+</urlset>
