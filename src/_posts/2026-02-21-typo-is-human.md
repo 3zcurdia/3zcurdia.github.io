@@ -3,7 +3,7 @@ layout: post
 lang: es-MX
 title: "Typo is Human"
 description: "Errar es humano, o mejor dicho: no es un bug, es un feature"
-cover: /images/cortazar-vs-llms.jpeg
+cover: /images/cortazar-vs-llms.webp
 image:
   path: /images/cortazar-vs-llms.jpeg
   alt: "Typo is Human"

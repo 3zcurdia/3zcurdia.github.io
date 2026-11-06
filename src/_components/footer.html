@@ -12,16 +12,16 @@
 
         <div class="ml-2 flex items-center gap-1 border-l border-glacier-border pl-2">
           <a href="https://github.com/{{ site.metadata.social.github }}" class="footer-social-link" aria-label="GitHub" rel="me">
-            <span class="fab fa-github text-lg" aria-hidden="true"></span>
+            {% render "icon", name: "github", class: "text-lg" %}
           </a>
           <a href="https://x.com/{{ site.metadata.social.twitter }}" class="footer-social-link" aria-label="X (Twitter)" rel="me">
-            <span class="fab fa-twitter text-lg" aria-hidden="true"></span>
+            {% render "icon", name: "twitter", class: "text-lg" %}
           </a>
           <a href="https://www.linkedin.com/in/{{ site.metadata.social.linkedin }}" class="footer-social-link" aria-label="LinkedIn" rel="me">
-            <span class="fab fa-linkedin text-lg" aria-hidden="true"></span>
+            {% render "icon", name: "linkedin", class: "text-lg" %}
           </a>
           <a href="{{ '/feed.xml' | relative_url }}" class="footer-social-link" aria-label="RSS feed">
-            <span class="fas fa-rss text-lg" aria-hidden="true"></span>
+            {% render "icon", name: "rss", class: "text-lg" %}
           </a>
         </div>
       </div>

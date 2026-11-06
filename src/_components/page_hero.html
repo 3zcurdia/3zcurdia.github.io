@@ -1,8 +1,10 @@
 {% assign hero_size = size | default: "compact" %}
+{% assign hero_webp = image | default: "/images/glacier.webp" %}
+{% assign hero_jpg = hero_webp | replace: ".webp", ".jpg" %}
 <section class="page-hero page-hero--{{ hero_size }}" aria-labelledby="page-hero-title">
   <div
     class="page-hero-image"
-    style="background-image: url('{{ image | default: "/images/glacier.png" | relative_url }}');"
+    style="background-image: url('{{ hero_jpg | relative_url }}'); background-image: image-set(url('{{ hero_webp | relative_url }}') type('image/webp') 1x);"
     aria-hidden="true"
   ></div>
   <div class="page-hero-overlay" aria-hidden="true"></div>

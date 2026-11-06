@@ -47,7 +47,8 @@
           aria-controls="mobile-menu"
           aria-label="Open navigation"
         >
-          <i class="fas fa-bars text-xl" data-menu-icon aria-hidden="true"></i>
+          {% render "icon", name: "bars", class: "text-xl", data: "bars" %}
+          {% render "icon", name: "xmark", class: "text-xl hidden", data: "close" %}
         </button>
       </div>
     </div>

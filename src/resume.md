@@ -7,7 +7,7 @@ current_nav: about
 ---
 
 <a class="resume-print-link no-print" href="#" onclick="window.print();return false;">
-  <i class="fas fa-print" aria-hidden="true"></i> Print resume
+  {% render "icon", name: "print", class: "mr-1" %}Print resume
 </a>
 
 **Luis Ezcurdia**
@@ -15,7 +15,7 @@ Senior Software Engineer · Tech Lead · Software Architect
 
 [ing.ezcurdia@gmail.com](mailto:ing.ezcurdia@gmail.com) · Mexico City (UTC-6) · [https://github.com/3zcurdia](https://github.com/3zcurdia){: .resume-url }
 
-## <i class="fa fa-briefcase"></i> Experience
+## {% render "icon", name: "briefcase" %} Experience
 
 ### Senior Software Engineer, Koombea — Medellín, Colombia | Remote *(07/2024 – Present)*
 *Elixir, Phoenix, LiveView, LLM integrations, agentic workflows*
@@ -98,7 +98,7 @@ Senior Software Engineer · Tech Lead · Software Architect
   * Maintained the existing infrastructure for a virtual reality department
   * Implemented a project repository catalog application
 
-## <i class="fa fa-graduation-cap"></i> Education
+## {% render "icon", name: "graduation-cap" %} Education
 
 * **Universidad Nacional Autónoma de México: Facultad de Ingeniería** — Mexico City, MX *(2009)*<br/>
   Bachelor's Degree in Computer Engineering
@@ -111,7 +111,7 @@ Senior Software Engineer · Tech Lead · Software Architect
 
 ---
 
-## <i class="fa fa-cogs"></i> Skills
+## {% render "icon", name: "cogs" %} Skills
 
 **Expert**
 Agentic Workflows, Elixir, Ruby, Phoenix, Rails, PostgreSQL, Redis, Git
@@ -122,12 +122,12 @@ JavaScript, Swift, Go, HTML, CSS, LiveView, Hotwire, RabbitMQ, MySQL, SQLite, ET
 **Familiar**
 Erlang, Objective-C, Python, Java, Mnesia, Kubernetes, XMPP
 
-## <i class="fa fa-trophy"></i> Awards
+## {% render "icon", name: "trophy" %} Awards
 
 * **StartupBus** — Austin, TX, United States *(08/2022)*<br/>
   Tech Lead — Semifinalist *(Chila)*: a market research tool to improve design briefs using AI analysis
 
-## <i class="far fa-lightbulb"></i> Side Projects
+## {% render "icon", name: "lightbulb" %} Side Projects
 * **ampwire** — TUI hi-def audio player · [https://ampwire.ezcurdia.dev](https://ampwire.ezcurdia.dev){: .resume-url }
 * **digestivo** — Daily digest of nerd news · [https://digest.ezcurdia.dev](https://digest.ezcurdia.dev){: .resume-url }
 * **annealing** — Simulated annealing Ruby gem · [https://github.com/3zcurdia/annealing](https://github.com/3zcurdia/annealing){: .resume-url }

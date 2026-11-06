@@ -14,7 +14,7 @@ I am always been fascinated about speed, from overclocking hardware to efficient
   Nobody complains if you make your code faster
 </blockquote>
 
-### I just want pretty badges <i class='fa fa-trophy'></i>
+### I just want pretty badges {% render "icon", name: "trophy" %}
 While I was building this site I wanted to have a pretty styled badges from my github account, but I could not found any service that I liked. So I decide to build my own badge system to pull from my github repositories statistics to present them nicely. The problem was simple fetch your repositories, get the programming languages on each one of them and add it into a single hash. Very simple, right?
 
 <blockquote class="blockquote-reverse">

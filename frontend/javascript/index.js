@@ -8,17 +8,16 @@ document.addEventListener('DOMContentLoaded', function() {
   if (!btn || !menu) return;
 
   const header = btn.closest('header');
-  const menuIcon = btn.querySelector('[data-menu-icon]');
+  const iconOpen = btn.querySelector('[data-icon="bars"]');
+  const iconClose = btn.querySelector('[data-icon="close"]');
 
   const setMenuState = function(isOpen) {
     btn.setAttribute('aria-expanded', String(isOpen));
     btn.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
     menu.classList.toggle('hidden', !isOpen);
 
-    if (menuIcon) {
-      menuIcon.classList.toggle('fa-bars', !isOpen);
-      menuIcon.classList.toggle('fa-xmark', isOpen);
-    }
+    if (iconOpen) iconOpen.classList.toggle('hidden', isOpen);
+    if (iconClose) iconClose.classList.toggle('hidden', !isOpen);
   };
 
   btn.addEventListener('click', function() {

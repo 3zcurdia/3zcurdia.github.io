@@ -19,21 +19,26 @@
     {% seo %}
     {% render "schema", site: site, page: page %}
     {% feed_meta %}
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="{{ '/fonts/inter-latin.woff2' | relative_url }}"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
+    {% if page.relative_url == "/" %}
+    <link
+      rel="preload"
+      href="{{ '/images/glacier.webp' | relative_url }}"
+      as="image"
+      fetchpriority="high"
+    />
+    {% endif %}
     <link rel="stylesheet" href="{% asset_path css %}" />
   </head>
   <body class="bg-glacier-white text-glacier-text antialiased">
     <a href="#main-content" class="skip-link">Skip to content</a>
     {{ content }}
-    <script
-      defer
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
-    ></script>
     <script src="{% asset_path js %}" defer></script>
   </body>
 </html>

@@ -10,7 +10,7 @@ layout: base
   <header class="home-hero">
     <div
       class="home-hero-image"
-      style="background-image: url('{{ '/images/glacier.png' | relative_url }}');"
+      style="background-image: url('{{ '/images/glacier.jpg' | relative_url }}'); background-image: image-set(url('{{ '/images/glacier.webp' | relative_url }}') type('image/webp') 1x);"
       aria-hidden="true"
     ></div>
     <div class="home-hero-overlay" aria-hidden="true"></div>
@@ -27,7 +27,7 @@ layout: base
         <div class="flex items-center justify-between gap-4 mb-6">
           <h2 id="latest-posts-heading" class="text-2xl font-bold text-oxford-blue">Latest Posts</h2>
           <a href="{{ '/posts/' | relative_url }}" class="text-indigo-dye hover:text-oxford-blue font-semibold transition-colors">
-            View all <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+            View all {% render "icon", name: "arrow-right", class: "ml-1" %}
           </a>
         </div>
         <div class="grid gap-6 md:grid-cols-2">
@@ -41,7 +41,7 @@ layout: base
         <div class="flex items-center justify-between gap-4 mb-6">
           <h2 id="recent-stories-heading" class="text-2xl font-bold text-oxford-blue">Recent Stories</h2>
           <a href="{{ '/stories/' | relative_url }}" class="text-indigo-dye hover:text-oxford-blue font-semibold transition-colors">
-            View all <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+            View all {% render "icon", name: "arrow-right", class: "ml-1" %}
           </a>
         </div>
         {% if collections.stories.resources.size > 0 %}
@@ -52,7 +52,7 @@ layout: base
           </div>
         {% else %}
           <div class="empty-state">
-            <i class="fas fa-book-open empty-state-icon" aria-hidden="true"></i>
+            {% render "icon", name: "book-open", class: "empty-state-icon" %}
             <p class="text-glacier-muted">
               No stories yet. <a href="{{ '/stories/' | relative_url }}" class="font-semibold text-indigo-dye hover:text-oxford-blue">Check back soon!</a>
             </p>

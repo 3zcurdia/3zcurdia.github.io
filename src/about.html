@@ -21,7 +21,7 @@ permalink: /about/
         <p class="mt-1 text-glacier-muted">
           <a class="font-medium text-indigo-dye hover:text-oxford-blue" href="{{ '/about/resume' | relative_url }}">
             Software engineer <span aria-hidden="true">·</span> View resume
-            <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+            {% render "icon", name: "arrow-right", class: "ml-1" %}
           </a>
         </p>
       </div>
@@ -41,13 +41,13 @@ permalink: /about/
 
       <nav class="profile-socials" aria-label="Social profiles">
         <a class="profile-social-link" href="https://github.com/{{ site.metadata.social.github }}" aria-label="GitHub" rel="me">
-          <span class="fab fa-github text-xl" aria-hidden="true"></span>
+          {% render "icon", name: "github", class: "text-xl" %}
         </a>
         <a class="profile-social-link" href="https://x.com/{{ site.metadata.social.twitter }}" aria-label="X (Twitter)" rel="me">
-          <span class="fab fa-twitter text-xl" aria-hidden="true"></span>
+          {% render "icon", name: "twitter", class: "text-xl" %}
         </a>
         <a class="profile-social-link" href="https://www.linkedin.com/in/{{ site.metadata.social.linkedin }}" aria-label="LinkedIn" rel="me">
-          <span class="fab fa-linkedin text-xl" aria-hidden="true"></span>
+          {% render "icon", name: "linkedin", class: "text-xl" %}
         </a>
       </nav>
     </div>

@@ -16,7 +16,7 @@ permalink: /stories/
     </div>
   {% else %}
     <div class="empty-state">
-      <i class="fas fa-book-open empty-state-icon" aria-hidden="true"></i>
+      {% render "icon", name: "book-open", class: "empty-state-icon" %}
       <p class="text-glacier-muted">
         No stories yet. Check back soon for new content!
       </p>

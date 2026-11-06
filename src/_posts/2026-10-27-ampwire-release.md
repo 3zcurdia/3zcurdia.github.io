@@ -4,9 +4,9 @@ lang: es-MX
 title: "Ampwire Release"
 description: "Tu musica, exactamente como fue masterizada."
 date: 2026-10-27
-cover: /images/neon.png
+cover: /images/neon.webp
 image:
-  path: /images/neon.png
+  path: /images/neon.jpg
   alt: "Ampwire neon theme"
   width: 1946
   height: 1352

@@ -2,9 +2,9 @@
 layout: post
 title: "Ray Tracing in Elixir"
 description: "What Happens When You Run Heavy Math in a 'Slow' Language?"
-cover: /images/ray-tracing-elixir.png
+cover: /images/ray-tracing-elixir.webp
 image:
-  path: /images/ray-tracing-elixir.png
+  path: /images/ray-tracing-elixir.jpg
   alt: "Ray Tracing in Elixir"
   width: 1440
   height: 720

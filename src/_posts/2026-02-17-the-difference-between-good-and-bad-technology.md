@@ -2,7 +2,7 @@
 layout: post
 title: "The Difference Between Good and Bad Technology"
 description: "How to tell if technology actually serves its users or just its creators"
-cover: /images/good-and-the-bad.jpeg
+cover: /images/good-and-the-bad.webp
 image:
   path: /images/good-and-the-bad.jpeg
   alt: "The Difference Between Good and Bad Technology"

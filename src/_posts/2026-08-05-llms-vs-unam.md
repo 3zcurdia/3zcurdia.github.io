@@ -3,9 +3,9 @@ layout: post
 lang: es-MX
 title: "LLMs vs Examen de Admisión UNAM"
 description: ¿Puede una Inteligencia Artificial entrar a la Universidad por mérito propio?
-cover: /images/unam-vs-llm.png
+cover: /images/unam-vs-llm.webp
 image:
-  path: /images/unam-vs-llm.png
+  path: /images/unam-vs-llm.jpg
   alt: "LLMs vs Examen de Admisión UNAM"
   width: 2058
   height: 946
